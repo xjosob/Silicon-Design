@@ -1,0 +1,40 @@
+@import 'elements';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import 'typography';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #b38e8e;
+    height: 4.75rem;
+
+
+    .logo{
+        left: 19.5rem;
+        width: 7.625rem;
+        height: 2.75rem;
+        margin-left: 19.5rem;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+
+    .features{
+
+        font-family: map-get($navigation-text, font-family);
+        color: map-get($navigation-text, color);
+        font-size: map-get($navigation-text, font-size);
+        font-weight: map-get($navigation-text, font-weight);
+        margin-left: 48px;
+    }
+}
+
+
+
