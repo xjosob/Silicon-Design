@@ -1,14 +1,12 @@
 @import 'elements';
 
 $display-1: (
- font-family: 'Manrope',
  color: $heading-dark,
  font-size: 5rem
  );
 
  $navigation-text: (
-    font-family: 'Manrope',
     color: $navigation,
-    font-size: 16px
+    font-size: 16px,
     font-weight: 600
  );

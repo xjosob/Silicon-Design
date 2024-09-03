@@ -5,19 +5,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Manrope'
 }
 nav {
     display: flex;
     align-items: center;
     background-color: #b38e8e;
-    height: 4.75rem;
+    height: 3.25rem;
 
 
     .logo{
-        left: 19.5rem;
-        width: 7.625rem;
-        height: 2.75rem;
-        margin-left: 19.5rem;
+        margin-left: 1rem;
     }
 
     ul{
@@ -28,7 +26,6 @@ nav {
 
     .features{
 
-        font-family: map-get($navigation-text, font-family);
         color: map-get($navigation-text, color);
         font-size: map-get($navigation-text, font-size);
         font-weight: map-get($navigation-text, font-weight);
