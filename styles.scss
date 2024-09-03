@@ -13,6 +13,7 @@ nav {
     justify-content: space-between;
     background-color: #b38e8e;
     height: 4.75rem;
+    padding: 0 2rem;
 
 
     .logo{
@@ -40,12 +41,13 @@ nav {
         color: map-get($navigation-text, color);
         font-size: map-get($navigation-text, font-size);
         font-weight: map-get($navigation-text, font-weight);
-        margin-left: 48px;
+        margin-left: 3rem;
 
     }
 
     .sign-in-button{
       margin-right: 5rem;
+      width: 8.75rem;
     }
 
     .toggle-container{
@@ -126,14 +128,22 @@ nav {
             margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
             height: 3.25rem;
             justify-content: flex-end;
+            padding: 0;
+        }
+
+        nav .logo{
+          margin-left: 1.25rem;
         }
 
         .features{
             display: none;
         }
+
         
         nav .hamburger{
             display: block;
+            margin-left: 1.875rem;
+            margin-right: 1rem;
         }
 
         .toggle-container{
@@ -155,5 +165,6 @@ nav {
         nav{
             margin: .4375rem .225rem 0rem 0rem;
             height: 3.25rem;
+            padding: 0;
         }
     }

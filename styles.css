@@ -11,6 +11,7 @@ nav {
   justify-content: space-between;
   background-color: #b38e8e;
   height: 4.75rem;
+  padding: 0 2rem;
 }
 nav .logo {
   margin-left: 5rem;
@@ -33,10 +34,11 @@ nav .features {
   color: #33354D;
   font-size: 16px;
   font-weight: 600;
-  margin-left: 48px;
+  margin-left: 3rem;
 }
 nav .sign-in-button {
   margin-right: 5rem;
+  width: 8.75rem;
 }
 nav .toggle-container {
   margin-right: 1rem;
@@ -100,12 +102,18 @@ nav .slider.round:before {
     margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
     height: 3.25rem;
     justify-content: flex-end;
+    padding: 0;
+  }
+  nav .logo {
+    margin-left: 1.25rem;
   }
   .features {
     display: none;
   }
   nav .hamburger {
     display: block;
+    margin-left: 1.875rem;
+    margin-right: 1rem;
   }
   .toggle-container {
     display: inline-block;
@@ -122,5 +130,6 @@ nav .slider.round:before {
   nav {
     margin: 0.4375rem 0.225rem 0rem 0rem;
     height: 3.25rem;
+    padding: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
