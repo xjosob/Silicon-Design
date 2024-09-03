@@ -13,7 +13,7 @@ nav {
   height: 4.75rem;
 }
 nav .logo {
-  margin-left: 3.125rem;
+  margin-left: 5rem;
 }
 nav ul {
   list-style: none;
@@ -23,6 +23,12 @@ nav ul {
   flex-grow: 1;
   justify-content: flex-end;
 }
+nav .features-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  list-style: none;
+}
 nav .features {
   color: #33354D;
   font-size: 16px;
@@ -30,7 +36,7 @@ nav .features {
   margin-left: 48px;
 }
 nav .sign-in-button {
-  margin-right: 16px;
+  margin-right: 5rem;
 }
 nav .toggle-container {
   margin-right: 1rem;
