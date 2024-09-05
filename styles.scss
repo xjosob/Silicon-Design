@@ -145,6 +145,56 @@ nav {
       }
 }
 
+header{
+.header-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  margin-left: 19.5rem;
+  margin-right: 67.625rem;
+  margin-bottom: 20.25rem;
+  margin-top: 14rem;
+  width: 35.125rem;
+  height: 328px;
+  background-color: #b38e8e;
+
+  .header-title{
+    font-size: map-get($display-4, font-size);
+    font-weight: map-get($display-4 , font-weight);
+  }
+
+  .header-subtitle{
+    font-size: map-get($l-text, font-size);
+    font-weight: map-get($l-text, font-weight);
+    color: map-get($l-text, color);
+  }
+
+.market-buttons-container{
+  display: flex;
+  gap: 24px;
+  height: 3.625rem;
+  background-color:#b38e8e;
+  width: 100%;
+}
+.button-app-store{
+  @each $property, $value in $button-app-store{
+    #{$property}: $value;
+  }
+}
+
+.button-google-play{
+  @each $property, $value in $button-google-play{
+    #{$property}: $value;
+  }
+}
+
+.header-phones{
+  display: flex;
+}
+
+}
+}
     @media (max-width: 48rem) {
         nav{
             margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
@@ -180,6 +230,10 @@ nav {
         }
 
         }
+
+      .header-container{
+        width: 768px;
+      }
     }
 
     @media (max-width: 30rem){

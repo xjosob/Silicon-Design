@@ -40,6 +40,23 @@ $button-l: (
     font-size: 1.25rem,
  );
 
+ // Market buttons
+ $button-app-store: (
+   background-image: url('/buttons/appstore.svg'),
+   background-size: cover,
+   width: 11.25rem,
+   height: 3.25rem,
+   border: none,
+ );
+
+ $button-google-play: (
+   background-image: url('/buttons/googleplay.svg'),
+   background-size: cover,
+   width: 11.25rem,
+   height: 3.25rem,
+   border: none,
+ );
+
  // Carousel buttons, properties added from ChatGPT
  $carousel-button: (
   font-family: 'Material Icons',
