@@ -1,0 +1,53 @@
+@import 'elements';
+@import 'typography';
+
+// Main buttons
+$button-l: (
+ background-color: $primary,
+ color: white, 
+ font-size: 1rem,
+ font-weight: 600,
+ border-radius: .5rem,
+ padding: .8125rem,
+ border: none
+ );
+
+ $button-m: map-merge($button-l,(
+    font-size: .875rem,
+    border-radius: .375rem,
+    padding: .6875rem
+ ));
+
+ $button-s: map-merge($button-l,(
+    font-size: .875rem,
+    border-radius: .25rem,
+    padding: .5625rem
+ ));
+
+ // Button type
+ $button-with-icon: map-merge($button-s,(
+    font-size: .875rem,
+    border-radius: .375rem,
+    padding: .5625rem 1.25rem,
+    display: flex,
+    align-items: center,
+    justify-content: center,
+    gap: .5rem
+ ));
+
+ $icon-style: (
+    font-family: 'Material Icons',
+    font-size: 1.25rem,
+ );
+
+ // Carousel buttons, properties added from ChatGPT
+ $carousel-button: (
+  font-family: 'Material Icons',
+  background-color: #2196F3,  // Example color
+  width: 52px,          
+  height: 52px,              
+  border-radius: 50%,        
+  border: none,
+  font-size: 2em,
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+);

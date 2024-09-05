@@ -1,6 +1,8 @@
 @import 'elements';
+@import 'buttons';
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import 'typography';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 * {
     margin: 0;
@@ -12,22 +14,30 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #b38e8e;
+    flex-shrink: 0;
+    flex-wrap: wrap;
     height: 4.75rem;
     padding: 0 2rem;
 
+    ul{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding: 0;
+  }
+
 
     .logo{
-        margin-left: 5rem;
+        margin-left: 5rem
     }
 
-    ul{
-        list-style: none;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: flex-end;
+    .theme-text{
+      color: $body-text;
+      font-size: map-get($navigation-text, font-size);
+      font-weight: map-get($navigation-text, font-weight);
+      margin-right: 1rem;
     }
+
 
     .features-container{
       display: flex;
@@ -47,19 +57,31 @@ nav {
 
     .sign-in-button{
       margin-right: 5rem;
-      width: 8.75rem;
+
+      .sign-in{
+      @each $property, $value in $button-with-icon{
+        #{$property}: $value;
+      }
+
+      .icon{
+        @each $property, $value in $icon-style{
+          #{$property}: $value;
+        }
+      }
     }
+  }
 
     .toggle-container{
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
 
     .hamburger{
+      display: none;
         width: 1.875rem;
         height: 2.25rem;
-        display: none;
         background-image: url("/buttons/Hamburger.svg");
         margin-right: 1rem;
+        
     }
 
     .switch {
@@ -83,7 +105,7 @@ nav {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
+        background-color: $muted-text;
         -webkit-transition: .4s;
         transition: .4s;
       }
@@ -101,17 +123,17 @@ nav {
       }
       
       input:checked + .slider {
-        background-color: #2196F3;
+        background-color: $primary;
       }
       
       input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
+        box-shadow: 0 0 1px $primary;
       }
       
       input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
       }
       
       .slider.round {
@@ -129,21 +151,23 @@ nav {
             height: 3.25rem;
             justify-content: flex-end;
             padding: 0;
-        }
 
-        nav .logo{
-          margin-left: 1.25rem;
-        }
+            .logo{
+              margin-left: 1rem;
+            }
 
-        .features{
-            display: none;
-        }
+            .features{
+              display: none;
+          }
 
-        
-        nav .hamburger{
+          .hamburger{
             display: block;
             margin-left: 1.875rem;
             margin-right: 1rem;
+        }
+
+        .theme-text{
+          color: #131022
         }
 
         .toggle-container{
@@ -155,10 +179,7 @@ nav {
           display: none;
         }
 
-        ul{
-            display: none;
         }
-
     }
 
     @media (max-width: 30rem){
@@ -166,5 +187,18 @@ nav {
             margin: .4375rem .225rem 0rem 0rem;
             height: 3.25rem;
             padding: 0;
+
+            .theme-text{
+              display: none;
+            }
+
+            .toggle-container{
+              margin-right: 0;
+            }
+
+            .hamburger{
+
+              margin-right: 1.375rem;
+            }
         }
     }
