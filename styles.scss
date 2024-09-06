@@ -145,28 +145,34 @@ nav {
 
 header{
   display: flex;
-  justify-content: space-between;
-  position: relative;
+  flex-direction: column;
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1)0%, rgba(240, 200, 212, 0.05)42%, rgba(160, 108, 156, 0.07) 83%);
 
+  .header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 .header-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
   margin: auto;
-  flex-shrink: 0;
-  box-sizing: border-box;
   width: 35.125rem;
   max-width: 100%;
+  
 
   .header-title{
     font-size: map-get($display-4, font-size);
     font-weight: map-get($display-4 , font-weight);
-    margin-left: 3.75rem;
+    text-align: center;
   }
 
   .header-subtitle{
@@ -182,8 +188,6 @@ header{
   gap: 24px;
   height: 3.625rem;
   width: 100%;
-  flex-wrap: nowrap;
-  box-sizing: border-box;
   flex-wrap: nowrap;
 }
 .button-app-store{
@@ -204,17 +208,53 @@ header{
 .header-phones{
   display: flex;
   align-items: flex-end;
-  flex: 1;
+  flex-grow: 1;
   justify-content: flex-end;
   max-width: 50%;
-  margin-top: 7rem;
+  min-width: 20%;
+  padding-top: 7rem;
   box-sizing: border-box;
-  position: relative;
+  margin-bottom: -135.5px;
+  transform: translatex(-12%);
 }
+
 
 .header-phones img{
   max-width: 100%;
   height: auto;
+}
+
+.discover-more-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 3.75rem;
+
+  .material-icons{
+    transform: rotate(90deg);
+  }
+}
+
+.discover-more-button{
+  @each $property, $value in $carousel-button{
+    #{$property}: $value;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  
+}
+
+
+.discover-more-text{
+  font-size: map-get($s-text, font-size);
+  font-weight: map-get($s-text, font-weight);
+  color: map-get($s-text, color);
 }
 
 }
