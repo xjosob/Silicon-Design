@@ -13,7 +13,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #b38e8e;
     flex-shrink: 0;
     height: 4.75rem;
     padding: 0 2rem;
@@ -147,28 +146,27 @@ nav {
 header{
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   position: relative;
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
-  background-color: aqua;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1)0%, rgba(240, 200, 212, 0.05)42%, rgba(160, 108, 156, 0.07) 83%);
 
 .header-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
-  margin-top: 9.25rem;
+  margin: auto;
   flex-shrink: 0;
   box-sizing: border-box;
   width: 35.125rem;
   max-width: 100%;
-  background-color: #b38e8e;
 
   .header-title{
     font-size: map-get($display-4, font-size);
     font-weight: map-get($display-4 , font-weight);
+    margin-left: 3.75rem;
   }
 
   .header-subtitle{
@@ -179,9 +177,10 @@ header{
 
 .market-buttons-container{
   display: flex;
+  justify-content:center;
+  margin-right: 3.4375rem;
   gap: 24px;
   height: 3.625rem;
-  background-color:#b38e8e;
   width: 100%;
   flex-wrap: nowrap;
   box-sizing: border-box;
@@ -206,10 +205,11 @@ header{
   display: flex;
   align-items: flex-end;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 50%;
   margin-top: 7rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .header-phones img{
