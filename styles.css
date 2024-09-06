@@ -133,14 +133,12 @@ header .header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
   gap: 48px;
   margin-top: 9.25rem;
-  flex: 1 1 50%;
+  flex-shrink: 0;
   box-sizing: border-box;
-  height: auto;
   width: 35.125rem;
-  height: 328px;
+  max-width: 100%;
   background-color: #b38e8e;
 }
 header .header-container .header-title {
@@ -160,6 +158,7 @@ header .header-container .market-buttons-container {
   width: 100%;
   flex-wrap: nowrap;
   box-sizing: border-box;
+  flex-wrap: nowrap;
 }
 header .header-container .button-app-store {
   flex-shrink: 0;
@@ -180,8 +179,7 @@ header .header-container .button-google-play {
 header .header-phones {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  flex: 1 1 50%;
+  flex: 1;
   justify-content: center;
   max-width: 50%;
   margin-top: 7rem;
