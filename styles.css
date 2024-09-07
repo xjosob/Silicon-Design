@@ -132,7 +132,6 @@ header .header-content {
   align-items: flex-end;
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 header .header-container {
   display: flex;
@@ -187,7 +186,7 @@ header .header-phones {
   min-width: 20%;
   padding-top: 7rem;
   box-sizing: border-box;
-  margin-bottom: -135.5px;
+  margin-bottom: -8.375rem;
   transform: translatex(-12%);
 }
 header .header-phones img {
@@ -198,7 +197,7 @@ header .discover-more-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 2rem;
   width: 50%;
   box-sizing: border-box;
@@ -255,8 +254,59 @@ header .discover-more-text {
   nav .sign-in-button {
     display: none;
   }
-  .header-container {
-    width: 768px;
+  header {
+    box-sizing: content-box;
+  }
+  header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+  }
+  header .header-container {
+    width: 16.875rem;
+  }
+  header .market-buttons-container {
+    justify-content: center !important;
+    padding-left: 3.125rem !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    flex-shrink: 1 !important;
+  }
+  header .button-google-play {
+    flex-shrink: 1 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-width: 7.875rem !important;
+    min-height: 2.7437rem !important;
+    background-color: transparent;
+  }
+  header .button-app-store {
+    flex-shrink: 1 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-width: 7.875rem !important;
+    min-height: 2.7437rem !important;
+    background-color: transparent;
+  }
+  header .header-phones {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    max-width: 80%;
+    min-width: 43%;
+    margin-bottom: -8.375rem;
+    transform: none;
+    padding-right: 1.5625rem;
   }
 }
 @media (max-width: 30rem) {
