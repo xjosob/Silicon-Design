@@ -227,6 +227,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 18.125rem;
   gap: 1rem;
   margin-top: 2rem;
   width: 50%;
@@ -257,12 +258,24 @@ header{
 }
 
 }
+
+@media(max-width: 56.9375rem){
+  header{
+  .discover-more-container{
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+}
+}
+
+
     @media (max-width: 48rem) {
         nav{
             margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
             height: 3.25rem;
             justify-content: flex-end;
             padding: 0;
+            margin-bottom: 3.125rem;
 
             .logo{
               margin-left: 1rem;
@@ -295,6 +308,7 @@ header{
 
       header{
         box-sizing:content-box;
+        padding: 0 1rem;
 
         .header-content{
           display: flex;
@@ -306,13 +320,27 @@ header{
         }
         
       .header-container{
-        width: 16.875rem; //40%
+        width: 16.875rem; 
+      }
+
+      .header-title{
+        transform: translateX(55%);
+        width: 18.75rem;
+        font-size: 2.125rem !important;
         
+        
+      }
+
+      .header-subtitle{
+        padding-top: 50px;
+        font-size: map-get($m-text, font-size) !important;
+        font-weight: map-get($m-text, font-weight) !important;
       }
 
       .market-buttons-container{
   justify-content: center !important;
-  padding-left: 3.125rem !important;
+  align-items: center;
+  margin-left: 3.125rem !important;
   gap: 1rem !important;
   width: 100% !important;
   flex-shrink: 1 !important;
@@ -337,28 +365,32 @@ header{
   background-size: 100% 100% !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  min-width: 7.875rem !important;
+  min-width: 2.5rem !important;
   min-height: 2.7437rem !important;
   background-color: transparent;
+  padding-top: 1.25rem !important;
+}
+
+.discover-more-container{
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 0;
 }
 
 
 
       .header-phones{
-        display: flex;
-  align-items: center;
-  flex-grow: 1;
   justify-content: flex-end;
   max-width: 80%;
-  min-width: 43%;
-  margin-bottom: -8.375rem;
+  min-width: 45%;
   transform: none;
-  padding-right: 1.5625rem
+  padding-right: 3.4375rem;
         
       }
     }
       
     }
+
 
     @media (max-width: 30rem){
         nav{
@@ -378,5 +410,74 @@ header{
 
               margin-right: 1.375rem;
             }
+        }
+
+        header{
+          width: 100%;
+          box-sizing: border-box;
+          padding: 0;
+          
+          .header-phones{
+            display: none;
+          }
+
+          .header-content{
+            padding-left: 0;
+          }
+          .header-container{
+            width: 100% 
+          }
+
+          .header-title{
+            transform: none;
+          }
+
+          .header-container{
+            padding-left: 0;
+            width: 100%;
+          }
+
+          .market-buttons-container{
+            flex-direction: column;
+          }
+
+          .discover-more-container{
+            justify-content: center;
+            width: 100%;
+          }
+
+          .market-buttons-container{
+            justify-content: center !important;
+            align-items: center;
+            margin-left: 3.125rem !important;
+            gap: 1rem !important;
+            width: 100% !important;
+            flex-shrink: 1 !important;
+                }
+          
+          .button-google-play{
+            flex-shrink: 1 !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            background-size: 100% 100% !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            min-width: 7.875rem !important;
+            min-height: 2.7437rem !important;
+            background-color: transparent;
+          }
+          
+          .button-app-store{
+            flex-shrink: 1 !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            background-size: 100% 100% !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            min-width: 2.5rem !important;
+            min-height: 2.7437rem !important;
+            background-color: transparent;
+            padding-top: 1.25rem !important;
+          }
         }
     }
