@@ -57,6 +57,23 @@ $button-l: (
    border: none,
  );
 
+
+ $mobile-button-app-store: (
+   background-image: url('/buttons/appstore.svg'),
+   background-size: contain,
+   width: 7.6875rem,
+   height: 2rem,
+   border: none,
+ );
+
+ $mobile-button-google-play: (
+   background-image: url('/buttons/googleplay.svg'),
+   background-size: contain,
+   width: 7.6875rem,
+   height: 2rem,
+   border: none,
+ );
+
  // Carousel buttons, properties added from ChatGPT
  $carousel-button: (
   font-family: 'Material Icons',
