@@ -236,10 +236,13 @@ main {
   padding-right: 3.125rem;
   margin-top: 2rem;
 }
+main img {
+  max-width: 100%;
+  height: auto;
+}
 main #brands .brands-container {
   padding: 0.625rem;
   padding-top: 0;
-  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -421,6 +424,38 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     min-width: 45%;
     transform: none;
     padding-right: 3.4375rem;
+  }
+  main {
+    padding: 0 !important;
+    margin-top: 2rem;
+  }
+  main #brands #brand-1, main #brands #brand-2 {
+    display: none;
+  }
+  main #brands .brands-container {
+    padding: 0.625rem;
+    padding-top: 0;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    gap: 30px;
+  }
+  main #brands img {
+    max-width: 100%;
+    height: auto;
+  }
+  main #brands .brand-box {
+    border: 1px solid #E2E5F1;
+    border-radius: 8px;
+    height: 5.625rem;
+    width: 9.375rem !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .phone-visa {
+    display: none;
   }
 }
 @media (max-width: 480px) {
