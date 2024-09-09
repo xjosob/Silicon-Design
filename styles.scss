@@ -262,10 +262,36 @@ header{
   font-weight: map-get($s-text, font-weight);
   color: map-get($s-text, color);
 }
-
 }
 
-@media(max-width: 56.9375rem){
+main{
+  box-sizing: border-box;
+  padding-left: 8.75rem;
+  padding-right: 3.125rem;
+  margin-top: 2rem;
+#brands{
+  .brands-container{
+    padding: .625rem;
+    padding-top: 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .brand-box{
+    border: 1px solid $divider-border;
+    border-radius: 8px;
+    height: 6.25rem;
+    width: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+}
+
+@media(max-width: 911px){
   header{
   .discover-more-container{
     padding-right: 0;
@@ -275,7 +301,7 @@ header{
 }
 
 
-    @media (max-width: 48rem) {
+    @media (max-width: 768px) {
         nav{
             margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
             height: 3.25rem;
@@ -399,11 +425,10 @@ display: none;
         
       }
     }
-      
     }
 
 
-    @media (max-width: 30rem){
+    @media (max-width: 480px){
         nav{
             margin: .4375rem .225rem 0rem 0rem;
             height: 3.25rem;
@@ -495,5 +520,9 @@ display: none;
                     border-radius: 8px;                    
         }
     }
+  }
+
+  #brands{
+    display: none;
   }
 }
