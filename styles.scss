@@ -266,8 +266,6 @@ header{
 
 main{
   box-sizing: border-box;
-  padding-left: 8.75rem;
-  padding-right: 3.125rem;
   margin-top: 2rem;
 
   img{
@@ -278,7 +276,7 @@ main{
   .brands-container{
     padding: .625rem;
     padding-top: 0;
-    
+    gap: 1rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -310,7 +308,7 @@ main{
 
   .phone-visa{
     height: 53.125rem;
-    padding-left: 3.125rem;
+    padding-left: 12.5rem;
   }
 
   

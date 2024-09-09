@@ -232,8 +232,6 @@ header .discover-more-text {
 
 main {
   box-sizing: border-box;
-  padding-left: 8.75rem;
-  padding-right: 3.125rem;
   margin-top: 2rem;
 }
 main img {
@@ -243,6 +241,7 @@ main img {
 main #brands .brands-container {
   padding: 0.625rem;
   padding-top: 0;
+  gap: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -269,7 +268,7 @@ main #app-features img {
 }
 main #app-features .phone-visa {
   height: 53.125rem;
-  padding-left: 3.125rem;
+  padding-left: 12.5rem;
 }
 main #app-features .features-content {
   max-width: 55%;
