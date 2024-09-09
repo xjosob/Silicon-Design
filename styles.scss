@@ -289,6 +289,83 @@ main{
     align-items: center;
   }
 }
+
+#app-features{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+
+
+  img{
+    max-width: 60%;
+    height: auto;
+    min-width: 20%;
+  }
+
+  .phone-visa{
+    height: 53.125rem;
+    padding-left: 3.125rem;
+  }
+
+  
+
+  .features-content{
+    max-width: 55%;
+    padding-right: 5rem;
+  }
+
+  .features-title{
+    font-size: map-get($display-4, font-size);
+    font-weight: map-get($display-4, font-weight);
+    color: map-get($heading-h2, color);
+    margin-bottom: 1rem;
+  }
+
+  .features-subtitle{
+    font-size: map-get($l-text, font-size);
+    font-weight: map-get($l-text, font-weight);
+    color: $muted-text;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 40rem;
+  }
+
+  .features-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+
+    .feature{
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      align-items: center;
+      
+
+      .feature-icon{
+        border-radius: .75rem;
+
+        img{
+          width: 12.5rem;
+          height: 12.5rem;
+        }
+      }
+
+      .feature-text{
+        font-size: map-get($m-text, font-size);
+          font-weight: map-get($m-text, font-weight);
+          color: $body-text;
+        .feature-title{
+          font-size: map-get($heading-h5, font-size);
+          font-weight: map-get($heading-h5, font-weight);
+          color: $heading-dark;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
 }
 
 @media(max-width: 911px){

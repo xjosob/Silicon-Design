@@ -253,6 +253,68 @@ main #brands .brand-box {
   justify-content: center;
   align-items: center;
 }
+main #app-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+}
+main #app-features img {
+  max-width: 60%;
+  height: auto;
+  min-width: 20%;
+}
+main #app-features .phone-visa {
+  height: 53.125rem;
+  padding-left: 3.125rem;
+}
+main #app-features .features-content {
+  max-width: 55%;
+  padding-right: 5rem;
+}
+main #app-features .features-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0B0F19;
+  margin-bottom: 1rem;
+}
+main #app-features .features-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #9397AD;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+main #app-features .features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+}
+main #app-features .features-grid .feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  align-items: center;
+}
+main #app-features .features-grid .feature .feature-icon {
+  border-radius: 0.75rem;
+}
+main #app-features .features-grid .feature .feature-icon img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+main #app-features .features-grid .feature .feature-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #565973;
+}
+main #app-features .features-grid .feature .feature-text .feature-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0B0F19;
+  line-height: 1.5;
+}
 
 @media (max-width: 911px) {
   header .discover-more-container {
