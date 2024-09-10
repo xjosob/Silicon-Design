@@ -239,7 +239,8 @@ main img {
   height: auto;
 }
 main #brands .brands-container {
-  padding: 0.625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   padding-top: 0;
   gap: 1rem;
   display: flex;
@@ -267,7 +268,7 @@ main #app-features img {
   min-width: 20%;
 }
 main #app-features .phone-visa {
-  height: 53.125rem;
+  height: 50rem;
   padding-left: 12.5rem;
 }
 main #app-features .features-content {
@@ -296,7 +297,6 @@ main #app-features .features-grid {
 main #app-features .features-grid .feature {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
   align-items: center;
 }
 main #app-features .features-grid .feature .feature-icon {
@@ -354,8 +354,7 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     display: none;
   }
   header {
-    box-sizing: content-box;
-    padding: 0 1rem;
+    box-sizing: border-box;
   }
   header .header-content {
     display: flex;
@@ -363,7 +362,6 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     align-items: flex-end;
     width: 100%;
     margin: 0 auto;
-    padding-left: 10px;
   }
   header .header-container {
     width: 16.875rem;
@@ -427,6 +425,13 @@ main #app-features .features-grid .feature .feature-text .feature-title {
   main {
     padding: 0 !important;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #brands {
+    width: 100%;
+    margin-top: 2rem;
   }
   main #brands #brand-1, main #brands #brand-2 {
     display: none;
@@ -453,11 +458,38 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     justify-content: center !important;
     align-items: center;
   }
-  .phone-visa {
+  main .phone-visa {
     display: none;
   }
+  main #app-features {
+    display: flex;
+    width: 100%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  main #app-features .features-content {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  main #app-features .features-content .features-title {
+    font-size: 1.75rem !important;
+  }
+  main .features-grid {
+    grid-row-gap: 0.0063rem !important;
+  }
+  main .features-grid .feature .feature-title, main .features-grid .feature .feature-text {
+    text-align: left !important;
+  }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) and (max-width: 480px) {
   nav {
     margin: 0.4375rem 0.225rem 0rem 0rem;
     height: 3.25rem;
@@ -475,9 +507,9 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     background-repeat: no-repeat;
   }
   header {
+    padding: 0%;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 0.3125rem !important;
   }
   header .header-phones {
     display: none;
@@ -586,7 +618,28 @@ main #app-features .features-grid .feature .feature-text .feature-title {
     background-position: center;
     border-radius: 8px;
   }
-  #brands {
+  main #brands {
     display: none;
+  }
+  main #app-features {
+    display: flex;
+    width: 100% !important;
+    text-align: center;
+    align-items: center;
+    max-width: -moz-fit-content !important;
+    max-width: fit-content !important;
+    justify-content: center !important;
+    flex-direction: column;
+    padding: 4.375rem !important;
+  }
+  main #app-features .features-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+  main #app-features .features-title {
+    font-size: 1.75rem !important;
+  }
+  main #app-features .feature-title, main #app-features .feature-text {
+    text-align: left !important;
   }
 }/*# sourceMappingURL=styles.css.map */

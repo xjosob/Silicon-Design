@@ -82,6 +82,7 @@ nav {
         
     }
 
+    // Switch button from W3Schools
     .switch {
         position: relative;
         display: inline-block;
@@ -274,7 +275,8 @@ main{
   }
 #brands{
   .brands-container{
-    padding: .625rem;
+    padding-left: .625rem;
+    padding-right: .625rem;
     padding-top: 0;
     gap: 1rem;
     display: flex;
@@ -307,7 +309,7 @@ main{
   }
 
   .phone-visa{
-    height: 53.125rem;
+    height: 50rem;
     padding-left: 12.5rem;
   }
 
@@ -342,7 +344,6 @@ main{
     .feature{
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
       align-items: center;
       
 
@@ -419,8 +420,7 @@ main{
         }
 
       header{
-        box-sizing:content-box;
-        padding: 0 1rem;
+        box-sizing:border-box;
 
         .header-content{
           display: flex;
@@ -428,7 +428,6 @@ main{
           align-items: flex-end;
           width: 100%;
           margin: 0 auto;
-          padding-left: 10px;
         }
         
       .header-container{
@@ -509,7 +508,14 @@ display: none;
 main{
   padding: 0 !important;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 #brands{
+  width: 100%;
+  
+  margin-top: 2rem;
 #brand-1, #brand-2{
   display: none;
 }
@@ -539,11 +545,45 @@ img{
   align-items: center;
 }
 }
-}
 
 .phone-visa{
   display: none;
 }
+
+#app-features{
+  display: flex;
+width: 100%;
+max-width: fit-content;
+padding: 2rem;
+text-align: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+.features-content{
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  flex-direction: column;
+  padding: 0;
+
+  .features-title{
+    font-size: map-get($heading-h3, font-size) !important;
+  }
+}
+}
+
+.features-grid{
+  grid-row-gap: .0063rem !important;
+
+  .feature{
+
+    .feature-title, .feature-text{
+      text-align: left !important;
+    }
+  }
+  }
+
 }
 
 
@@ -570,9 +610,10 @@ img{
         }
 
         header{
+          padding: 0%;
           width: 100%;
           box-sizing: border-box;
-          padding-left: .3125rem !important;
+          
           
           .header-phones{
             display: none;
@@ -624,7 +665,8 @@ img{
                       background-repeat: no-repeat;
                       background-color: black;
                     background-position: center;
-                    border-radius: 8px;   
+                    border-radius: 8px;
+                       
                       
                   }
               }
@@ -642,7 +684,34 @@ img{
     }
   }
 
+main{
   #brands{
     display: none;
   }
+
+  #app-features{
+    display: flex;
+  width: 100% !important;
+  text-align: center;
+  align-items: center;
+  max-width: fit-content !important;
+  justify-content: center !important;
+  flex-direction: column;
+  padding: 4.375rem !important;
+
+  .features-grid{
+    display: grid;
+    grid-template-columns: 1fr !important;
+  }
+
+  .features-title{
+    font-size: map-get($heading-h3, font-size) !important;
+  }
+
+  .feature-title, .feature-text{
+    text-align: left !important;
+  }
+    }
+  }
+}
     }
