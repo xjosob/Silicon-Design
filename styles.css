@@ -321,6 +321,7 @@ main #how-it-works {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F3F6FF;
 }
 main #how-it-works .how-it-works-container {
   display: flex;
@@ -328,6 +329,20 @@ main #how-it-works .how-it-works-container {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
+  max-width: 75%;
+}
+main #how-it-works .how-it-works-container .how-it-works-images {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  justify-content: center;
+}
+main #how-it-works .how-it-works-container .how-it-works-images img {
+  width: 31.25rem;
+  max-width: 60%;
+  height: auto;
+  min-width: 20%;
 }
 
 @media (max-width: 911px) {

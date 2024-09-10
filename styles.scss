@@ -374,6 +374,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $background-light;
 
   .how-it-works-container{
     display: flex;
@@ -381,8 +382,22 @@ main{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
+    max-width: 75%;
 
+    .how-it-works-images{
+      display: flex;
+      align-items: center;
+      gap: 7.5rem;
+      justify-content: center;
 
+      img{
+   width: 31.25rem;
+    max-width: 60%;
+    height: auto;
+    min-width: 20%;
+  }
+    }
   } 
  }
 }
