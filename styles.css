@@ -354,7 +354,6 @@ main #how-it-works .how-it-works-container .how-it-works-subtitle {
 }
 main #how-it-works .how-it-works-container .how-it-works-text {
   color: #565973;
-  width: 39.75rem;
 }
 
 @media (max-width: 911px) {
@@ -680,5 +679,13 @@ main #how-it-works .how-it-works-container .how-it-works-text {
   }
   main #app-features .feature-title, main #app-features .feature-text {
     text-align: left !important;
+  }
+  main .how-it-works-images .iphone-1, main .how-it-works-images .iphone-2 {
+    display: none;
+  }
+  main .how-it-works-images img {
+    max-width: 100% !important;
+    height: auto;
+    min-width: 50% !important;
   }
 }/*# sourceMappingURL=styles.css.map */

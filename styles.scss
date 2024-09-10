@@ -411,7 +411,7 @@ main{
 
     .how-it-works-text{
       color: map-get($m-text, color);
-      width: 39.75rem;
+
     }
   } 
  }
@@ -756,6 +756,18 @@ main{
   .feature-title, .feature-text{
     text-align: left !important;
   }
+    }
+
+    .how-it-works-images{
+      .iphone-1, .iphone-2 {
+        display: none;
+      }
+
+      img{
+         max-width: 100% !important;
+         height: auto;
+         min-width: 50% !important;
+       }
     }
   }
 }
