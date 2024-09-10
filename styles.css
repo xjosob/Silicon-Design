@@ -317,6 +317,18 @@ main #app-features .features-grid .feature .feature-text .feature-title {
   color: #0B0F19;
   line-height: 1.5;
 }
+main #how-it-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #how-it-works .how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
 
 @media (max-width: 911px) {
   header .discover-more-container {

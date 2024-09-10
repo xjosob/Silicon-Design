@@ -370,6 +370,21 @@ main{
     }
   }
 }
+#how-it-works{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .how-it-works-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+
+  } 
+ }
 }
 
 @media(max-width: 911px){
