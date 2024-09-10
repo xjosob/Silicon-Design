@@ -315,8 +315,7 @@ main{
   
 
   .features-content{
-    max-width: 40%;
-    padding-right: 5rem;
+    max-width: 55%;
   }
 
   .features-title{
@@ -375,6 +374,7 @@ main{
   align-items: center;
   background-color: $background-light;
   padding: 4rem 2rem;
+  text-align: center;
 
   .how-it-works-container{
     display: flex;
@@ -397,6 +397,21 @@ main{
     height: auto;
     min-width: 20%;
   }
+    }
+
+    .how-it-works-title{
+      font-size: map-get($heading-h1, font-size);
+      font-weight: map-get($heading-h1, font-weight);
+    }
+
+    .how-it-works-subtitle{
+      font-size: map-get($heading-h4, font-size);
+      font-weight: map-get($heading-h4, font-weight);
+    }
+
+    .how-it-works-text{
+      color: map-get($m-text, color);
+      width: 39.75rem;
     }
   } 
  }
