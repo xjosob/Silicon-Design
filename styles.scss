@@ -432,6 +432,78 @@ main{
     }
   } 
  }
+
+ .app-features-2-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .money-transfer-container{
+    display: flex;
+    align-items: center;
+    gap: 10.125rem;
+    justify-content: center;
+  }
+
+  .money-transfer-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+
+    .learn-more-button-right{
+      display: flex;
+      width: 25%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+  }
+  .receive-money-container{
+    display: flex;
+    align-items: center;
+    gap: 10.125rem;
+
+    .receive-money-text-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+
+    .receive-money-icons{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 3.125rem;
+      width: 50%;
+      img{
+        padding-bottom: 1.5625rem;
+      }
+
+    .receive-money-icon-1, .receive-money-icon-2{
+      gap: 50px;
+    }
+    }
+
+    .receive-money-button-right{
+      display: flex;
+      width: 25%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+  }
+  }
+
+  .money-transfer-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .75rem;
+  }
+ }
 }
 
 @media(max-width: 911px){
