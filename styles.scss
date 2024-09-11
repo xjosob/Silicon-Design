@@ -445,6 +445,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  padding: .625rem;
 
   .money-transfer-container{
     display: flex;
@@ -472,6 +473,7 @@ main{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    
 
     .receive-money-button-right{
       display: flex;
@@ -487,21 +489,18 @@ main{
       justify-content: flex-start;
       align-items: flex-start;
       gap: 2rem;
-      width: 40%;
+      width: 37%;
+
 
     .receive-money-icons{
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 3.125rem;
-      width: 50%;
       img{
+        gap: 50px;
         padding-bottom: 1.5625rem;
       }
-
-    .receive-money-icon-1, .receive-money-icon-2{
-      gap: 50px;
-    }
     }
 
   }

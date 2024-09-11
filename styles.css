@@ -373,6 +373,7 @@ main .app-features-2-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0.625rem;
 }
 main .app-features-2-container .money-transfer-container {
   display: flex;
@@ -412,20 +413,17 @@ main .app-features-2-container .receive-money-container .receive-money-text-cont
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
-  width: 40%;
+  width: 37%;
 }
 main .app-features-2-container .receive-money-container .receive-money-text-container .receive-money-icons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 3.125rem;
-  width: 50%;
 }
 main .app-features-2-container .receive-money-container .receive-money-text-container .receive-money-icons img {
-  padding-bottom: 1.5625rem;
-}
-main .app-features-2-container .receive-money-container .receive-money-text-container .receive-money-icons .receive-money-icon-1, main .app-features-2-container .receive-money-container .receive-money-text-container .receive-money-icons .receive-money-icon-2 {
   gap: 50px;
+  padding-bottom: 1.5625rem;
 }
 main .app-features-2-container .money-transfer-text-container {
   display: flex;
