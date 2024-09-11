@@ -384,12 +384,17 @@ main{
     gap: 1.5rem;
     width: 100%;
     max-width: 75%;
+    flex-wrap: nowrap;
 
     .how-it-works-images{
       display: flex;
       align-items: center;
       gap: 7.5rem;
       justify-content: center;
+
+      .iphone-tablet-1, .iphone-tablet-2, .iphone-tablet-3{
+        display: none;
+      }
 
       img{
    width: 31.25rem;
@@ -412,6 +417,18 @@ main{
     .how-it-works-text{
       color: map-get($m-text, color);
 
+    }
+
+    .how-it-works-subtitle-mobile{
+      display: none;
+    }
+
+    .how-it-works-subtitle-tablet{
+      display: none;
+    }
+
+    .how-it-works-text-mobile{
+      display: none;
     }
   } 
  }
@@ -627,6 +644,46 @@ flex-direction: column;
       text-align: left !important;
     }
   }
+}
+
+  .how-it-works-images{
+    gap: 0 !important;
+    .iphone-1, .iphone-2, .iphone-3{
+      display: none !important;
+    }
+
+  .iphone-tablet-1, .iphone-tablet-2, .iphone-tablet-3{
+    display: flex !important;
+  }
+
+  img{
+    width: 31.25rem;
+     height: auto;
+     min-width: 45% !important;
+   }
+  }
+
+  .how-it-works-subtitle{
+    display: none !important;
+  }
+
+  .how-it-works-text{
+    display: none !important;
+  }
+
+  .how-it-works-subtitle-mobile{
+    display: none !important;
+  }
+
+  .how-it-works-subtitle-tablet{
+    display: flex !important;
+    font-size: map-get($heading-h3, font-size) !important;
+    font-weight: map-get($heading-h4, font-weight) !important;
+  }
+
+  .how-it-works-text-mobile{
+    display: flex !important;
+    color: map-get($m-text, color) !important;
   }
 
 }
@@ -730,6 +787,7 @@ flex-direction: column;
   }
 
 main{
+  margin-top: 0;
   #brands{
     display: none;
   }
@@ -742,10 +800,9 @@ main{
   max-width: fit-content !important;
   justify-content: center !important;
   flex-direction: column;
-  padding: 4.375rem !important;
+  padding: .9375rem !important;
 
   .features-grid{
-    display: grid;
     grid-template-columns: 1fr !important;
   }
 
@@ -758,10 +815,15 @@ main{
   }
     }
 
-    .how-it-works-images{
-      .iphone-1, .iphone-2 {
-        display: none;
+    #how-it-works{
+   .how-it-works-images{
+      .iphone-1, .iphone-2, .iphone-3, .iphone-tablet-1, .iphone-tablet-3 {
+        display: none !important;
       }
+
+    main .iphone-tablet-2{
+      display: flex !important;
+    }
 
       img{
          max-width: 100% !important;
@@ -769,6 +831,30 @@ main{
          min-width: 50% !important;
        }
     }
+
+    .how-it-works-subtitle{
+      display: none !important;
+    }
+
+    .how-it-works-text{
+      display: none !important;
+    }
+
+    .how-it-works-subtitle-mobile{
+      display: flex !important;
+      font-size: map-get($heading-h4, font-size) !important;
+      font-weight: map-get($heading-h4, font-weight) !important;
+    }
+
+    .how-it-works-subtitle-tablet{
+      display: none !important;
+    }
+    
+    .how-it-works-text-mobile{
+      display: flex !important;
+      color: map-get($m-text, color) !important;
+    }
   }
+}
 }
     }

@@ -331,12 +331,16 @@ main #how-it-works .how-it-works-container {
   gap: 1.5rem;
   width: 100%;
   max-width: 75%;
+  flex-wrap: nowrap;
 }
 main #how-it-works .how-it-works-container .how-it-works-images {
   display: flex;
   align-items: center;
   gap: 7.5rem;
   justify-content: center;
+}
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1, main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2, main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
+  display: none;
 }
 main #how-it-works .how-it-works-container .how-it-works-images img {
   width: 31.25rem;
@@ -354,6 +358,15 @@ main #how-it-works .how-it-works-container .how-it-works-subtitle {
 }
 main #how-it-works .how-it-works-container .how-it-works-text {
   color: #565973;
+}
+main #how-it-works .how-it-works-container .how-it-works-subtitle-mobile {
+  display: none;
+}
+main #how-it-works .how-it-works-container .how-it-works-subtitle-tablet {
+  display: none;
+}
+main #how-it-works .how-it-works-container .how-it-works-text-mobile {
+  display: none;
 }
 
 @media (max-width: 911px) {
@@ -526,6 +539,38 @@ main #how-it-works .how-it-works-container .how-it-works-text {
   main .features-grid .feature .feature-title, main .features-grid .feature .feature-text {
     text-align: left !important;
   }
+  main .how-it-works-images {
+    gap: 0 !important;
+  }
+  main .how-it-works-images .iphone-1, main .how-it-works-images .iphone-2, main .how-it-works-images .iphone-3 {
+    display: none !important;
+  }
+  main .how-it-works-images .iphone-tablet-1, main .how-it-works-images .iphone-tablet-2, main .how-it-works-images .iphone-tablet-3 {
+    display: flex !important;
+  }
+  main .how-it-works-images img {
+    width: 31.25rem;
+    height: auto;
+    min-width: 45% !important;
+  }
+  main .how-it-works-subtitle {
+    display: none !important;
+  }
+  main .how-it-works-text {
+    display: none !important;
+  }
+  main .how-it-works-subtitle-mobile {
+    display: none !important;
+  }
+  main .how-it-works-subtitle-tablet {
+    display: flex !important;
+    font-size: 1.75rem !important;
+    font-weight: 800 !important;
+  }
+  main .how-it-works-text-mobile {
+    display: flex !important;
+    color: #565973 !important;
+  }
 }
 @media (max-width: 768px) and (max-width: 480px) {
   nav {
@@ -656,6 +701,9 @@ main #how-it-works .how-it-works-container .how-it-works-text {
     background-position: center;
     border-radius: 8px;
   }
+  main {
+    margin-top: 0;
+  }
   main #brands {
     display: none;
   }
@@ -668,10 +716,9 @@ main #how-it-works .how-it-works-container .how-it-works-text {
     max-width: fit-content !important;
     justify-content: center !important;
     flex-direction: column;
-    padding: 4.375rem !important;
+    padding: 0.9375rem !important;
   }
   main #app-features .features-grid {
-    display: grid;
     grid-template-columns: 1fr !important;
   }
   main #app-features .features-title {
@@ -680,12 +727,33 @@ main #how-it-works .how-it-works-container .how-it-works-text {
   main #app-features .feature-title, main #app-features .feature-text {
     text-align: left !important;
   }
-  main .how-it-works-images .iphone-1, main .how-it-works-images .iphone-2 {
-    display: none;
+  main #how-it-works .how-it-works-images .iphone-1, main #how-it-works .how-it-works-images .iphone-2, main #how-it-works .how-it-works-images .iphone-3, main #how-it-works .how-it-works-images .iphone-tablet-1, main #how-it-works .how-it-works-images .iphone-tablet-3 {
+    display: none !important;
   }
-  main .how-it-works-images img {
+  main #how-it-works .how-it-works-images main .iphone-tablet-2 {
+    display: flex !important;
+  }
+  main #how-it-works .how-it-works-images img {
     max-width: 100% !important;
     height: auto;
     min-width: 50% !important;
+  }
+  main #how-it-works .how-it-works-subtitle {
+    display: none !important;
+  }
+  main #how-it-works .how-it-works-text {
+    display: none !important;
+  }
+  main #how-it-works .how-it-works-subtitle-mobile {
+    display: flex !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+  }
+  main #how-it-works .how-it-works-subtitle-tablet {
+    display: none !important;
+  }
+  main #how-it-works .how-it-works-text-mobile {
+    display: flex !important;
+    color: #565973 !important;
   }
 }/*# sourceMappingURL=styles.css.map */
