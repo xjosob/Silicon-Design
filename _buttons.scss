@@ -26,12 +26,13 @@ $button-l: (
 
  // Button type
  $button-with-icon: map-merge($button-s,(
-    font-size: .875rem,
     border-radius: .375rem,
     padding: .5625rem 1.25rem,
     display: flex,
     align-items: center,
     justify-content: center,
+    width: auto,
+    height: auto,
     gap: .5rem
  ));
 
