@@ -502,7 +502,6 @@ main{
         padding-bottom: 1.5625rem;
       }
     }
-
   }
   }
 
@@ -529,6 +528,35 @@ main{
       }
   }
  }
+
+ #testimonials{
+  display: flex;
+  justify-content: center;
+  background-color: $background-light;
+  .testimonials-container{
+    display: flex;
+    justify-content: space-between;
+    padding: .9375rem;
+    width: 80%;
+    .clients-loving{
+      @each $property, $value in $heading-h1{
+        #{$property}: $value;
+      }
+
+      width: 20%;
+    }
+
+    .testimonial-images{
+      display: flex;
+      gap: .9375rem;
+      img{
+        max-width: 60%;
+    height: auto;
+    min-width: 20%;
+      }
+    }
+  }
+}
 }
 
 @media(max-width: 911px){
@@ -787,6 +815,9 @@ flex-direction: column;
     display: none;
   }
 
+  #testimonials{
+    display: none;
+  }
 }
 
 
@@ -958,6 +989,10 @@ main{
   }
 
   #app-features-2{
+    display: none;
+  }
+
+  #testimonials{
     display: none;
   }
 }

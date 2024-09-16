@@ -461,6 +461,32 @@ main .app-features-2-container .money-transfer-text-container .check-icon {
   background-color: #6366F1;
   border-radius: 50%;
 }
+main #testimonials {
+  display: flex;
+  justify-content: center;
+  background-color: #F3F6FF;
+}
+main #testimonials .testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9375rem;
+  width: 80%;
+}
+main #testimonials .testimonials-container .clients-loving {
+  color: #0B0F19;
+  font-size: 2.5rem;
+  font-weight: 800;
+  width: 20%;
+}
+main #testimonials .testimonials-container .testimonial-images {
+  display: flex;
+  gap: 0.9375rem;
+}
+main #testimonials .testimonials-container .testimonial-images img {
+  max-width: 60%;
+  height: auto;
+  min-width: 20%;
+}
 
 @media (max-width: 911px) {
   header .discover-more-container {
@@ -667,6 +693,9 @@ main .app-features-2-container .money-transfer-text-container .check-icon {
   main #app-features-2 {
     display: none;
   }
+  main #testimonials {
+    display: none;
+  }
 }
 @media (max-width: 768px) and (max-width: 480px) {
   nav {
@@ -853,6 +882,9 @@ main .app-features-2-container .money-transfer-text-container .check-icon {
     color: #565973 !important;
   }
   main #app-features-2 {
+    display: none;
+  }
+  main #testimonials {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
