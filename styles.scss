@@ -534,7 +534,7 @@ main{
   justify-content: center;
   background-color: $background-light;
   box-sizing: border-box;
-  
+
   .testimonials-container{
     display: flex;
     justify-content: space-between;
@@ -572,6 +572,7 @@ box-sizing: border-box;
     #{$property}: $value;
   }
   margin-bottom: 1rem;
+  width: 60%;
 }
 
 .faq-subtitle{
@@ -579,6 +580,7 @@ box-sizing: border-box;
     #{$property}: $value;
   }
   margin-bottom: 2rem;
+  width: 75%;
 }
 
 .faq-contact-container{
@@ -586,6 +588,7 @@ box-sizing: border-box;
   gap: 1rem;
   margin-bottom: 2rem;
   flex-direction: column;
+
 
     .contact-image-box{
       display: flex;
@@ -614,6 +617,23 @@ box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    .faq-chevron{
+      @each $property, $value in $carousel-button{
+        #{$property}: $value;
+        display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+  justify-content: center;
+  box-shadow: none;
+  background-color: $background-light;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5em;
+    }
+  }
+
+
   }
   .faq-question-expanded{
     display: flex;
@@ -627,6 +647,25 @@ box-sizing: border-box;
       display: flex;
       justify-content: space-between;
     }
+    .faq-answer{
+      @each $property, $value in $s-text{
+        #{$property}: $value;
+      }
+    }
+    .faq-chevron{
+      @each $property, $value in $carousel-button{
+        #{$property}: $value;
+        display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  transform: rotate(270deg);
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5em;
+    }
+  }
   }
 }
 }
