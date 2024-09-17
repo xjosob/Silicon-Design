@@ -617,6 +617,9 @@ box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    .faq-question-title{
+      color: $navigation;
+    }
     .faq-chevron{
       @each $property, $value in $carousel-button{
         #{$property}: $value;
@@ -646,6 +649,9 @@ box-sizing: border-box;
     .faq-question-title-container{
       display: flex;
       justify-content: space-between;
+      .faq-question-title{
+        color: $navigation;
+      }
     }
     .faq-answer{
       @each $property, $value in $s-text{
@@ -664,6 +670,7 @@ box-sizing: border-box;
   width: 36px;
   height: 36px;
   font-size: 1.5em;
+  color: white;
     }
   }
   }
@@ -671,6 +678,11 @@ box-sizing: border-box;
 
 .faq-contact-container-tablet,
 .faq-questions-container-tablet{
+  display: none;
+}
+
+.faq-contact-container-mobile,
+.faq-questions-container-mobile{
   display: none;
 }
 }
@@ -936,22 +948,122 @@ flex-direction: column;
   }
 
 #faq-section{
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
   .faq-contact-container,
 .faq-questions-container{
   display: none;
 }
+  .faq-contact-container-mobile,
+.faq-questions-container-mobile{
+  display: none;
+}
+
+.faq-title-tablet{
+  text-align: center;
+  @each $property, $value in $heading-h2{
+    #{$property}: $value;
+  }
+  margin-bottom: 1rem;
+}
+
+.faq-subtitle-tablet{
+  text-align: center;
+  @each $property, $value in $l-text{
+    #{$property}: $value;
+  }
+  margin-bottom: 2rem;
+}
 
 .faq-contact-container-tablet{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 .faq-questions-container-tablet{
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   .contact-image-box-tablet{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    img{
+      max-width: 60%;
+      height: auto;
+      min-width: 20%;
+    }
+  }
+  .faq-question-tablet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    .faq-question-title-tablet{
+      @each $property, $value in $navigation-text{
+        #{$property}: $value;
+      }
+    }
+    .faq-chevron-tablet{
+      @each $property, $value in $carousel-button{
+        #{$property}: $value;
+        display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+  justify-content: center;
+  box-shadow: none;
+  background-color: $background-light;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5em;
+    }
+  }
+  }
+  .faq-question-expanded-tablet{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    .faq-question-title-container-tablet{
+      display: flex;
+      justify-content: space-between;
+      .faq-question-title-tablet{
+        @each $property, $value in $navigation-text{
+          #{$property}: $value;
+        }
+      }
+    }
+    
+    .faq-answer-tablet{
+      @each $property, $value in $s-text{
+        #{$property}: $value;
+      }
+    }
+    .faq-chevron-tablet{
+      @each $property, $value in $carousel-button{
+        #{$property}: $value;
+        display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  transform: rotate(270deg);
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5em;
+  color: white;
+    }
+  }
   }
 }
 
@@ -1133,6 +1245,121 @@ main{
   #testimonials{
     display: none;
   }
+
+#faq-section{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  .faq-contact-container-tablet,
+  .faq-questions-container-tablet{
+    display: none; 
+  }
+  .faq-contact-container-mobile,
+.faq-questions-container-mobile{
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-title-mobile{
+  text-align: center;
+  @each $property, $value in $heading-h2{
+    #{$property}: $value;
+  }
+  margin-bottom: 1rem;
+}
+
+.faq-subtitle-mobile{
+  text-align: center;
+  @each $property, $value in $l-text{
+    #{$property}: $value;
+  }
+  margin-bottom: 2rem;
+}
+
+.faq-contact-container-mobile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.faq-questions-container-mobile{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-question-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+  .faq-question-title-mobile{
+    @each $property, $value in $navigation-text{
+      #{$property}: $value;
+    }
+  }
+}
+.faq-chevron-mobile{
+  @each $property, $value in $carousel-button{
+    #{$property}: $value;
+    display: flex;
+align-items: center;
+transform: rotate(90deg);
+justify-content: center;
+box-shadow: none;
+background-color: $background-light;
+flex-shrink: 0;
+width: 36px;
+height: 36px;
+font-size: 1.5em;
+}
+}
+.faq-question-expanded-mobile{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+  .faq-question-title-container-mobile{
+    display: flex;
+    justify-content: space-between;
+    .faq-question-title-mobile{
+      @each $property, $value in $navigation-text{
+        #{$property}: $value;
+      }
+    }
+    
+}
+.faq-chevron-mobile{
+  @each $property, $value in $carousel-button{
+    #{$property}: $value;
+    display: flex;
+align-items: center;
+justify-content: center;
+background-color: $primary;
+transform: rotate(270deg);
+flex-shrink: 0;
+width: 36px;
+height: 36px;
+font-size: 1.5em;
+color: white;
 }
 }
     }
+    .faq-answer-mobile{
+      @each $property, $value in $s-text{
+        #{$property}: $value;
+      }
+    }
+    
+  }
+}
+}
+}
