@@ -1,1365 +1,1373 @@
-@import 'elements';
-@import 'buttons';
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-@import 'typography';
+@import "elements";
+@import "buttons";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "typography";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Manrope';
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
 }
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  height: 4.75rem;
+  padding: 0 2rem;
+
+  ul {
+    list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-    height: 4.75rem;
-    padding: 0 2rem;
-
-    ul{
-      list-style: none;
-      display: flex;
-      align-items: center;
-      padding: 0;
+    padding: 0;
   }
 
+  .logo {
+    margin-left: 5rem;
+  }
 
-    .logo{
-        margin-left: 5rem
-    }
+  .theme-text {
+    color: $body-text;
+    font-size: map-get($navigation-text, font-size);
+    font-weight: map-get($navigation-text, font-weight);
+    margin-right: 1rem;
+  }
 
-    .theme-text{
-      color: $body-text;
-      font-size: map-get($navigation-text, font-size);
-      font-weight: map-get($navigation-text, font-weight);
-      margin-right: 1rem;
-    }
+  .features-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    list-style: none;
+  }
 
+  .features {
+    color: map-get($navigation-text, color);
+    font-size: map-get($navigation-text, font-size);
+    font-weight: map-get($navigation-text, font-weight);
+    margin-left: 3rem;
+  }
 
-    .features-container{
-      display: flex;
-      align-items: center;
-      flex-grow: 1;
-      list-style: none;
-    }
+  .sign-in-button {
+    margin-right: 5rem;
 
-    .features{
-
-        color: map-get($navigation-text, color);
-        font-size: map-get($navigation-text, font-size);
-        font-weight: map-get($navigation-text, font-weight);
-        margin-left: 3rem;
-
-    }
-
-    .sign-in-button{
-      margin-right: 5rem;
-
-      .sign-in{
-      @each $property, $value in $button-with-icon{
+    .sign-in {
+      @each $property, $value in $button-with-icon {
         #{$property}: $value;
       }
 
-      .icon{
-        @each $property, $value in $icon-style{
+      .icon {
+        @each $property, $value in $icon-style {
           #{$property}: $value;
         }
       }
     }
   }
 
-    .toggle-container{
-      margin-right: 2rem;
-    }
+  .toggle-container {
+    margin-right: 2rem;
+  }
 
-    .hamburger{
-      display: none;
-        width: 1.875rem;
-        height: 2.25rem;
-        background-image: url("/buttons/Hamburger.svg");
-        margin-right: 1rem;
-        
-    }
+  .hamburger {
+    display: none;
+    width: 1.875rem;
+    height: 2.25rem;
+    background-image: url("/buttons/Hamburger.svg");
+    margin-right: 1rem;
+  }
 
-    // Switch button from W3Schools
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 46px;
-        height: 26px;
-      }
-      
+  // Switch button from W3Schools
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+  }
 
-      .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: $muted-text;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-      
-      .slider:before {
-        position: absolute;
-        content: "";
-        height: 18px;
-        width: 18px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-      }
-      
-      input:checked + .slider {
-        background-color: $primary;
-      }
-      
-      input:focus + .slider {
-        box-shadow: 0 0 1px $primary;
-      }
-      
-      input:checked + .slider:before {
-        -webkit-transform: translateX(20px);
-        -ms-transform: translateX(20px);
-        transform: translateX(20px);
-      }
-      
-      .slider.round {
-        border-radius: 34px;
-      }
-      
-      .slider.round:before {
-        border-radius: 50%;
-      }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $muted-text;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: $primary;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px $primary;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
 }
 
-header{
+header {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1)0%, rgba(240, 200, 212, 0.05)42%, rgba(160, 108, 156, 0.07) 83%);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 200, 212, 0.05) 42%,
+    rgba(160, 108, 156, 0.07) 83%
+  );
 
-  .mobile-buttons-wrapper{
+  .mobile-buttons-wrapper {
     display: none;
   }
 
-  .header-content{
+  .header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
     margin: 0 auto;
   }
-.header-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-  margin: auto;
-  width: 35.125rem;
-  max-width: 100%;
-  
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin: auto;
+    width: 35.125rem;
+    max-width: 100%;
 
-  .header-title{
-    font-size: map-get($display-4, font-size);
-    font-weight: map-get($display-4 , font-weight);
-    text-align: center;
+    .header-title {
+      font-size: map-get($display-4, font-size);
+      font-weight: map-get($display-4, font-weight);
+      text-align: center;
+    }
+
+    .header-subtitle {
+      font-size: map-get($l-text, font-size);
+      font-weight: map-get($l-text, font-weight);
+      color: map-get($l-text, color);
+    }
+
+    .market-buttons-container {
+      display: flex;
+      justify-content: center;
+      margin-right: 3.4375rem;
+      gap: 24px;
+      height: 3.625rem;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+
+    .button-app-store {
+      flex-shrink: 0;
+      @each $property, $value in $button-app-store {
+        #{$property}: $value;
+      }
+    }
+
+    .button-google-play {
+      flex-shrink: 0;
+      @each $property, $value in $button-google-play {
+        #{$property}: $value;
+      }
+    }
   }
 
-  .header-subtitle{
-    font-size: map-get($l-text, font-size);
-    font-weight: map-get($l-text, font-weight);
-    color: map-get($l-text, color);
+  .header-phones {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    justify-content: flex-end;
+    max-width: 50%;
+    min-width: 20%;
+    padding-top: 7rem;
+    box-sizing: border-box;
+    margin-bottom: -8.375rem;
+    transform: translatex(-12%);
   }
 
-.market-buttons-container{
-  display: flex;
-  justify-content:center;
-  margin-right: 3.4375rem;
-  gap: 24px;
-  height: 3.625rem;
-  width: 100%;
-  flex-wrap: nowrap;
-}
-
-
-.button-app-store{
-  flex-shrink: 0;
-  @each $property, $value in $button-app-store{
-    #{$property}: $value;
-  }
-}
-
-.button-google-play{
-  flex-shrink: 0;
-  @each $property, $value in $button-google-play{
-    #{$property}: $value;
-  }
-}
-}
-
-.header-phones{
-  display: flex;
-  align-items: flex-end;
-  flex-grow: 1;
-  justify-content: flex-end;
-  max-width: 50%;
-  min-width: 20%;
-  padding-top: 7rem;
-  box-sizing: border-box;
-  margin-bottom: -8.375rem;
-  transform: translatex(-12%);
-}
-
-
-.header-phones img{
-  max-width: 100%;
-  height: auto;
-}
-
-.discover-more-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 18.125rem;
-  gap: 1rem;
-  margin-top: 2rem;
-  width: 50%;
-  box-sizing: border-box;
-  margin-bottom: 3.75rem;
-
-  .material-icons{
-    transform: rotate(90deg);
-  }
-}
-
-.discover-more-button{
-  @each $property, $value in $carousel-button{
-    #{$property}: $value;
-  }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  
-}
-
-
-.discover-more-text{
-  font-size: map-get($s-text, font-size);
-  font-weight: map-get($s-text, font-weight);
-  color: map-get($s-text, color);
-}
-}
-
-main{
-  box-sizing: border-box;
-  margin-top: 2rem;
-
-  img{
+  .header-phones img {
     max-width: 100%;
     height: auto;
   }
-#brands{
-  .brands-container{
-    padding-left: .625rem;
-    padding-right: .625rem;
-    padding-top: 0;
-    gap: 1rem;
+
+  .discover-more-container {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+    padding-right: 18.125rem;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 3.75rem;
+
+    .material-icons {
+      transform: rotate(90deg);
+    }
   }
 
-  .brand-box{
-    border: 1px solid $divider-border;
-    border-radius: 8px;
-    height: 6.25rem;
-    width: 12.5rem;
+  .discover-more-button {
+    @each $property, $value in $carousel-button {
+      #{$property}: $value;
+    }
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .discover-more-text {
+    font-size: map-get($s-text, font-size);
+    font-weight: map-get($s-text, font-weight);
+    color: map-get($s-text, color);
   }
 }
 
-#app-features{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  padding: 4rem 2rem;
+main {
+  box-sizing: border-box;
+  margin-top: 2rem;
 
-
-  img{
-    max-width: 60%;
+  img {
+    max-width: 100%;
     height: auto;
-    min-width: 20%;
   }
-
-  .phone-visa{
-    height: 50rem;
-  }
-
-  
-
-  .features-content{
-    max-width: 55%;
-  }
-
-  .features-title{
-    font-size: map-get($display-4, font-size);
-    font-weight: map-get($display-4, font-weight);
-    color: map-get($heading-h2, color);
-    margin-bottom: 1rem;
-  }
-
-  .features-subtitle{
-    font-size: map-get($l-text, font-size);
-    font-weight: map-get($l-text, font-weight);
-    color: $muted-text;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    max-width: 40rem;
-  }
-
-  .features-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 3rem;
-
-    .feature{
+  #brands {
+    .brands-container {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      padding-top: 0;
+      gap: 1rem;
       display: flex;
-      align-items: flex-start;
+      justify-content: space-evenly;
       align-items: center;
-      
+    }
 
-      .feature-icon{
-        border-radius: .75rem;
+    .brand-box {
+      border: 1px solid $divider-border;
+      border-radius: 8px;
+      height: 6.25rem;
+      width: 12.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
-        img{
-          width: 12.5rem;
-          height: 12.5rem;
+  #app-features {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+
+    img {
+      max-width: 60%;
+      height: auto;
+      min-width: 20%;
+    }
+
+    .phone-visa {
+      height: 50rem;
+    }
+
+    .features-content {
+      max-width: 55%;
+    }
+
+    .features-title {
+      font-size: map-get($display-4, font-size);
+      font-weight: map-get($display-4, font-weight);
+      color: map-get($heading-h2, color);
+      margin-bottom: 1rem;
+    }
+
+    .features-subtitle {
+      font-size: map-get($l-text, font-size);
+      font-weight: map-get($l-text, font-weight);
+      color: $muted-text;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      max-width: 40rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 3rem;
+
+      .feature {
+        display: flex;
+        align-items: flex-start;
+        align-items: center;
+
+        .feature-icon {
+          border-radius: 0.75rem;
+
+          img {
+            width: 12.5rem;
+            height: 12.5rem;
+          }
         }
-      }
 
-      .feature-text{
-        font-size: map-get($m-text, font-size);
+        .feature-text {
+          font-size: map-get($m-text, font-size);
           font-weight: map-get($m-text, font-weight);
           color: $body-text;
-        .feature-title{
-          font-size: map-get($heading-h5, font-size);
-          font-weight: map-get($heading-h5, font-weight);
-          color: $heading-dark;
-          line-height: 1.5;
+          .feature-title {
+            font-size: map-get($heading-h5, font-size);
+            font-weight: map-get($heading-h5, font-weight);
+            color: $heading-dark;
+            line-height: 1.5;
+          }
         }
       }
     }
   }
-}
 
-#how-it-works{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $background-light;
-  padding: 4rem 2rem;
-  text-align: center;
-
-  .how-it-works-container{
+  #how-it-works {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 75%;
-    flex-wrap: nowrap;
+    background-color: $background-light;
+    padding: 4rem 2rem;
+    text-align: center;
 
-    .how-it-works-images{
+    .how-it-works-container {
       display: flex;
-      align-items: center;
-      gap: 7.5rem;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 75%;
+      flex-wrap: nowrap;
 
-      .iphone-tablet-1, .iphone-tablet-2, .iphone-tablet-3{
+      .how-it-works-images {
+        display: flex;
+        align-items: center;
+        gap: 7.5rem;
+        justify-content: center;
+
+        .iphone-tablet-1,
+        .iphone-tablet-2,
+        .iphone-tablet-3 {
+          display: none;
+        }
+
+        img {
+          width: 31.25rem;
+          max-width: 60%;
+          height: auto;
+          min-width: 20%;
+        }
+      }
+
+      .how-it-works-title {
+        font-size: map-get($heading-h1, font-size);
+        font-weight: map-get($heading-h1, font-weight);
+      }
+
+      .how-it-works-subtitle {
+        font-size: map-get($heading-h4, font-size);
+        font-weight: map-get($heading-h4, font-weight);
+      }
+
+      .how-it-works-text {
+        color: map-get($m-text, color);
+      }
+
+      .how-it-works-subtitle-mobile {
         display: none;
       }
 
-      img{
-   width: 31.25rem;
-    max-width: 60%;
-    height: auto;
-    min-width: 20%;
+      .how-it-works-subtitle-tablet {
+        display: none;
+      }
+
+      .how-it-works-text-mobile {
+        display: none;
+      }
+    }
   }
-    }
 
-    .how-it-works-title{
-      font-size: map-get($heading-h1, font-size);
-      font-weight: map-get($heading-h1, font-weight);
-    }
-
-    .how-it-works-subtitle{
-      font-size: map-get($heading-h4, font-size);
-      font-weight: map-get($heading-h4, font-weight);
-    }
-
-    .how-it-works-text{
-      color: map-get($m-text, color);
-
-    }
-
-    .how-it-works-subtitle-mobile{
-      display: none;
-    }
-
-    .how-it-works-subtitle-tablet{
-      display: none;
-    }
-
-    .how-it-works-text-mobile{
-      display: none;
-    }
-  } 
- }
-
- //#how-it-works, .receive-money-container {
+  //#how-it-works, .receive-money-container {
   //width: 100%;
-  //max-width: 75rem; 
-  //margin: 0 auto;  
-//}
+  //max-width: 75rem;
+  //margin: 0 auto;
+  //}
 
- .app-features-2-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  padding: .625rem;
-
-  .money-transfer-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .money-transfer-text-container{
+  .app-features-2-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: .75rem;
-
-    .learn-more-button-right{
-      @each $property, $value in $button-with-icon{
-        #{$property}: $value;
-      }
-      margin-top: 1.25rem;
-    }
-  }
-  .receive-money-container{
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1rem;
-    
-    
+    align-items: center;
+    padding: 0.625rem;
 
-    .receive-money-button-right{
-      @each $property, $value in $button-with-icon{
-        #{$property}: $value;
-      }
-      margin-top: 1.25rem;
+    .money-transfer-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    
-
-    .receive-money-text-container{
+    .money-transfer-text-container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: flex-start;
-      gap: 2rem;
-      width: 27%;
+      gap: 0.75rem;
 
-      
-    .receive-money-icons{
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 3.125rem;
-      img{
-        gap: 50px;
-        padding-bottom: 1.5625rem;
+      .learn-more-button-right {
+        @each $property, $value in $button-with-icon {
+          #{$property}: $value;
+        }
+        margin-top: 1.25rem;
       }
     }
-  }
-  }
-
-
-
-  .money-transfer-text-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .75rem;
-
-    p{
+    .receive-money-container {
       display: flex;
       align-items: center;
-      gap: .5625rem;
+      justify-content: center;
+      gap: 1rem;
+
+      .receive-money-button-right {
+        @each $property, $value in $button-with-icon {
+          #{$property}: $value;
+        }
+        margin-top: 1.25rem;
+      }
+
+      .receive-money-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 27%;
+
+        .receive-money-icons {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 3.125rem;
+          img {
+            gap: 50px;
+            padding-bottom: 1.5625rem;
+          }
+        }
+      }
     }
 
+    .money-transfer-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
 
-      .check-icon{
+      p {
+        display: flex;
+        align-items: center;
+        gap: 0.5625rem;
+      }
+
+      .check-icon {
         font-size: 1.25rem;
-       color: white;
-       background-color: $primary;
-       border-radius: 50%;
+        color: white;
+        background-color: $primary;
+        border-radius: 50%;
       }
+    }
   }
- }
 
- #testimonials{
-  display: flex;
-  justify-content: center;
-  background-color: $background-light;
-  box-sizing: border-box;
-
-  .testimonials-container{
+  #testimonials {
     display: flex;
-    justify-content: space-between;
-    padding: .9375rem;
-    width: 80%;
-    .clients-loving{
-      @each $property, $value in $heading-h1{
-        #{$property}: $value;
-      }
+    justify-content: center;
+    background-color: $background-light;
+    box-sizing: border-box;
 
-      width: 20%;
-    }
-
-    .testimonial-images{
+    .testimonials-container {
       display: flex;
-      gap: .9375rem;
-      img{
-        max-width: 60%;
-    height: auto;
-    min-width: 20%;
+      justify-content: space-between;
+      padding: 0.9375rem;
+      width: 80%;
+      .clients-loving {
+        @each $property, $value in $heading-h1 {
+          #{$property}: $value;
+        }
+
+        width: 20%;
+      }
+
+      .testimonial-images {
+        display: flex;
+        gap: 0.9375rem;
+        img {
+          max-width: 60%;
+          height: auto;
+          min-width: 20%;
+        }
       }
     }
   }
-}
 
-#faq-section{
-  padding: 5rem;
-  display: flex;
-justify-content: space-around;
-box-sizing: border-box;
-}
-
-.faq-title{
-  @each $property, $value in $heading-h2{
-    #{$property}: $value;
+  #faq-section {
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
   }
-  margin-bottom: 1rem;
-  width: 60%;
-}
 
-.faq-subtitle{
-  @each $property, $value in $l-text{
-    #{$property}: $value;
+  .faq-title {
+    @each $property, $value in $heading-h2 {
+      #{$property}: $value;
+    }
+    margin-bottom: 1rem;
+    width: 60%;
   }
-  margin-bottom: 2rem;
-  width: 75%;
-}
 
-.faq-contact-container{
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  flex-direction: column;
+  .faq-subtitle {
+    @each $property, $value in $l-text {
+      #{$property}: $value;
+    }
+    margin-bottom: 2rem;
+    width: 75%;
+  }
 
+  .faq-contact-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
 
-    .contact-image-box{
+    .contact-image-box {
       display: flex;
       gap: 1rem;
 
-      img{
+      img {
         max-width: 60%;
         height: auto;
         min-width: 20%;
       }
     }
-
-}
-
-.faq-questions-container{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 43%;
-  justify-content: center;
-
-  .faq-question{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-    .faq-question-title{
-      color: $navigation;
-    }
-    .faq-chevron{
-      @each $property, $value in $carousel-button{
-        #{$property}: $value;
-        display: flex;
-  align-items: center;
-  transform: rotate(90deg);
-  justify-content: center;
-  box-shadow: none;
-  background-color: $background-light;
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5em;
-    }
   }
 
-
-  }
-  .faq-question-expanded{
+  .faq-questions-container {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-    .faq-question-title-container{
+    width: 43%;
+    justify-content: center;
+
+    .faq-question {
       display: flex;
       justify-content: space-between;
-      .faq-question-title{
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
+        0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+      .faq-question-title {
         color: $navigation;
       }
-    }
-    .faq-answer{
-      @each $property, $value in $s-text{
-        #{$property}: $value;
-      }
-    }
-    .faq-chevron{
-      @each $property, $value in $carousel-button{
-        #{$property}: $value;
-        display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $primary;
-  transform: rotate(270deg);
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5em;
-  color: white;
-    }
-  }
-  }
-}
-
-.faq-contact-container-tablet,
-.faq-questions-container-tablet{
-  display: none;
-}
-
-.faq-contact-container-mobile,
-.faq-questions-container-mobile{
-  display: none;
-}
-}
-
-@media(max-width: 911px){
-  header{
-  .discover-more-container{
-    padding-right: 0;
-    justify-content: flex-start;
-  }
-}
-}
-
-
-    @media (max-width: 768px) {
-        nav{
-            margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
-            height: 3.25rem;
-            justify-content: flex-end;
-            padding: 0;
-            margin-bottom: 3.125rem;
-
-            .logo{
-              margin-left: 1rem;
-            }
-
-            .features{
-              display: none;
-          }
-
-          .hamburger{
-            display: block;
-            margin-left: 1.875rem;
-            margin-right: 1rem;
-        }
-
-        .theme-text{
-          color: #131022
-        }
-
-        .toggle-container{
-          display: inline-block;
-          margin-left: auto;
-        }
-
-        .sign-in-button{
-          display: none;
-        }
-
-        }
-
-      header{
-        box-sizing:border-box;
-
-        .header-content{
+      .faq-chevron {
+        @each $property, $value in $carousel-button {
+          #{$property}: $value;
           display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          width: 100%;
-          margin: 0 auto;
+          align-items: center;
+          transform: rotate(90deg);
+          justify-content: center;
+          box-shadow: none;
+          background-color: $background-light;
+          flex-shrink: 0;
+          width: 36px;
+          height: 36px;
+          font-size: 1.5em;
         }
-        
-      .header-container{
-        width: 16.875rem; 
-      }
-
-      .header-title{
-        transform: translateX(55%);
-        width: 18.75rem;
-        font-size: 2.125rem !important;
-        
-        
-      }
-
-      .header-subtitle{
-        padding-top: 50px;
-        font-size: map-get($m-text, font-size) !important;
-        font-weight: map-get($m-text, font-weight) !important;
-      }
-
-      .market-buttons-container{
-  justify-content: center !important;
-  align-items: center;
-  margin-left: 3.125rem !important;
-  gap: 1rem !important;
-  width: 100% !important;
-  flex-shrink: 1 !important;
-      }
-
-
-.mobile-buttons-wrapper{
-display: none;
-}
-
-.button-google-play{
-  flex-shrink: 1 !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  background-size: 100% 100% !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  min-width: 7.875rem !important;
-  min-height: 2.7437rem !important;
-  background-color: transparent;
-}
-
-.button-app-store{
-  flex-shrink: 1 !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  background-size: 100% 100% !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  min-width: 2.5rem !important;
-  min-height: 2.7437rem !important;
-  background-color: transparent;
-  padding-top: 1.25rem !important;
-}
-
-.discover-more-container{
-  justify-content: flex-start;
-  padding-left: 10px;
-  padding-right: 0;
-}
-
-
-
-      .header-phones{
-  justify-content: flex-end;
-  max-width: 80%;
-  min-width: 45%;
-  transform: none;
-  padding-right: 3.4375rem;
-        
-      }
-}
-
-main{
-  padding: 0 !important;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-#brands{
-  width: 100%;
-  
-  margin-top: 2rem;
-#brand-1, #brand-2{
-  display: none;
-}
-
-.brands-container{
-  padding: .625rem;
-  padding-top: 0;
-  flex-wrap: nowrap;
-  display: flex;
-  justify-content: space-evenly !important;
-  align-items: center !important;
-  gap: 30px;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-}
-
-.brand-box{
-  border: 1px solid $divider-border;
-  border-radius: 8px;
-  height: 5.625rem;
-  width: 9.375rem !important;
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-}
-}
-
-.phone-visa{
-  display: none;
-}
-
-#app-features{
-  display: flex;
-width: 100%;
-max-width: fit-content;
-padding: 2rem;
-text-align: center;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-
-.features-content{
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  flex-direction: column;
-  padding: 0;
-
-  .features-title{
-    font-size: map-get($heading-h3, font-size) !important;
-  }
-}
-}
-
-.features-grid{
-  grid-row-gap: .0063rem !important;
-
-  .feature{
-
-    .feature-title, .feature-text{
-      text-align: left !important;
-    }
-  }
-}
-
-  .how-it-works-images{
-    gap: 0 !important;
-    .iphone-1, .iphone-2, .iphone-3{
-      display: none !important;
-    }
-
-  .iphone-tablet-1, .iphone-tablet-2, .iphone-tablet-3{
-    display: flex !important;
-  }
-
-  img{
-    width: 31.25rem;
-     height: auto;
-     min-width: 45% !important;
-   }
-  }
-
-  .how-it-works-subtitle{
-    display: none !important;
-  }
-
-  .how-it-works-text{
-    display: none !important;
-  }
-
-  .how-it-works-subtitle-mobile{
-    display: none !important;
-  }
-
-  .how-it-works-subtitle-tablet{
-    display: flex !important;
-    font-size: map-get($heading-h3, font-size) !important;
-    font-weight: map-get($heading-h4, font-weight) !important;
-  }
-
-  .how-it-works-text-mobile{
-    display: flex !important;
-    color: map-get($m-text, color) !important;
-  }
-
-  #app-features-2{
-    display: none;
-  }
-
-  #testimonials{
-    display: none;
-  }
-
-#faq-section{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  .faq-contact-container,
-.faq-questions-container{
-  display: none;
-}
-  .faq-contact-container-mobile,
-.faq-questions-container-mobile{
-  display: none;
-}
-
-.faq-title-tablet{
-  text-align: center;
-  @each $property, $value in $heading-h2{
-    #{$property}: $value;
-  }
-  margin-bottom: 1rem;
-}
-
-.faq-subtitle-tablet{
-  text-align: center;
-  @each $property, $value in $l-text{
-    #{$property}: $value;
-  }
-  margin-bottom: 2rem;
-}
-
-.faq-contact-container-tablet{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.faq-questions-container-tablet{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  .contact-image-box-tablet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    img{
-      max-width: 60%;
-      height: auto;
-      min-width: 20%;
-    }
-  }
-  .faq-question-tablet{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-    .faq-question-title-tablet{
-      @each $property, $value in $navigation-text{
-        #{$property}: $value;
       }
     }
-    .faq-chevron-tablet{
-      @each $property, $value in $carousel-button{
-        #{$property}: $value;
-        display: flex;
-  align-items: center;
-  transform: rotate(90deg);
-  justify-content: center;
-  box-shadow: none;
-  background-color: $background-light;
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5em;
-    }
-  }
-  }
-  .faq-question-expanded-tablet{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-    .faq-question-title-container-tablet{
+    .faq-question-expanded {
       display: flex;
       justify-content: space-between;
-      .faq-question-title-tablet{
-        @each $property, $value in $navigation-text{
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
+        0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+      .faq-question-title-container {
+        display: flex;
+        justify-content: space-between;
+        .faq-question-title {
+          color: $navigation;
+        }
+      }
+      .faq-answer {
+        @each $property, $value in $s-text {
           #{$property}: $value;
         }
       }
-    }
-    
-    .faq-answer-tablet{
-      @each $property, $value in $s-text{
-        #{$property}: $value;
+      .faq-chevron {
+        @each $property, $value in $carousel-button {
+          #{$property}: $value;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $primary;
+          transform: rotate(270deg);
+          flex-shrink: 0;
+          width: 36px;
+          height: 36px;
+          font-size: 1.5em;
+          color: white;
+        }
       }
     }
-    .faq-chevron-tablet{
-      @each $property, $value in $carousel-button{
-        #{$property}: $value;
-        display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $primary;
-  transform: rotate(270deg);
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5em;
-  color: white;
-    }
-  }
-  }
-}
-
-}
-}
-
-
-
-    @media (max-width: 480px){
-        nav{
-            margin: .4375rem .225rem 0rem 0rem;
-            height: 3.25rem;
-            padding: 0;
-
-            .theme-text{
-              display: none;
-            }
-
-            .toggle-container{
-              margin-right: 0;
-            }
-
-            .hamburger{
-              margin-left: 1.5rem;
-              padding-right: 1rem;
-              background-repeat: no-repeat;
-            }
-        }
-
-        header{
-          padding: 0%;
-          width: 100%;
-          box-sizing: border-box;
-          
-          
-          .header-phones{
-            display: none;
-          }
-
-          .header-content{
-            padding-left: 0;
-          }
-
-          .header-title{
-            transform: none;
-          }
-
-          .header-subtitle{
-            text-align: center;
-            padding-top: 0;
-          }
-
-          .header-container{
-            padding-left: 0;
-            width: 100%;
-          }
-
-          .market-buttons-container{
-            flex-direction: column;
-          }
-
-          .discover-more-container{
-            justify-content: center;
-            width: 100%;
-          }
-
-          .market-buttons-container{
-            display: none !important;
-                }
-          
-                .mobile-buttons-wrapper{
-                  display: flex;
-                  flex-direction: column;;
-                  align-items: center;
-                  gap: 1rem;
-                }
-
-                .mobile-button-app-store {
-                  @each $property, $value in $mobile-button-app-store {
-                      #{$property}: $value;
-                      width: 22.875rem;
-                      height: 3.125rem;
-                      background-repeat: no-repeat;
-                      background-color: black;
-                    background-position: center;
-                    border-radius: 8px;
-                       
-                      
-                  }
-              }
-
-              .mobile-button-google-play {
-                @each $property, $value in $mobile-button-google-play {
-                    #{$property}: $value;
-                    width: 22.875rem;
-                      height: 3.125rem;
-                    background-repeat: no-repeat;
-                    background-color: black;
-                    background-position: center;
-                    border-radius: 8px;                    
-        }
-    }
   }
 
-main{
-  margin-top: 0;
-  #brands{
+  .faq-contact-container-tablet,
+  .faq-questions-container-tablet {
     display: none;
   }
 
-  #app-features{
-    display: flex;
-  width: 100% !important;
-  text-align: center;
-  align-items: center;
-  max-width: fit-content !important;
-  justify-content: center !important;
-  flex-direction: column;
-  padding: .9375rem !important;
-
-  .features-grid{
-    grid-template-columns: 1fr !important;
+  .faq-contact-container-mobile,
+  .faq-questions-container-mobile {
+    display: none;
   }
 
-  .features-title{
-    font-size: map-get($heading-h3, font-size) !important;
+  .contact-button {
+    display: none;
   }
+}
 
-  .feature-title, .feature-text{
-    text-align: left !important;
+@media (max-width: 911px) {
+  header {
+    .discover-more-container {
+      padding-right: 0;
+      justify-content: flex-start;
+    }
   }
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin: 1.5625rem 1.2125rem 1rem 1.1875rem;
+    height: 3.25rem;
+    justify-content: flex-end;
+    padding: 0;
+    margin-bottom: 3.125rem;
+
+    .logo {
+      margin-left: 1rem;
     }
 
-    #how-it-works{
-   .how-it-works-images{
-      .iphone-1, .iphone-2, .iphone-3, .iphone-tablet-1, .iphone-tablet-3 {
+    .features {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+      margin-left: 1.875rem;
+      margin-right: 1rem;
+    }
+
+    .theme-text {
+      color: #131022;
+    }
+
+    .toggle-container {
+      display: inline-block;
+      margin-left: auto;
+    }
+
+    .sign-in-button {
+      display: none;
+    }
+  }
+
+  header {
+    box-sizing: border-box;
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .header-container {
+      width: 16.875rem;
+    }
+
+    .header-title {
+      transform: translateX(55%);
+      width: 18.75rem;
+      font-size: 2.125rem !important;
+    }
+
+    .header-subtitle {
+      padding-top: 50px;
+      font-size: map-get($m-text, font-size) !important;
+      font-weight: map-get($m-text, font-weight) !important;
+    }
+
+    .market-buttons-container {
+      justify-content: center !important;
+      align-items: center;
+      margin-left: 3.125rem !important;
+      gap: 1rem !important;
+      width: 100% !important;
+      flex-shrink: 1 !important;
+    }
+
+    .mobile-buttons-wrapper {
+      display: none;
+    }
+
+    .button-google-play {
+      flex-shrink: 1 !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      background-size: 100% 100% !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      min-width: 7.875rem !important;
+      min-height: 2.7437rem !important;
+      background-color: transparent;
+    }
+
+    .button-app-store {
+      flex-shrink: 1 !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      background-size: 100% 100% !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      min-width: 2.5rem !important;
+      min-height: 2.7437rem !important;
+      background-color: transparent;
+      padding-top: 1.25rem !important;
+    }
+
+    .discover-more-container {
+      justify-content: flex-start;
+      padding-right: 0;
+    }
+
+    .header-phones {
+      justify-content: flex-end;
+      max-width: 80%;
+      min-width: 45%;
+      transform: none;
+      padding-right: 3.4375rem;
+    }
+  }
+
+  main {
+    padding: 0 !important;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #brands {
+      width: 100%;
+
+      margin-top: 2rem;
+      #brand-1,
+      #brand-2 {
+        display: none;
+      }
+
+      .brands-container {
+        padding: 0.625rem;
+        padding-top: 0;
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        gap: 30px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .brand-box {
+        border: 1px solid $divider-border;
+        border-radius: 8px;
+        height: 5.625rem;
+        width: 9.375rem !important;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+      }
+    }
+
+    .phone-visa {
+      display: none;
+    }
+
+    #app-features {
+      display: flex;
+      width: 100%;
+      max-width: fit-content;
+      padding: 2rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .features-content {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        flex-direction: column;
+        padding: 0;
+
+        .features-title {
+          font-size: map-get($heading-h3, font-size) !important;
+        }
+      }
+    }
+
+    .features-grid {
+      grid-row-gap: 0.0063rem !important;
+
+      .feature {
+        .feature-title,
+        .feature-text {
+          text-align: left !important;
+        }
+      }
+    }
+
+    .how-it-works-images {
+      gap: 0 !important;
+      .iphone-1,
+      .iphone-2,
+      .iphone-3 {
         display: none !important;
       }
 
-    main .iphone-tablet-2{
-      display: flex !important;
+      .iphone-tablet-1,
+      .iphone-tablet-2,
+      .iphone-tablet-3 {
+        display: flex !important;
+      }
+
+      img {
+        width: 31.25rem;
+        height: auto;
+        min-width: 45% !important;
+      }
     }
 
-      img{
-         max-width: 100% !important;
-         height: auto;
-         min-width: 50% !important;
-       }
-    }
-
-    .how-it-works-subtitle{
+    .how-it-works-subtitle {
       display: none !important;
     }
 
-    .how-it-works-text{
+    .how-it-works-text {
       display: none !important;
     }
 
-    .how-it-works-subtitle-mobile{
+    .how-it-works-subtitle-mobile {
+      display: none !important;
+    }
+
+    .how-it-works-subtitle-tablet {
       display: flex !important;
-      font-size: map-get($heading-h4, font-size) !important;
+      font-size: map-get($heading-h3, font-size) !important;
       font-weight: map-get($heading-h4, font-weight) !important;
     }
 
-    .how-it-works-subtitle-tablet{
-      display: none !important;
-    }
-    
-    .how-it-works-text-mobile{
+    .how-it-works-text-mobile {
       display: flex !important;
       color: map-get($m-text, color) !important;
     }
-  }
 
-  #app-features-2{
-    display: none;
-  }
-
-  #testimonials{
-    display: none;
-  }
-
-#faq-section{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-
-  .faq-contact-container-tablet,
-  .faq-questions-container-tablet{
-    display: none; 
-  }
-  .faq-contact-container-mobile,
-.faq-questions-container-mobile{
-  display: flex;
-  flex-direction: column;
-}
-
-.faq-title-mobile{
-  text-align: center;
-  @each $property, $value in $heading-h2{
-    #{$property}: $value;
-  }
-  margin-bottom: 1rem;
-}
-
-.faq-subtitle-mobile{
-  text-align: center;
-  @each $property, $value in $l-text{
-    #{$property}: $value;
-  }
-  margin-bottom: 2rem;
-}
-
-.faq-contact-container-mobile{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.faq-questions-container-mobile{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.faq-question-mobile{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-  .faq-question-title-mobile{
-    @each $property, $value in $navigation-text{
-      #{$property}: $value;
+    #app-features-2 {
+      display: none;
     }
-  }
-}
-.faq-chevron-mobile{
-  @each $property, $value in $carousel-button{
-    #{$property}: $value;
-    display: flex;
-align-items: center;
-transform: rotate(90deg);
-justify-content: center;
-box-shadow: none;
-background-color: $background-light;
-flex-shrink: 0;
-width: 36px;
-height: 36px;
-font-size: 1.5em;
-}
-}
-.faq-question-expanded-mobile{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-  .faq-question-title-container-mobile{
-    display: flex;
-    justify-content: space-between;
-    .faq-question-title-mobile{
-      @each $property, $value in $navigation-text{
-        #{$property}: $value;
+
+    #testimonials {
+      display: none;
+    }
+
+    #faq-section {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      .faq-contact-container,
+      .faq-questions-container {
+        display: none;
+      }
+      .faq-contact-container-mobile,
+      .faq-questions-container-mobile {
+        display: none;
+      }
+
+      .contact-button {
+        display: none;
+      }
+
+      .faq-title-tablet {
+        text-align: center;
+        @each $property, $value in $heading-h2 {
+          #{$property}: $value;
+        }
+        margin-bottom: 1rem;
+      }
+
+      .faq-subtitle-tablet {
+        text-align: center;
+        @each $property, $value in $l-text {
+          #{$property}: $value;
+        }
+        margin-bottom: 2rem;
+      }
+
+      .faq-contact-container-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .faq-questions-container-tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .contact-image-box-tablet {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 16px;
+          img {
+            max-width: 60%;
+            height: auto;
+            min-width: 20%;
+          }
+        }
+        .faq-question-tablet {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
+            0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+          .faq-question-title-tablet {
+            @each $property, $value in $navigation-text {
+              #{$property}: $value;
+            }
+          }
+          .faq-chevron-tablet {
+            @each $property, $value in $carousel-button {
+              #{$property}: $value;
+              display: flex;
+              align-items: center;
+              transform: rotate(90deg);
+              justify-content: center;
+              box-shadow: none;
+              background-color: $background-light;
+              flex-shrink: 0;
+              width: 36px;
+              height: 36px;
+              font-size: 1.5em;
+            }
+          }
+        }
+        .faq-question-expanded-tablet {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
+            0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+          .faq-question-title-container-tablet {
+            display: flex;
+            justify-content: space-between;
+            .faq-question-title-tablet {
+              @each $property, $value in $navigation-text {
+                #{$property}: $value;
+              }
+            }
+          }
+
+          .faq-answer-tablet {
+            @each $property, $value in $s-text {
+              #{$property}: $value;
+            }
+          }
+          .faq-chevron-tablet {
+            @each $property, $value in $carousel-button {
+              #{$property}: $value;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: $primary;
+              transform: rotate(270deg);
+              flex-shrink: 0;
+              width: 36px;
+              height: 36px;
+              font-size: 1.5em;
+              color: white;
+            }
+          }
+        }
       }
     }
-    
-}
-.faq-chevron-mobile{
-  @each $property, $value in $carousel-button{
-    #{$property}: $value;
-    display: flex;
-align-items: center;
-justify-content: center;
-background-color: $primary;
-transform: rotate(270deg);
-flex-shrink: 0;
-width: 36px;
-height: 36px;
-font-size: 1.5em;
-color: white;
-}
-}
-    }
-    .faq-answer-mobile{
-      @each $property, $value in $s-text{
-        #{$property}: $value;
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      margin: 0.4375rem 0.225rem 0rem 0rem;
+      height: 3.25rem;
+      padding: 0;
+
+      .theme-text {
+        display: none;
+      }
+
+      .toggle-container {
+        margin-right: 0;
+      }
+
+      .hamburger {
+        margin-left: 1.5rem;
+        padding-right: 1rem;
+        background-repeat: no-repeat;
       }
     }
-    
+
+    header {
+      padding: 0%;
+      width: 100%;
+      box-sizing: border-box;
+
+      .header-phones {
+        display: none;
+      }
+
+      .header-content {
+        padding-left: 0;
+      }
+
+      .header-title {
+        transform: none;
+      }
+
+      .header-subtitle {
+        text-align: center;
+        padding-top: 0;
+      }
+
+      .header-container {
+        padding-left: 0;
+        width: 100%;
+      }
+
+      .market-buttons-container {
+        flex-direction: column;
+      }
+
+      .discover-more-container {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .market-buttons-container {
+        display: none !important;
+      }
+
+      .mobile-buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .mobile-button-app-store {
+        @each $property, $value in $mobile-button-app-store {
+          #{$property}: $value;
+          width: 22.875rem;
+          height: 3.125rem;
+          background-repeat: no-repeat;
+          background-color: black;
+          background-position: center;
+          border-radius: 8px;
+        }
+      }
+
+      .mobile-button-google-play {
+        @each $property, $value in $mobile-button-google-play {
+          #{$property}: $value;
+          width: 22.875rem;
+          height: 3.125rem;
+          background-repeat: no-repeat;
+          background-color: black;
+          background-position: center;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    main {
+      margin-top: 0;
+      #brands {
+        display: none;
+      }
+
+      #app-features {
+        display: flex;
+        width: 100% !important;
+        text-align: center;
+        align-items: center;
+        max-width: fit-content !important;
+        justify-content: center !important;
+        flex-direction: column;
+        padding: 0.9375rem !important;
+
+        .features-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .features-title {
+          font-size: map-get($heading-h3, font-size) !important;
+        }
+
+        .feature-title,
+        .feature-text {
+          text-align: left !important;
+        }
+      }
+
+      #how-it-works {
+        .how-it-works-images {
+          .iphone-1,
+          .iphone-2,
+          .iphone-3,
+          .iphone-tablet-1,
+          .iphone-tablet-3 {
+            display: none !important;
+          }
+
+          main .iphone-tablet-2 {
+            display: flex !important;
+          }
+
+          img {
+            max-width: 100% !important;
+            height: auto;
+            min-width: 50% !important;
+          }
+        }
+
+        .how-it-works-subtitle {
+          display: none !important;
+        }
+
+        .how-it-works-text {
+          display: none !important;
+        }
+
+        .how-it-works-subtitle-mobile {
+          display: flex !important;
+          font-size: map-get($heading-h4, font-size) !important;
+          font-weight: map-get($heading-h4, font-weight) !important;
+        }
+
+        .how-it-works-subtitle-tablet {
+          display: none !important;
+        }
+
+        .how-it-works-text-mobile {
+          display: flex !important;
+          color: map-get($m-text, color) !important;
+        }
+      }
+
+      #app-features-2 {
+        display: none;
+      }
+
+      #testimonials {
+        display: none;
+      }
+
+      #faq-section {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        hr {
+          background-color: $divider-border;
+          height: 1px;
+          border: 0;
+        }
+
+        .faq-contact-container-tablet,
+        .faq-questions-container-tablet {
+          display: none;
+        }
+        .faq-contact-container-mobile,
+        .faq-questions-container-mobile {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .faq-title-mobile {
+          text-align: center;
+          @each $property, $value in $heading-h2 {
+            #{$property}: $value;
+          }
+          margin-bottom: 1rem;
+        }
+
+        .faq-subtitle-mobile {
+          text-align: center;
+          @each $property, $value in $l-text {
+            #{$property}: $value;
+          }
+          margin-bottom: 2rem;
+        }
+
+        .faq-contact-container-mobile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 2rem;
+        }
+
+        .faq-questions-container-mobile {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $divider-border;
+          border-radius: 8px;
+        }
+
+        .faq-question-mobile {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: none;
+          .faq-question-title-mobile {
+            @each $property, $value in $navigation-text {
+              #{$property}: $value;
+            }
+          }
+        }
+        .faq-chevron-mobile {
+          @each $property, $value in $carousel-button {
+            #{$property}: $value;
+            display: flex;
+            align-items: center;
+            transform: rotate(90deg);
+            justify-content: center;
+            box-shadow: none;
+            background-color: $background-light;
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            font-size: 1.5em;
+          }
+        }
+        .faq-question-expanded-mobile {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1.5rem;
+          border-radius: 8px;
+          box-shadow: none;
+          .faq-question-title-container-mobile {
+            display: flex;
+            justify-content: space-between;
+            .faq-question-title-mobile {
+              @each $property, $value in $navigation-text {
+                #{$property}: $value;
+              }
+            }
+          }
+          .faq-chevron-mobile {
+            @each $property, $value in $carousel-button {
+              #{$property}: $value;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: $primary;
+              transform: rotate(270deg);
+              flex-shrink: 0;
+              width: 36px;
+              height: 36px;
+              font-size: 1.5em;
+              color: white;
+            }
+          }
+        }
+        .faq-answer-mobile {
+          @each $property, $value in $s-text {
+            #{$property}: $value;
+          }
+        }
+        .contact-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          margin-top: 3.75rem;
+          margin-bottom: 2.5rem;
+          width: 10.125rem;
+          height: auto;
+          @each $property, $value in $button-l {
+            #{$property}: $value;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 10.8px 28.438px 16.3px 28.8px;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
   }
-}
-}
 }

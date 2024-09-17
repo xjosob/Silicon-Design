@@ -214,7 +214,7 @@ header .discover-more-container .material-icons {
 }
 header .discover-more-button {
   font-family: "Material Icons";
-  background-color: #2196F3;
+  background-color: #2196f3;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -341,7 +341,9 @@ main #how-it-works .how-it-works-container .how-it-works-images {
   gap: 7.5rem;
   justify-content: center;
 }
-main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1, main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2, main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2,
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
   display: none;
 }
 main #how-it-works .how-it-works-container .how-it-works-images img {
@@ -553,7 +555,7 @@ main .faq-questions-container .faq-question .faq-chevron {
   width: 36px;
   height: 36px;
   font-size: 1.5em;
-  background-color: #2196F3;
+  background-color: #2196f3;
   display: flex;
   align-items: center;
   transform: rotate(90deg);
@@ -664,7 +666,7 @@ main .faq-questions-container .faq-question-expanded .faq-chevron {
   height: 36px;
   font-size: 1.5em;
   color: white;
-  background-color: #2196F3;
+  background-color: #2196f3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -748,6 +750,9 @@ main .faq-questions-container-tablet {
 }
 main .faq-contact-container-mobile,
 main .faq-questions-container-mobile {
+  display: none;
+}
+main .contact-button {
   display: none;
 }
 
@@ -845,7 +850,6 @@ main .faq-questions-container-mobile {
   }
   header .discover-more-container {
     justify-content: flex-start;
-    padding-left: 10px;
     padding-right: 0;
   }
   header .header-phones {
@@ -866,7 +870,8 @@ main .faq-questions-container-mobile {
     width: 100%;
     margin-top: 2rem;
   }
-  main #brands #brand-1, main #brands #brand-2 {
+  main #brands #brand-1,
+  main #brands #brand-2 {
     display: none;
   }
   main #brands .brands-container {
@@ -918,16 +923,21 @@ main .faq-questions-container-mobile {
   main .features-grid {
     grid-row-gap: 0.0063rem !important;
   }
-  main .features-grid .feature .feature-title, main .features-grid .feature .feature-text {
+  main .features-grid .feature .feature-title,
+  main .features-grid .feature .feature-text {
     text-align: left !important;
   }
   main .how-it-works-images {
     gap: 0 !important;
   }
-  main .how-it-works-images .iphone-1, main .how-it-works-images .iphone-2, main .how-it-works-images .iphone-3 {
+  main .how-it-works-images .iphone-1,
+  main .how-it-works-images .iphone-2,
+  main .how-it-works-images .iphone-3 {
     display: none !important;
   }
-  main .how-it-works-images .iphone-tablet-1, main .how-it-works-images .iphone-tablet-2, main .how-it-works-images .iphone-tablet-3 {
+  main .how-it-works-images .iphone-tablet-1,
+  main .how-it-works-images .iphone-tablet-2,
+  main .how-it-works-images .iphone-tablet-3 {
     display: flex !important;
   }
   main .how-it-works-images img {
@@ -971,6 +981,9 @@ main .faq-questions-container-mobile {
   }
   main #faq-section .faq-contact-container-mobile,
   main #faq-section .faq-questions-container-mobile {
+    display: none;
+  }
+  main #faq-section .contact-button {
     display: none;
   }
   main #faq-section .faq-title-tablet {
@@ -1034,7 +1047,7 @@ main .faq-questions-container-mobile {
     width: 36px;
     height: 36px;
     font-size: 1.5em;
-    background-color: #2196F3;
+    background-color: #2196f3;
     display: flex;
     align-items: center;
     transform: rotate(90deg);
@@ -1147,7 +1160,7 @@ main .faq-questions-container-mobile {
     height: 36px;
     font-size: 1.5em;
     color: white;
-    background-color: #2196F3;
+    background-color: #2196f3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1378,10 +1391,15 @@ main .faq-questions-container-mobile {
   main #app-features .features-title {
     font-size: 1.75rem !important;
   }
-  main #app-features .feature-title, main #app-features .feature-text {
+  main #app-features .feature-title,
+  main #app-features .feature-text {
     text-align: left !important;
   }
-  main #how-it-works .how-it-works-images .iphone-1, main #how-it-works .how-it-works-images .iphone-2, main #how-it-works .how-it-works-images .iphone-3, main #how-it-works .how-it-works-images .iphone-tablet-1, main #how-it-works .how-it-works-images .iphone-tablet-3 {
+  main #how-it-works .how-it-works-images .iphone-1,
+  main #how-it-works .how-it-works-images .iphone-2,
+  main #how-it-works .how-it-works-images .iphone-3,
+  main #how-it-works .how-it-works-images .iphone-tablet-1,
+  main #how-it-works .how-it-works-images .iphone-tablet-3 {
     display: none !important;
   }
   main #how-it-works .how-it-works-images main .iphone-tablet-2 {
@@ -1422,6 +1440,11 @@ main .faq-questions-container-mobile {
     flex-direction: column;
     padding: 1rem;
   }
+  main #faq-section hr {
+    background-color: #E2E5F1;
+    height: 1px;
+    border: 0;
+  }
   main #faq-section .faq-contact-container-tablet,
   main #faq-section .faq-questions-container-tablet {
     display: none;
@@ -1454,7 +1477,8 @@ main .faq-questions-container-mobile {
   main #faq-section .faq-questions-container-mobile {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    border: 1px solid #E2E5F1;
+    border-radius: 8px;
   }
   main #faq-section .faq-question-mobile {
     display: flex;
@@ -1462,7 +1486,7 @@ main .faq-questions-container-mobile {
     align-items: center;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    box-shadow: none;
   }
   main #faq-section .faq-question-mobile .faq-question-title-mobile {
     color: #33354D;
@@ -1481,7 +1505,7 @@ main .faq-questions-container-mobile {
     width: 36px;
     height: 36px;
     font-size: 1.5em;
-    background-color: #2196F3;
+    background-color: #2196f3;
     display: flex;
     align-items: center;
     transform: rotate(90deg);
@@ -1566,7 +1590,7 @@ main .faq-questions-container-mobile {
     gap: 1rem;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    box-shadow: none;
   }
   main #faq-section .faq-question-expanded-mobile .faq-question-title-container-mobile {
     display: flex;
@@ -1589,7 +1613,7 @@ main .faq-questions-container-mobile {
     height: 36px;
     font-size: 1.5em;
     color: white;
-    background-color: #2196F3;
+    background-color: #2196f3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1671,5 +1695,50 @@ main .faq-questions-container-mobile {
     color: #565973;
     font-size: 0.875rem;
     font-weight: 400;
+  }
+  main #faq-section .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: 3.75rem;
+    margin-bottom: 2.5rem;
+    width: 10.125rem;
+    height: auto;
+    background-color: #6366F1;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    padding: 0.8125rem;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10.8px 28.438px 16.3px 28.8px;
+    border-radius: 6px;
   }
 }/*# sourceMappingURL=styles.css.map */
