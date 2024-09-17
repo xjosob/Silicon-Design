@@ -668,6 +668,11 @@ box-sizing: border-box;
   }
   }
 }
+
+.faq-contact-container-tablet,
+.faq-questions-container-tablet{
+  display: none;
+}
 }
 
 @media(max-width: 911px){
@@ -929,6 +934,28 @@ flex-direction: column;
   #testimonials{
     display: none;
   }
+
+#faq-section{
+  display: flex;
+  flex-direction: column;
+  .faq-contact-container,
+.faq-questions-container{
+  display: none;
+}
+
+.faq-contact-container-tablet{
+  display: flex;
+}
+.faq-questions-container-tablet{
+  display: flex;
+  flex-direction: column;
+  .contact-image-box-tablet{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+}
 }
 
 
