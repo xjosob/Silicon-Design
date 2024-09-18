@@ -45,11 +45,6 @@ $button-with-icon: map-merge(
   )
 );
 
-$icon-style: (
-  font-family: "Material Icons",
-  font-size: 1.25rem,
-);
-
 // Market buttons
 $button-app-store: (
   background-image: url("/buttons/appstore.svg"),

@@ -57,11 +57,10 @@ nav {
       @each $property, $value in $button-with-icon {
         #{$property}: $value;
       }
+      gap: 0;
 
       .icon {
-        @each $property, $value in $icon-style {
-          #{$property}: $value;
-        }
+        font-size: 1.4375rem;
       }
     }
   }
@@ -741,6 +740,25 @@ main {
       border-radius: 0px 8px 8px 0px;
       font-size: 16px;
     }
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
+
+  p {
+    @each $property, $value in $s-text {
+      #{$property}: $value;
+    }
+    color: $muted-text;
+  }
+
+  .footer-container {
+    display: flex;
+    gap: 0.1875rem;
   }
 }
 
@@ -1467,6 +1485,70 @@ main {
             padding: 10.8px 28.438px 16.3px 28.8px;
             border-radius: 6px;
           }
+        }
+      }
+    }
+    footer {
+      .footer-container {
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+    #subscribe {
+      width: 92%;
+      padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem !important;
+      gap: 3.125rem !important;
+      flex-direction: column;
+
+      .subscribe-content {
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+
+      .alert-icon {
+        margin-right: 2rem;
+        width: 75px !important;
+        height: 75px !important;
+      }
+
+      .subscribe-text h4 {
+        display: none;
+      }
+
+      .subscribe-text-tablet h4 {
+        display: flex;
+        @each $property, $value in $heading-h4 {
+          #{$property}: $value !important;
+        }
+      }
+
+      .subscribe-form {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        white-space: nowrap;
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+      .subscribe-btn {
+        padding: 0.9375rem 1.1557rem 1.125rem 1.25rem !important;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        border-radius: 8px 0px 0px 8px;
+        padding: 7px 10px 5px 20px !important;
+        border: 1px solid #ddd;
+        flex-grow: 1;
+        max-width: 20.625rem;
+
+        background-color: white;
+        .material-icons-outlined {
+          color: $input-placeholder;
         }
       }
     }
