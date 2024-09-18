@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
 * {
   margin: 0;
   padding: 0;
@@ -755,6 +756,67 @@ main .faq-questions-container-mobile {
 main .contact-button {
   display: none;
 }
+main #subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #F3F6FF;
+  width: 80%;
+  margin: 0 auto;
+  padding: 4.5rem 6.875rem;
+  gap: 4.875rem;
+  border-radius: 8px;
+}
+main #subscribe .subscribe-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+main #subscribe .alert-icon {
+  margin-right: 2rem;
+}
+main #subscribe .subscribe-text h4 {
+  color: #0B0F19;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+main #subscribe .subscribe-text-tablet h4 {
+  display: none;
+}
+main #subscribe .subscribe-form {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+main #subscribe .input-group {
+  display: flex;
+  align-items: center;
+  border-radius: 8px 0px 0px 8px;
+  padding-left: 0.625rem;
+  border: 1px solid #ddd;
+  flex-grow: 1;
+  max-width: 20.625rem;
+  background-color: white;
+}
+main #subscribe .input-group .material-icons-outlined {
+  color: #B4B7C9;
+}
+main #subscribe .email-placeholder {
+  padding: 0.625rem;
+  color: #B4B7C9;
+}
+main #subscribe .subscribe-btn {
+  background-color: #6366F1;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0px 8px 8px 0px;
+  font-size: 16px;
+}
 
 @media (max-width: 911px) {
   header .discover-more-container {
@@ -1237,6 +1299,31 @@ main .contact-button {
     height: 36px;
     font-size: 1.5em;
     color: white;
+  }
+  main #subscribe {
+    width: 92%;
+    padding: 3.125rem 1.125rem 3.125rem 1.25rem;
+    gap: 1.875rem;
+  }
+  main #subscribe .subscribe-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  main #subscribe .alert-icon {
+    margin-right: 2rem;
+    width: 65px;
+    height: 65px;
+  }
+  main #subscribe .subscribe-text h4 {
+    display: none;
+  }
+  main #subscribe .subscribe-text-tablet h4 {
+    display: flex;
+    color: #0B0F19 !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
