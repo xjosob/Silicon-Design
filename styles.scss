@@ -314,7 +314,6 @@ main {
     .features-content {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
     }
 
     .features-title {
@@ -339,11 +338,11 @@ main {
         align-items: flex-start;
 
         .feature-icon {
-          border-radius: 0.75rem;
+          display: flex;
 
           img {
             width: 15.625rem;
-            min-width: 60%;
+            flex-shrink: 0;
           }
         }
 
@@ -1173,71 +1172,68 @@ footer {
     header {
       padding: 0%;
       width: 100%;
-      box-sizing: border-box;
 
       .header-phones {
-        display: none;
-      }
-
-      .header-content {
-        padding-left: 0;
+        display: none !important;
       }
 
       .header-title {
-        transform: none;
+        transform: none !important;
+        padding-top: 1.5625rem;
       }
 
       .header-subtitle {
         text-align: center;
+        width: 100%;
         padding-top: 0;
+        font-size: 1.125rem !important;
       }
 
       .header-container {
         padding-left: 0;
-        width: 100%;
-      }
-
-      .market-buttons-container {
-        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
       }
 
       .discover-more-container {
-        justify-content: center;
-        width: 100%;
+        justify-content: center !important;
+        width: 100% !important;
       }
 
       .market-buttons-container {
         display: none !important;
+        width: 100% !important;
       }
 
       .mobile-buttons-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
       }
 
       .mobile-button-app-store {
         @each $property, $value in $mobile-button-app-store {
           #{$property}: $value;
-          width: 22.875rem;
-          height: 3.125rem;
+          width: 100% !important;
           background-repeat: no-repeat;
           background-color: black;
           background-position: center;
           border-radius: 8px;
+          height: 3.125rem;
         }
       }
 
       .mobile-button-google-play {
         @each $property, $value in $mobile-button-google-play {
           #{$property}: $value;
-          width: 22.875rem;
-          height: 3.125rem;
+          width: 100% !important;
           background-repeat: no-repeat;
           background-color: black;
           background-position: center;
           border-radius: 8px;
+          height: 3.125rem;
         }
       }
     }
@@ -1259,6 +1255,7 @@ footer {
 
         .features-grid {
           grid-template-columns: 1fr !important;
+          gap: 2rem !important;
         }
 
         .features-title {
