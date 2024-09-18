@@ -269,7 +269,7 @@ main #app-features {
   padding-top: 4rem;
   padding-bottom: 4rem;
   width: 100%;
-  gap: 12.5rem;
+  gap: 9.375rem;
 }
 main #app-features img {
   max-width: 60%;
@@ -290,9 +290,11 @@ main #app-features .features-title {
   color: #0B0F19;
 }
 main #app-features .features-subtitle {
+  margin-top: 1.4375rem;
   font-size: 1.125rem;
   font-weight: 400;
   color: #9397AD;
+  margin-bottom: 2.5rem;
 }
 main #app-features .features-grid {
   display: grid;
@@ -348,7 +350,8 @@ main #how-it-works .how-it-works-container .how-it-works-images {
 }
 main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
 main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2,
-main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3,
+main #how-it-works .how-it-works-container .how-it-works-images .iphone-mobile {
   display: none;
 }
 main #how-it-works .how-it-works-container .how-it-works-images img {
@@ -839,16 +842,12 @@ footer .footer-container {
   gap: 0.1875rem;
 }
 
-@media (max-width: 911px) {
-  header .discover-more-container {
-    padding-right: 0;
-    justify-content: flex-start;
-  }
-}
 @media (max-width: 768px) {
   nav {
     margin-bottom: 3.125rem;
     width: 100% !important;
+    padding-left: 1.1875rem;
+    padding-right: 1.1875rem;
   }
   nav .features {
     display: none;
@@ -865,6 +864,10 @@ footer .footer-container {
   }
   nav .sign-in-button {
     display: none;
+  }
+  header {
+    padding-left: 1.1875rem;
+    padding-right: 1.1875rem;
   }
   header .header-content {
     display: flex;
@@ -922,7 +925,6 @@ footer .footer-container {
     justify-content: flex-end;
   }
   main {
-    padding: 0 !important;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -930,6 +932,8 @@ footer .footer-container {
   }
   main #brands {
     width: 100%;
+    padding-left: 1.1875rem;
+    padding-right: 1.1875rem;
     margin-top: 2rem;
   }
   main #brands #brand-1,
@@ -937,11 +941,10 @@ footer .footer-container {
     display: none;
   }
   main #brands .brands-container {
-    padding: 0.625rem;
     padding-top: 0;
     flex-wrap: nowrap;
     display: flex;
-    justify-content: space-evenly !important;
+    justify-content: space-between !important;
     align-items: center !important;
     gap: 30px;
   }
@@ -968,6 +971,8 @@ footer .footer-container {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-left: 1.1875rem;
+    padding-right: 1.1875rem;
   }
   main #app-features .features-content {
     display: flex;
@@ -988,7 +993,8 @@ footer .footer-container {
   }
   main .how-it-works-images .iphone-1,
   main .how-it-works-images .iphone-2,
-  main .how-it-works-images .iphone-3 {
+  main .how-it-works-images .iphone-3,
+  main .how-it-works-images .iphone-mobile {
     display: none !important;
   }
   main .how-it-works-images .iphone-tablet-1,
@@ -1021,6 +1027,8 @@ footer .footer-container {
     display: none;
   }
   main #faq-section {
+    padding-left: 1.1875rem;
+    padding-right: 1.1875rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1289,7 +1297,7 @@ footer .footer-container {
     color: white;
   }
   main #subscribe {
-    width: 100% !important;
+    width: 95% !important;
     padding: 3.125rem 1.125rem 3.125rem 1.25rem;
     gap: 1.875rem;
   }
@@ -1305,6 +1313,11 @@ footer .footer-container {
   }
   main #subscribe .subscribe-text h4 {
     display: none;
+  }
+  main #subscribe .subscribe-form {
+    display: flex;
+    align-items: center;
+    min-width: 30%;
   }
   main #subscribe .subscribe-btn {
     background-color: #6366F1;
@@ -1325,7 +1338,8 @@ footer .footer-container {
   nav {
     margin: 0.4375rem 0.225rem 0rem 0rem;
     height: 3.25rem;
-    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   nav .theme-text {
     display: none;
@@ -1374,6 +1388,8 @@ footer .footer-container {
     align-items: center !important;
     gap: 1rem !important;
     width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   header .mobile-button-app-store {
     background-image: url("/buttons/appstore.svg");
@@ -1464,6 +1480,8 @@ footer .footer-container {
     max-width: fit-content !important;
     justify-content: center !important;
     flex-direction: column;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   main #app-features .features-grid {
     grid-template-columns: 1fr !important;
@@ -1480,16 +1498,16 @@ footer .footer-container {
   main #how-it-works .how-it-works-images .iphone-2,
   main #how-it-works .how-it-works-images .iphone-3,
   main #how-it-works .how-it-works-images .iphone-tablet-1,
+  main #how-it-works .how-it-works-images .iphone-tablet-2,
   main #how-it-works .how-it-works-images .iphone-tablet-3 {
     display: none !important;
   }
-  main #how-it-works .how-it-works-images main .iphone-tablet-2 {
+  main #how-it-works .how-it-works-images .iphone-mobile {
     display: flex !important;
   }
   main #how-it-works .how-it-works-images img {
     max-width: 100% !important;
-    height: auto;
-    min-width: 50% !important;
+    height: auto !important;
   }
   main #how-it-works .how-it-works-subtitle {
     display: none !important;
@@ -1826,7 +1844,6 @@ footer .footer-container {
     flex-direction: column;
   }
   #subscribe {
-    width: 92%;
     padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem !important;
     gap: 3.125rem !important;
     flex-direction: column;
