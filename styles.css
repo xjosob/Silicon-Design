@@ -127,85 +127,80 @@ nav .slider.round:before {
   border-radius: 50%;
 }
 
-.full-width-header {
+header .full-width-header {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(240, 200, 212, 0.05) 42%, rgba(160, 108, 156, 0.07) 83%);
   width: 100%;
 }
-
-.content-wrapper {
+header .content-wrapper {
   display: flex;
   flex-direction: column;
 }
-.content-wrapper .mobile-buttons-wrapper {
+header .content-wrapper .mobile-buttons-wrapper {
   display: none;
 }
-.content-wrapper .header-content {
+header .content-wrapper .header-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
   margin: 0 auto;
 }
-.content-wrapper .header-container {
+header .content-wrapper .header-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 48px;
   width: 100%;
 }
-.content-wrapper .header-container .header-title {
+header .content-wrapper .header-container .header-title {
   font-size: 3.5rem;
   font-weight: 800;
 }
-.content-wrapper .header-container .header-subtitle {
+header .content-wrapper .header-container .header-subtitle {
   font-size: 1.125rem;
   font-weight: 400;
   color: #565973;
 }
-.content-wrapper .header-container .market-buttons-container {
+header .content-wrapper .header-container .market-buttons-container {
   display: flex;
-  gap: 1.5rem;
-  height: 3.625rem;
 }
-.content-wrapper .header-container .market-buttons-container .button-app-store {
-  flex-shrink: 0;
+header .content-wrapper .header-container .market-buttons-container .button-app-store {
   background-image: url("/buttons/appstore.svg");
   background-size: cover;
   width: 11.25rem;
   height: 3.25rem;
   border: none;
 }
-.content-wrapper .header-container .market-buttons-container .button-google-play {
-  flex-shrink: 0;
+header .content-wrapper .header-container .market-buttons-container .button-google-play {
   background-image: url("/buttons/googleplay.svg");
   background-size: cover;
   width: 11.25rem;
   height: 3.25rem;
   border: none;
 }
-.content-wrapper .header-phones {
+header .content-wrapper .header-phones {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding-top: 7rem;
   margin-bottom: -8.375rem;
 }
-.content-wrapper .header-phones img {
+header .content-wrapper .header-phones img {
   max-width: 100%;
   height: auto;
 }
-.content-wrapper .discover-more-container {
+header .content-wrapper .discover-more-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 16px;
   margin-top: 2rem;
   margin-bottom: 3.75rem;
 }
-.content-wrapper .discover-more-container .material-icons {
+header .content-wrapper .discover-more-container .material-icons {
   transform: rotate(90deg);
 }
-.content-wrapper .discover-more-button {
+header .content-wrapper .discover-more-button {
   font-family: "Material Icons";
   background-color: #2196f3;
   width: 42px;
@@ -219,7 +214,7 @@ nav .slider.round:before {
   justify-content: center;
   background-color: white;
 }
-.content-wrapper .discover-more-text {
+header .content-wrapper .discover-more-text {
   font-size: 0.875rem;
   font-weight: 400;
   color: #565973;
@@ -233,9 +228,9 @@ main #brands img {
   height: auto;
 }
 main #brands .brands-container {
-  gap: 1rem;
+  gap: 16px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 main #brands .brand-box {
@@ -252,7 +247,7 @@ main #app-features {
   justify-content: space-between;
   align-items: flex-start;
   padding: 4rem 0;
-  gap: 9.375rem;
+  gap: 150px;
 }
 main #app-features img {
   max-width: 60%;
@@ -281,7 +276,7 @@ main #app-features .features-subtitle {
 main #app-features .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6rem 3rem;
+  gap: 96px 48px;
   margin-top: 1.25rem;
 }
 main #app-features .features-grid .feature {
@@ -317,12 +312,12 @@ main #how-it-works .how-it-works-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px;
 }
 main #how-it-works .how-it-works-container .how-it-works-images {
   display: flex;
   align-items: center;
-  gap: 7.5rem;
+  gap: 120px;
   justify-content: center;
 }
 main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
@@ -363,6 +358,7 @@ main .app-features-2-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 main .app-features-2-container .money-transfer-container,
 main .app-features-2-container .receive-money-container {
@@ -409,7 +405,7 @@ main .app-features-2-container .receive-money-text-container .receive-money-text
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 16px;
   width: 40%;
 }
 main .app-features-2-container .money-transfer-text-container .receive-money-text-container .receive-money-title,
@@ -433,12 +429,12 @@ main .app-features-2-container .money-transfer-text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 12px;
 }
 main .app-features-2-container .money-transfer-text-container p {
   display: flex;
   align-items: center;
-  gap: 0.5625rem;
+  gap: 9px;
 }
 main .app-features-2-container .money-transfer-text-container .check-icon {
   font-size: 1.25rem;
@@ -476,43 +472,43 @@ main #faq-section {
   justify-content: space-between;
   padding: 7rem 0;
 }
-main .faq-title {
+main #faq-section .faq-title {
+  margin-bottom: 1rem;
+  width: 60%;
   color: #0B0F19;
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 1rem;
-  width: 60%;
 }
-main .faq-subtitle {
+main #faq-section .faq-subtitle {
+  margin-bottom: 2rem;
+  width: 75%;
   color: #565973;
   font-size: 1.125rem;
   font-weight: 400;
-  margin-bottom: 2rem;
-  width: 75%;
 }
-main .faq-contact-container {
+main #faq-section .faq-contact-container {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   margin-bottom: 2rem;
   flex-direction: column;
 }
-main .faq-contact-container .contact-image-box {
+main #faq-section .faq-contact-container .contact-image-box {
   display: flex;
   gap: 1rem;
 }
-main .faq-contact-container .contact-image-box img {
+main #faq-section .faq-contact-container .contact-image-box img {
   max-width: 60%;
   height: auto;
   min-width: 20%;
 }
-main .faq-questions-container {
+main #faq-section .faq-questions-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 43%;
   justify-content: center;
 }
-main .faq-questions-container .faq-question {
+main #faq-section .faq-questions-container .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -520,10 +516,10 @@ main .faq-questions-container .faq-question {
   border-radius: 8px;
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 }
-main .faq-questions-container .faq-question .faq-question-title {
+main #faq-section .faq-questions-container .faq-question .faq-question-title {
   color: #33354D;
 }
-main .faq-questions-container .faq-question .faq-chevron {
+main #faq-section .faq-questions-container .faq-question .faq-chevron {
   font-family: "Material Icons";
   display: flex;
   align-items: center;
@@ -613,28 +609,28 @@ main .faq-questions-container .faq-question .faq-chevron {
   height: 36px;
   font-size: 1.5em;
 }
-main .faq-questions-container .faq-question-expanded {
+main #faq-section .faq-question-expanded {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 }
-main .faq-questions-container .faq-question-expanded .faq-question-title-container {
+main #faq-section .faq-question-expanded .faq-question-title-container {
   display: flex;
   justify-content: space-between;
 }
-main .faq-questions-container .faq-question-expanded .faq-question-title-container .faq-question-title {
+main #faq-section .faq-question-expanded .faq-question-title-container .faq-question-title {
   color: #33354D;
 }
-main .faq-questions-container .faq-question-expanded .faq-answer {
+main #faq-section .faq-question-expanded .faq-answer {
   color: #565973;
   font-size: 0.875rem;
   font-weight: 400;
 }
-main .faq-questions-container .faq-question-expanded .faq-chevron {
+main #faq-section .faq-question-expanded .faq-chevron {
   font-family: "Material Icons";
   display: flex;
   align-items: center;
@@ -739,7 +735,6 @@ main #subscribe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   background-color: #F3F6FF;
   width: 80%;
   margin: 0 auto;
@@ -750,7 +745,6 @@ main #subscribe {
 main #subscribe .subscribe-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   width: 50%;
 }
 main #subscribe .alert-icon {
@@ -781,11 +775,11 @@ main #subscribe .input-group {
   max-width: 20.625rem;
   background-color: white;
 }
-main #subscribe .input-group .material-icons-outlined {
+main #subscribe .input-group .email-placeholder {
+  padding: 0.625rem;
   color: #B4B7C9;
 }
-main #subscribe .email-placeholder {
-  padding: 0.625rem;
+main #subscribe .input-group .material-icons-outlined {
   color: #B4B7C9;
 }
 main #subscribe .subscribe-btn {
@@ -801,26 +795,23 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3.375rem;
-  padding-bottom: 3.375rem;
+  padding: 3.375rem 0;
 }
 footer p {
+  color: #9397AD;
   color: #565973;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #9397AD;
 }
 footer .footer-container {
   display: flex;
-  gap: 0.1875rem;
+  gap: 3px;
 }
 
 @media (max-width: 768px) {
   nav {
     margin-bottom: 3.125rem;
-    width: 100% !important;
-    padding-left: 1.1875rem;
-    padding-right: 1.1875rem;
+    padding: 0 1.1875rem;
   }
   nav .features {
     display: none;
@@ -839,62 +830,26 @@ footer .footer-container {
     display: none;
   }
   header {
-    padding-left: 1.1875rem;
-    padding-right: 1.1875rem;
+    padding: 0 1.1875rem;
   }
-  header .header-content {
-    display: flex;
-    margin: 0 auto;
-  }
-  header .header-title {
+  header .content-wrapper .header-container .header-title {
     transform: translateX(55%);
     width: 18.75rem;
-    font-size: 2.125rem !important;
+    font-size: 2.125rem;
   }
-  header .header-subtitle {
+  header .content-wrapper .header-container .header-subtitle {
     padding-top: 50px;
-    font-size: 1rem !important;
-    font-weight: 400 !important;
+    font-size: 1rem;
+    font-weight: 400;
   }
-  header .market-buttons-container {
-    justify-content: flex-start !important;
-    align-items: center;
-    gap: 1rem !important;
-    width: 100% !important;
-    flex-shrink: 1 !important;
-    margin-right: 0 !important;
-  }
-  header .mobile-buttons-wrapper {
+  header .content-wrapper .header-container .mobile-buttons-wrapper {
     display: none;
   }
-  header .button-google-play {
-    flex-shrink: 1 !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    min-width: 7.875rem !important;
-    min-height: 2.7437rem !important;
-    background-color: transparent;
-  }
-  header .button-app-store {
-    flex-shrink: 1 !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    min-width: 2.5rem !important;
-    min-height: 2.7437rem !important;
-    background-color: transparent;
-    padding-top: 1.25rem !important;
-  }
-  header .discover-more-container {
+  header .content-wrapper .discover-more-container {
     justify-content: flex-start;
     padding-right: 0;
   }
-  header .header-phones {
+  .header-phones {
     justify-content: flex-end;
   }
   main {
@@ -905,21 +860,11 @@ footer .footer-container {
   }
   main #brands {
     width: 100%;
-    padding-left: 1.1875rem;
-    padding-right: 1.1875rem;
-    margin-top: 2rem;
+    padding: 0 1.1875rem;
   }
   main #brands #brand-1,
   main #brands #brand-2 {
     display: none;
-  }
-  main #brands .brands-container {
-    padding-top: 0;
-    flex-wrap: nowrap;
-    display: flex;
-    justify-content: space-between !important;
-    align-items: center !important;
-    gap: 30px;
   }
   main #brands img {
     max-width: 100%;
@@ -947,62 +892,52 @@ footer .footer-container {
     padding-left: 1.1875rem;
     padding-right: 1.1875rem;
   }
-  main #app-features .features-content {
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    flex-direction: column;
-    padding: 0;
-  }
-  main #app-features .features-content .features-title {
+  main #app-features .features-title {
     font-size: 1.75rem !important;
   }
-  main .features-grid .feature .feature-title,
-  main .features-grid .feature .feature-text {
-    text-align: left !important;
+  main .features-grid .feature-title,
+  main .features-grid .feature-text {
+    text-align: left;
   }
-  main .how-it-works-images {
-    gap: 0 !important;
+  main #how-it-works .how-it-works-container .how-it-works-images {
+    gap: 0;
   }
-  main .how-it-works-images .iphone-1,
-  main .how-it-works-images .iphone-2,
-  main .how-it-works-images .iphone-3,
-  main .how-it-works-images .iphone-mobile {
-    display: none !important;
-  }
-  main .how-it-works-images .iphone-tablet-1,
-  main .how-it-works-images .iphone-tablet-2,
-  main .how-it-works-images .iphone-tablet-3 {
-    display: flex !important;
-  }
-  main .how-it-works-subtitle {
-    display: none !important;
-  }
-  main .how-it-works-text {
-    display: none !important;
-  }
-  main .how-it-works-subtitle-mobile {
-    display: none !important;
-  }
-  main .how-it-works-subtitle-tablet {
-    display: flex !important;
-    font-size: 1.75rem !important;
-    font-weight: 800 !important;
-  }
-  main .how-it-works-text-mobile {
-    display: flex !important;
-    color: #565973 !important;
-  }
-  main #app-features-2 {
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-1,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-2,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-3,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-mobile {
     display: none;
   }
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
+    display: flex;
+  }
+  main #how-it-works .how-it-works-container .how-it-works-subtitle {
+    display: none;
+  }
+  main #how-it-works .how-it-works-container .how-it-works-text {
+    display: none;
+  }
+  main #how-it-works .how-it-works-container .how-it-works-subtitle-mobile {
+    display: none;
+  }
+  main #how-it-works .how-it-works-container .how-it-works-subtitle-tablet {
+    display: flex;
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+  main #how-it-works .how-it-works-container .how-it-works-text-mobile {
+    display: flex;
+    color: #565973;
+  }
+  main #app-features-2,
   main #testimonials {
     display: none;
   }
   main #faq-section {
     padding-left: 1.1875rem;
     padding-right: 1.1875rem;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
   }
@@ -1040,7 +975,7 @@ footer .footer-container {
   main #faq-section .faq-questions-container-tablet {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
   }
   main #faq-section .faq-questions-container-tablet .contact-image-box-tablet {
     display: flex;
@@ -1160,7 +1095,7 @@ footer .footer-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
@@ -1270,14 +1205,9 @@ footer .footer-container {
     color: white;
   }
   main #subscribe {
-    width: 95% !important;
+    width: 95%;
     padding: 3.125rem 1.125rem 3.125rem 1.25rem;
     gap: 1.875rem;
-  }
-  main #subscribe .subscribe-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
   }
   main #subscribe .alert-icon {
     margin-right: 2rem;

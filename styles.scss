@@ -145,109 +145,107 @@ nav {
   }
 }
 
-.full-width-header {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(240, 200, 212, 0.05) 42%,
-    rgba(160, 108, 156, 0.07) 83%
-  );
-  width: 100%;
-}
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  .mobile-buttons-wrapper {
-    display: none;
-  }
-
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+header {
+  .full-width-header {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(240, 200, 212, 0.05) 42%,
+      rgba(160, 108, 156, 0.07) 83%
+    );
     width: 100%;
-    margin: 0 auto;
   }
-  .header-container {
+  .content-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 3rem;
-    width: 100%;
 
-    .header-title {
-      font-size: map-get($display-4, font-size);
-      font-weight: map-get($display-4, font-weight);
+    .mobile-buttons-wrapper {
+      display: none;
     }
 
-    .header-subtitle {
-      font-size: map-get($l-text, font-size);
-      font-weight: map-get($l-text, font-weight);
-      color: map-get($l-text, color);
-    }
-
-    .market-buttons-container {
+    .header-content {
       display: flex;
-      gap: 1.5rem;
-      height: 3.625rem;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 48px;
+      width: 100%;
 
-      .button-app-store {
-        flex-shrink: 0;
-        @each $property, $value in $button-app-store {
-          #{$property}: $value;
-        }
+      .header-title {
+        font-size: map-get($display-4, font-size);
+        font-weight: map-get($display-4, font-weight);
       }
 
-      .button-google-play {
-        flex-shrink: 0;
-        @each $property, $value in $button-google-play {
-          #{$property}: $value;
+      .header-subtitle {
+        font-size: map-get($l-text, font-size);
+        font-weight: map-get($l-text, font-weight);
+        color: map-get($l-text, color);
+      }
+
+      .market-buttons-container {
+        display: flex;
+
+        .button-app-store {
+          @each $property, $value in $button-app-store {
+            #{$property}: $value;
+          }
+        }
+
+        .button-google-play {
+          @each $property, $value in $button-google-play {
+            #{$property}: $value;
+          }
         }
       }
     }
-  }
 
-  .header-phones {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-top: 7rem;
-    margin-bottom: -8.375rem;
+    .header-phones {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-top: 7rem;
+      margin-bottom: -8.375rem;
 
-    img {
-      max-width: 100%;
-      height: auto;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
-  }
 
-  .discover-more-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3.75rem;
+    .discover-more-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-top: 2rem;
+      margin-bottom: 3.75rem;
 
-    .material-icons {
-      transform: rotate(90deg);
+      .material-icons {
+        transform: rotate(90deg);
+      }
     }
-  }
 
-  .discover-more-button {
-    @each $property, $value in $carousel-button {
-      #{$property}: $value;
+    .discover-more-button {
+      @each $property, $value in $carousel-button {
+        #{$property}: $value;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
     }
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-  }
 
-  .discover-more-text {
-    font-size: map-get($s-text, font-size);
-    font-weight: map-get($s-text, font-weight);
-    color: map-get($s-text, color);
+    .discover-more-text {
+      font-size: map-get($s-text, font-size);
+      font-weight: map-get($s-text, font-weight);
+      color: map-get($s-text, color);
+    }
   }
 }
 
@@ -260,9 +258,9 @@ main {
       height: auto;
     }
     .brands-container {
-      gap: 1rem;
+      gap: 16px;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
     }
 
@@ -282,7 +280,7 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem 0;
-    gap: 9.375rem;
+    gap: 150px;
 
     img {
       max-width: 60%;
@@ -316,7 +314,7 @@ main {
     .features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 6rem 3rem;
+      gap: 96px 48px;
       margin-top: 1.25rem;
 
       .feature {
@@ -358,12 +356,12 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
+      gap: 24px;
 
       .how-it-works-images {
         display: flex;
         align-items: center;
-        gap: 7.5rem;
+        gap: 120px;
         justify-content: center;
 
         .iphone-tablet-1,
@@ -415,6 +413,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 
     .money-transfer-container,
     .receive-money-container {
@@ -443,7 +442,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 16px;
         width: 40%;
 
         .receive-money-title {
@@ -468,12 +467,12 @@ main {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.75rem;
+      gap: 12px;
 
       p {
         display: flex;
         align-items: center;
-        gap: 0.5625rem;
+        gap: 9px;
       }
 
       .check-icon {
@@ -520,73 +519,75 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 7rem 0;
-  }
 
-  .faq-title {
-    @each $property, $value in $heading-h2 {
-      #{$property}: $value;
+    .faq-title {
+      margin-bottom: 1rem;
+      width: 60%;
+      @each $property, $value in $heading-h2 {
+        #{$property}: $value;
+      }
     }
-    margin-bottom: 1rem;
-    width: 60%;
-  }
 
-  .faq-subtitle {
-    @each $property, $value in $l-text {
-      #{$property}: $value;
+    .faq-subtitle {
+      margin-bottom: 2rem;
+      width: 75%;
+      @each $property, $value in $l-text {
+        #{$property}: $value;
+      }
     }
-    margin-bottom: 2rem;
-    width: 75%;
-  }
 
-  .faq-contact-container {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-direction: column;
-
-    .contact-image-box {
+    .faq-contact-container {
       display: flex;
+      gap: 16px;
+      margin-bottom: 2rem;
+      flex-direction: column;
+
+      .contact-image-box {
+        display: flex;
+        gap: 1rem;
+
+        img {
+          max-width: 60%;
+          height: auto;
+          min-width: 20%;
+        }
+      }
+    }
+
+    .faq-questions-container {
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
+      width: 43%;
+      justify-content: center;
 
-      img {
-        max-width: 60%;
-        height: auto;
-        min-width: 20%;
-      }
-    }
-  }
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
+          0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 
-  .faq-questions-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 43%;
-    justify-content: center;
+        .faq-question-title {
+          color: $navigation;
+        }
 
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
-        0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-      .faq-question-title {
-        color: $navigation;
-      }
-      .faq-chevron {
-        @each $property, $value in $carousel-button {
-          #{$property}: $value;
-          display: flex;
-          align-items: center;
-          transform: rotate(90deg);
-          justify-content: center;
-          box-shadow: none;
-          background-color: $background-light;
-          flex-shrink: 0;
-          width: 36px;
-          height: 36px;
-          font-size: 1.5em;
+        .faq-chevron {
+          @each $property, $value in $carousel-button {
+            #{$property}: $value;
+            display: flex;
+            align-items: center;
+            transform: rotate(90deg);
+            justify-content: center;
+            box-shadow: none;
+            background-color: $background-light;
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            font-size: 1.5em;
+          }
         }
       }
     }
@@ -594,11 +595,12 @@ main {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      gap: 1rem;
+      gap: 16px;
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
         0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+
       .faq-question-title-container {
         display: flex;
         justify-content: space-between;
@@ -606,11 +608,13 @@ main {
           color: $navigation;
         }
       }
+
       .faq-answer {
         @each $property, $value in $s-text {
           #{$property}: $value;
         }
       }
+
       .faq-chevron {
         @each $property, $value in $carousel-button {
           #{$property}: $value;
@@ -647,7 +651,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
     background-color: $background-light;
     width: 80%;
     margin: 0 auto;
@@ -658,7 +661,6 @@ main {
     .subscribe-content {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       width: 50%;
     }
 
@@ -692,16 +694,16 @@ main {
       border: 1px solid #ddd;
       flex-grow: 1;
       max-width: 20.625rem;
-
       background-color: white;
+
+      .email-placeholder {
+        padding: 0.625rem;
+        color: $input-placeholder;
+      }
+
       .material-icons-outlined {
         color: $input-placeholder;
       }
-    }
-
-    .email-placeholder {
-      padding: 0.625rem;
-      color: $input-placeholder;
     }
 
     .subscribe-btn {
@@ -714,32 +716,30 @@ main {
     }
   }
 }
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3.375rem;
-  padding-bottom: 3.375rem;
+  padding: 3.375rem 0;
 
   p {
+    color: $muted-text;
     @each $property, $value in $s-text {
       #{$property}: $value;
     }
-    color: $muted-text;
   }
 
   .footer-container {
     display: flex;
-    gap: 0.1875rem;
+    gap: 3px;
   }
 }
 
 @media (max-width: 768px) {
   nav {
     margin-bottom: 3.125rem;
-    width: 100% !important;
-    padding-left: 1.1875rem;
-    padding-right: 1.1875rem;
+    padding: 0 1.1875rem;
 
     .features {
       display: none;
@@ -764,71 +764,36 @@ footer {
   }
 
   header {
-    padding-left: 1.1875rem;
-    padding-right: 1.1875rem;
-    .header-content {
-      display: flex;
-      margin: 0 auto;
-    }
+    padding: 0 1.1875rem;
 
-    .header-title {
-      transform: translateX(55%);
-      width: 18.75rem;
-      font-size: 2.125rem !important;
-    }
+    .content-wrapper {
+      .header-container {
+        .header-title {
+          transform: translateX(55%);
+          width: 18.75rem;
+          font-size: 2.125rem;
+        }
 
-    .header-subtitle {
-      padding-top: 50px;
-      font-size: map-get($m-text, font-size) !important;
-      font-weight: map-get($m-text, font-weight) !important;
-    }
+        .header-subtitle {
+          padding-top: 50px;
+          font-size: map-get($m-text, font-size);
+          font-weight: map-get($m-text, font-weight);
+        }
 
-    .market-buttons-container {
-      justify-content: flex-start !important;
-      align-items: center;
-      gap: 1rem !important;
-      width: 100% !important;
-      flex-shrink: 1 !important;
-      margin-right: 0 !important;
-    }
+        .mobile-buttons-wrapper {
+          display: none;
+        }
+      }
 
-    .mobile-buttons-wrapper {
-      display: none;
+      .discover-more-container {
+        justify-content: flex-start;
+        padding-right: 0;
+      }
     }
+  }
 
-    .button-google-play {
-      flex-shrink: 1 !important;
-      max-width: 100% !important;
-      max-height: 100% !important;
-      background-size: 100% 100% !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      min-width: 7.875rem !important;
-      min-height: 2.7437rem !important;
-      background-color: transparent;
-    }
-
-    .button-app-store {
-      flex-shrink: 1 !important;
-      max-width: 100% !important;
-      max-height: 100% !important;
-      background-size: 100% 100% !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      min-width: 2.5rem !important;
-      min-height: 2.7437rem !important;
-      background-color: transparent;
-      padding-top: 1.25rem !important;
-    }
-
-    .discover-more-container {
-      justify-content: flex-start;
-      padding-right: 0;
-    }
-
-    .header-phones {
-      justify-content: flex-end;
-    }
+  .header-phones {
+    justify-content: flex-end;
   }
 
   main {
@@ -839,22 +804,11 @@ footer {
 
     #brands {
       width: 100%;
-      padding-left: 1.1875rem;
-      padding-right: 1.1875rem;
+      padding: 0 1.1875rem;
 
-      margin-top: 2rem;
       #brand-1,
       #brand-2 {
         display: none;
-      }
-
-      .brands-container {
-        padding-top: 0;
-        flex-wrap: nowrap;
-        display: flex;
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 30px;
       }
 
       img {
@@ -887,71 +841,62 @@ footer {
       padding-left: 1.1875rem;
       padding-right: 1.1875rem;
 
-      .features-content {
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        flex-direction: column;
-        padding: 0;
-
-        .features-title {
-          font-size: map-get($heading-h3, font-size) !important;
-        }
+      .features-title {
+        font-size: map-get($heading-h3, font-size) !important;
       }
     }
 
     .features-grid {
-      .feature {
-        .feature-title,
-        .feature-text {
-          text-align: left !important;
+      .feature-title,
+      .feature-text {
+        text-align: left;
+      }
+    }
+
+    #how-it-works {
+      .how-it-works-container {
+        .how-it-works-images {
+          gap: 0;
+          .iphone-1,
+          .iphone-2,
+          .iphone-3,
+          .iphone-mobile {
+            display: none;
+          }
+
+          .iphone-tablet-1,
+          .iphone-tablet-2,
+          .iphone-tablet-3 {
+            display: flex;
+          }
+        }
+
+        .how-it-works-subtitle {
+          display: none;
+        }
+
+        .how-it-works-text {
+          display: none;
+        }
+
+        .how-it-works-subtitle-mobile {
+          display: none;
+        }
+
+        .how-it-works-subtitle-tablet {
+          display: flex;
+          font-size: map-get($heading-h3, font-size);
+          font-weight: map-get($heading-h4, font-weight);
+        }
+
+        .how-it-works-text-mobile {
+          display: flex;
+          color: map-get($m-text, color);
         }
       }
     }
 
-    .how-it-works-images {
-      gap: 0 !important;
-      .iphone-1,
-      .iphone-2,
-      .iphone-3,
-      .iphone-mobile {
-        display: none !important;
-      }
-
-      .iphone-tablet-1,
-      .iphone-tablet-2,
-      .iphone-tablet-3 {
-        display: flex !important;
-      }
-    }
-
-    .how-it-works-subtitle {
-      display: none !important;
-    }
-
-    .how-it-works-text {
-      display: none !important;
-    }
-
-    .how-it-works-subtitle-mobile {
-      display: none !important;
-    }
-
-    .how-it-works-subtitle-tablet {
-      display: flex !important;
-      font-size: map-get($heading-h3, font-size) !important;
-      font-weight: map-get($heading-h4, font-weight) !important;
-    }
-
-    .how-it-works-text-mobile {
-      display: flex !important;
-      color: map-get($m-text, color) !important;
-    }
-
-    #app-features-2 {
-      display: none;
-    }
-
+    #app-features-2,
     #testimonials {
       display: none;
     }
@@ -959,9 +904,9 @@ footer {
     #faq-section {
       padding-left: 1.1875rem;
       padding-right: 1.1875rem;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
+
       .faq-contact-container,
       .faq-questions-container {
         display: none;
@@ -1000,7 +945,8 @@ footer {
       .faq-questions-container-tablet {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 16px;
+
         .contact-image-box-tablet {
           display: flex;
           justify-content: space-between;
@@ -1041,18 +987,21 @@ footer {
             }
           }
         }
+
         .faq-question-expanded-tablet {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          gap: 1rem;
+          gap: 16px;
           padding: 1.5rem;
           border-radius: 8px;
           box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
             0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+
           .faq-question-title-container-tablet {
             display: flex;
             justify-content: space-between;
+
             .faq-question-title-tablet {
               @each $property, $value in $navigation-text {
                 #{$property}: $value;
@@ -1065,6 +1014,7 @@ footer {
               #{$property}: $value;
             }
           }
+
           .faq-chevron-tablet {
             @each $property, $value in $carousel-button {
               #{$property}: $value;
@@ -1083,16 +1033,11 @@ footer {
         }
       }
     }
+
     #subscribe {
-      width: 95% !important;
+      width: 95%;
       padding: 3.125rem 1.125rem 3.125rem 1.25rem;
       gap: 1.875rem;
-
-      .subscribe-content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
 
       .alert-icon {
         margin-right: 2rem;
