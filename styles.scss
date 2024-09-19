@@ -416,24 +416,20 @@ main {
     flex-direction: column;
     justify-content: center;
 
-    .money-transfer-container {
+    .money-transfer-container,
+    .receive-money-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .money-transfer-text-container {
+    .money-transfer-text-container,
+    .receive-money-text-container {
       .learn-more-button-right {
         @each $property, $value in $button-with-icon {
           #{$property}: $value;
         }
-        margin-top: 1.25rem;
       }
-    }
-    .receive-money-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
 
       .receive-money-button-right {
         @each $property, $value in $button-with-icon {
@@ -493,13 +489,12 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: $background-light;
-    width: 100%;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 0;
 
     .testimonials-container {
       display: flex;
       justify-content: space-between;
+
       .clients-loving {
         @each $property, $value in $heading-h1 {
           #{$property}: $value;
@@ -511,6 +506,7 @@ main {
       .testimonial-images {
         display: flex;
         gap: 0.9375rem;
+
         img {
           max-width: 60%;
           height: auto;
@@ -523,8 +519,7 @@ main {
   #faq-section {
     display: flex;
     justify-content: space-between;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding: 7rem 0;
   }
 
   .faq-title {
