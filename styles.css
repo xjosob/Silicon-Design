@@ -127,10 +127,11 @@ nav .slider.round:before {
   border-radius: 50%;
 }
 
-header .full-width-header {
+.full-width-header {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(240, 200, 212, 0.05) 42%, rgba(160, 108, 156, 0.07) 83%);
   width: 100%;
 }
+
 header .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -163,6 +164,8 @@ header .content-wrapper .header-container .header-subtitle {
 }
 header .content-wrapper .header-container .market-buttons-container {
   display: flex;
+  gap: 24px;
+  height: 3.625rem;
 }
 header .content-wrapper .header-container .market-buttons-container .button-app-store {
   background-image: url("/buttons/appstore.svg");
@@ -193,7 +196,7 @@ header .content-wrapper .discover-more-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 16px;
+  gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 3.75rem;
 }
@@ -228,7 +231,7 @@ main #brands img {
   height: auto;
 }
 main #brands .brands-container {
-  gap: 16px;
+  gap: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -247,7 +250,7 @@ main #app-features {
   justify-content: space-between;
   align-items: flex-start;
   padding: 4rem 0;
-  gap: 150px;
+  gap: 9.375rem;
 }
 main #app-features img {
   max-width: 60%;
@@ -276,7 +279,7 @@ main #app-features .features-subtitle {
 main #app-features .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 96px 48px;
+  gap: 6rem 3rem;
   margin-top: 1.25rem;
 }
 main #app-features .features-grid .feature {
@@ -312,12 +315,12 @@ main #how-it-works .how-it-works-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 1.5rem;
 }
 main #how-it-works .how-it-works-container .how-it-works-images {
   display: flex;
   align-items: center;
-  gap: 120px;
+  gap: 7.5rem;
   justify-content: center;
 }
 main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
@@ -358,7 +361,6 @@ main .app-features-2-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 }
 main .app-features-2-container .money-transfer-container,
 main .app-features-2-container .receive-money-container {
@@ -405,7 +407,7 @@ main .app-features-2-container .receive-money-text-container .receive-money-text
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
   width: 40%;
 }
 main .app-features-2-container .money-transfer-text-container .receive-money-text-container .receive-money-title,
@@ -429,12 +431,12 @@ main .app-features-2-container .money-transfer-text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 0.75rem;
 }
 main .app-features-2-container .money-transfer-text-container p {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 0.5625rem;
 }
 main .app-features-2-container .money-transfer-text-container .check-icon {
   font-size: 1.25rem;
@@ -488,7 +490,7 @@ main #faq-section .faq-subtitle {
 }
 main #faq-section .faq-contact-container {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   margin-bottom: 2rem;
   flex-direction: column;
 }
@@ -613,7 +615,7 @@ main #faq-section .faq-question-expanded {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
@@ -735,6 +737,7 @@ main #subscribe {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   background-color: #F3F6FF;
   width: 80%;
   margin: 0 auto;
@@ -805,7 +808,7 @@ footer p {
 }
 footer .footer-container {
   display: flex;
-  gap: 3px;
+  gap: 0.1875rem;
 }
 
 @media (max-width: 768px) {
@@ -975,7 +978,7 @@ footer .footer-container {
   main #faq-section .faq-questions-container-tablet {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
   }
   main #faq-section .faq-questions-container-tablet .contact-image-box-tablet {
     display: flex;
@@ -1095,7 +1098,7 @@ footer .footer-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
@@ -1205,9 +1208,14 @@ footer .footer-container {
     color: white;
   }
   main #subscribe {
-    width: 95%;
+    width: 95% !important;
     padding: 3.125rem 1.125rem 3.125rem 1.25rem;
     gap: 1.875rem;
+  }
+  main #subscribe .subscribe-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
   main #subscribe .alert-icon {
     margin-right: 2rem;

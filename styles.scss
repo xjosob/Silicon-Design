@@ -145,16 +145,17 @@ nav {
   }
 }
 
+.full-width-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(240, 200, 212, 0.05) 42%,
+    rgba(160, 108, 156, 0.07) 83%
+  );
+  width: 100%;
+}
+
 header {
-  .full-width-header {
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(240, 200, 212, 0.05) 42%,
-      rgba(160, 108, 156, 0.07) 83%
-    );
-    width: 100%;
-  }
   .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -190,6 +191,8 @@ header {
 
       .market-buttons-container {
         display: flex;
+        gap: 24px;
+        height: 3.625rem;
 
         .button-app-store {
           @each $property, $value in $button-app-store {
@@ -222,7 +225,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: 16px;
+      gap: 1rem;
       margin-top: 2rem;
       margin-bottom: 3.75rem;
 
@@ -258,7 +261,7 @@ main {
       height: auto;
     }
     .brands-container {
-      gap: 16px;
+      gap: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -280,7 +283,7 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem 0;
-    gap: 150px;
+    gap: 9.375rem;
 
     img {
       max-width: 60%;
@@ -314,7 +317,7 @@ main {
     .features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 96px 48px;
+      gap: 6rem 3rem;
       margin-top: 1.25rem;
 
       .feature {
@@ -356,12 +359,12 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 24px;
+      gap: 1.5rem;
 
       .how-it-works-images {
         display: flex;
         align-items: center;
-        gap: 120px;
+        gap: 7.5rem;
         justify-content: center;
 
         .iphone-tablet-1,
@@ -413,7 +416,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
 
     .money-transfer-container,
     .receive-money-container {
@@ -442,7 +444,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 16px;
+        gap: 1rem;
         width: 40%;
 
         .receive-money-title {
@@ -467,12 +469,12 @@ main {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 12px;
+      gap: 0.75rem;
 
       p {
         display: flex;
         align-items: center;
-        gap: 9px;
+        gap: 0.5625rem;
       }
 
       .check-icon {
@@ -538,7 +540,7 @@ main {
 
     .faq-contact-container {
       display: flex;
-      gap: 16px;
+      gap: 1rem;
       margin-bottom: 2rem;
       flex-direction: column;
 
@@ -595,7 +597,7 @@ main {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      gap: 16px;
+      gap: 1rem;
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
@@ -651,6 +653,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
     background-color: $background-light;
     width: 80%;
     margin: 0 auto;
@@ -732,7 +735,7 @@ footer {
 
   .footer-container {
     display: flex;
-    gap: 3px;
+    gap: 0.1875rem;
   }
 }
 
@@ -945,7 +948,7 @@ footer {
       .faq-questions-container-tablet {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 1rem;
 
         .contact-image-box-tablet {
           display: flex;
@@ -987,21 +990,18 @@ footer {
             }
           }
         }
-
         .faq-question-expanded-tablet {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
-          gap: 16px;
+          gap: 1rem;
           padding: 1.5rem;
           border-radius: 8px;
           box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
             0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
-
           .faq-question-title-container-tablet {
             display: flex;
             justify-content: space-between;
-
             .faq-question-title-tablet {
               @each $property, $value in $navigation-text {
                 #{$property}: $value;
@@ -1014,7 +1014,6 @@ footer {
               #{$property}: $value;
             }
           }
-
           .faq-chevron-tablet {
             @each $property, $value in $carousel-button {
               #{$property}: $value;
@@ -1033,11 +1032,16 @@ footer {
         }
       }
     }
-
     #subscribe {
-      width: 95%;
+      width: 95% !important;
       padding: 3.125rem 1.125rem 3.125rem 1.25rem;
       gap: 1.875rem;
+
+      .subscribe-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
 
       .alert-icon {
         margin-right: 2rem;
