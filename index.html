@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Silicon Design</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
   </head>
@@ -18,7 +18,7 @@
       <ul>
         <li class="theme-text">Dark Mode</li>
         <li class="toggle-container">
-          <label class="switch">
+          <label class="switch" for="theme-toggle">
             <input type="checkbox" id="theme-toggle" />
             <span class="slider round"></span>
           </label>
@@ -29,28 +29,35 @@
             Sign in/up
           </button>
         </li>
+        <div class="hamburger"></div>
       </ul>
-      <div class="hamburger"></div>
     </nav>
 
     <header class="full-width-header">
       <div class="content-wrapper">
         <div class="header-content">
           <div class="header-container">
-            <div class="header-title">
-              Manage All Your<br />Money in One App
-            </div>
-            <div class="header-subtitle">
+            <h1 class="header-title">Manage All Your<br />Money in One App</h1>
+            <p class="header-subtitle">
               We offer you a new generation of the mobile banking. Save, spend &
               manage money in your pocket.
-            </div>
+            </p>
             <div class="mobile-buttons-wrapper">
-              <button class="mobile-button-app-store"></button>
-              <button class="mobile-button-google-play"></button>
+              <button
+                class="mobile-button-app-store"
+                aria-label="App Store"
+              ></button>
+              <button
+                class="mobile-button-google-play"
+                aria-label="Google Play"
+              ></button>
             </div>
             <div class="market-buttons-container">
-              <button class="button-app-store"></button>
-              <button class="button-google-play"></button>
+              <button class="button-app-store" aria-label="App Store"></button>
+              <button
+                class="button-google-play"
+                aria-label="Google Play"
+              ></button>
             </div>
           </div>
           <div class="header-phones">
@@ -58,38 +65,44 @@
           </div>
         </div>
         <div class="discover-more-container">
-          <button class="discover-more-button">
+          <button class="discover-more-button" aria-label="Discover More">
             <span class="material-icons">chevron_right</span>
           </button>
           <span class="discover-more-text">Discover More</span>
         </div>
       </div>
     </header>
+
     <main>
       <section id="brands">
         <div class="brands-container">
           <div id="brand-1" class="brand-box">
-            <img src="logos/brand1.svg" class="brand-box" />
+            <img src="logos/brand1.svg" class="brand-box" alt="Brand 1" />
           </div>
           <div id="brand-2" class="brand-box">
-            <img src="logos/brand2.svg" class="brand-box" />
+            <img src="logos/brand2.svg" class="brand-box" alt="Brand 2" />
           </div>
           <div id="brand-3" class="brand-container">
-            <img src="logos/brand3.svg" class="brand-box" />
+            <img src="logos/brand3.svg" class="brand-box" alt="Brand 3" />
           </div>
           <div id="brand-4" class="brand-container">
-            <img src="logos/brand4.svg" class="brand-box" />
+            <img src="logos/brand4.svg" class="brand-box" alt="Brand 4" />
           </div>
           <div id="brand-5" class="brand-container">
-            <img src="logos/brand5.svg" class="brand-box" />
+            <img src="logos/brand5.svg" class="brand-box" alt="Brand 5" />
           </div>
           <div id="brand-6" class="brand-container">
-            <img src="logos/brand6.svg" class="brand-box" />
+            <img src="logos/brand6.svg" class="brand-box" alt="Brand 6" />
           </div>
         </div>
       </section>
+
       <section id="app-features">
-        <img src="images/app-features-phone.svg" class="phone-visa" />
+        <img
+          src="images/app-features-phone.svg"
+          class="phone-visa"
+          alt="Phone"
+        />
         <div class="features-content">
           <h1 class="features-title">App Features</h1>
           <p class="features-subtitle">
@@ -173,6 +186,7 @@
           </div>
         </div>
       </section>
+
       <section id="how-it-works">
         <div class="how-it-works-container">
           <h1 class="how-it-works-title">How Does It Work?</h1>
@@ -180,19 +194,26 @@
             <img
               src="images/Iphone 12 Pro Tablet.svg"
               class="iphone-tablet-1"
+              alt="Iphone"
             />
             <img
               src="images/Iphone 12 Pro Tablet 2.svg"
               class="iphone-tablet-2"
+              alt="Iphone"
             />
             <img
               src="images/Iphone 12 Pro 3 Tablet.svg"
               class="iphone-tablet-3"
+              alt="Iphone"
             />
-            <img src="images/Iphone 12 Pro mobile.svg" class="iphone-mobile" />
-            <img src="images/iPhone 12 Pro.svg" class="iphone-1" />
-            <img src="images/Change This.svg" class="iphone-2" />
-            <img src="images/Change This-2.svg" class="iphone-3" />
+            <img
+              src="images/Iphone 12 Pro mobile.svg"
+              class="iphone-mobile"
+              alt="Iphone"
+            />
+            <img src="images/iPhone 12 Pro.svg" class="iphone-1" alt="Iphone" />
+            <img src="images/Change This.svg" class="iphone-2" alt="Iphone" />
+            <img src="images/Change This-2.svg" class="iphone-3" alt="Iphone" />
           </div>
           <h4 class="how-it-works-subtitle">Latest transaction history</h4>
           <h4 class="how-it-works-subtitle-mobile">
@@ -211,6 +232,7 @@
           </p>
         </div>
       </section>
+
       <section id="app-features-2">
         <div class="app-features-2-container">
           <div class="money-transfer-container">
@@ -219,30 +241,40 @@
                 Make your money transfer simple and clear
               </h2>
               <p>
-                <span class="material-icons check-icon">check_circle</span>
+                <span class="material-icons check-icon" aria-hidden="true"
+                  >check_circle</span
+                >
                 Banking transactions are free for you
               </p>
               <p>
-                <span class="material-icons check-icon">check_circle</span> No
-                monthly cash commission
+                <span class="material-icons check-icon" aria-hidden="true"
+                  >check_circle</span
+                >
+                No monthly cash commission
               </p>
               <p>
-                <span class="material-icons check-icon">check_circle</span>
+                <span class="material-icons check-icon" aria-hidden="true"
+                  >check_circle</span
+                >
                 Manage payments and transactions online
               </p>
               <button class="learn-more-button-right">
                 Learn More
-                <span class="material-icons">arrow_forward</span>
+                <span class="material-icons" aria-hidden="true"
+                  >arrow_forward</span
+                >
               </button>
             </div>
             <img
               src="images/money-transfer-image.svg"
+              alt="Money Transfer"
               class="money-transfer-image"
             />
           </div>
           <div class="receive-money-container">
             <img
               src="images/receive-money-image.svg"
+              alt="Receive Money"
               class="receive-money-image"
             />
             <div class="receive-money-text-container">
@@ -270,21 +302,25 @@
               </div>
               <button class="receive-money-button-right">
                 Learn More
-                <span class="material-icons">arrow_forward</span>
+                <span class="material-icons" aria-hidden="true"
+                  >arrow_forward</span
+                >
               </button>
             </div>
           </div>
         </div>
       </section>
+
       <section id="testimonials">
         <div class="testimonials-container">
           <h1 class="clients-loving">Clients are Loving Our App</h1>
           <div class="testimonial-images">
-            <img src="/images/testimonial.svg" />
-            <img src="/images/testimonial-2.svg" />
+            <img src="/images/testimonial.svg" alt="Testimonials Image 1" />
+            <img src="/images/testimonial-2.svg" alt="Testimonials Image 2" />
           </div>
         </div>
       </section>
+
       <section id="faq-section">
         <div class="faq-contact-container">
           <div class="faq-section-titles-container">
@@ -294,8 +330,16 @@
             </p>
           </div>
           <div class="contact-image-box">
-            <img src="/images/icon-box.svg" class="icon-box" />
-            <img src="/images/icon-box-2.svg" class="icon-box-2" />
+            <img
+              src="/images/icon-box.svg"
+              alt="Contact Icon"
+              class="icon-box"
+            />
+            <img
+              src="/images/icon-box-2.svg"
+              alt="Contact Icon"
+              class="icon-box-2"
+            />
           </div>
         </div>
 
@@ -304,20 +348,29 @@
             <h3 class="faq-question-title">
               Is any of my personal information stores in the App?
             </h3>
-            <button class="material-icons faq-chevron">chevron_right</button>
+            <button class="material-icons faq-chevron" aria-label="Expand FAQ">
+              chevron_right
+            </button>
           </div>
           <div class="faq-question">
             <h3 class="faq-question-title">
               What formats can I download my transaction history in?
             </h3>
-            <button class="material-icons faq-chevron">chevron_right</button>
+            <button class="material-icons faq-chevron" aria-label="Expand FAQ">
+              chevron_right
+            </button>
           </div>
           <div class="faq-question-expanded">
             <div class="faq-question-title-container">
               <h3 class="faq-question-title">
                 Can I schedule future transfers?
               </h3>
-              <button class="material-icons faq-chevron">chevron_right</button>
+              <button
+                class="material-icons faq-chevron"
+                aria-label="Collapse FAQ"
+              >
+                chevron_right
+              </button>
             </div>
             <p class="faq-answer">
               Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper.
@@ -333,19 +386,25 @@
             <h3 class="faq-question-title">
               When can I use Banking App services?
             </h3>
-            <button class="material-icons faq-chevron">chevron_right</button>
+            <button class="material-icons faq-chevron" aria-label="Expand FAQ">
+              chevron_right
+            </button>
           </div>
           <div class="faq-question">
             <h3 class="faq-question-title">
               Can I create my own password that is easy for me to remember?
             </h3>
-            <button class="material-icons faq-chevron">chevron_right</button>
+            <button class="material-icons faq-chevron" aria-label="Expand FAQ">
+              chevron_right
+            </button>
           </div>
           <div class="faq-question">
             <h3 class="faq-question-title">
               What happens if I forget or lose my password?
             </h3>
-            <button class="material-icons faq-chevron">chevron_right</button>
+            <button class="material-icons faq-chevron" aria-label="Expand FAQ">
+              chevron_right
+            </button>
           </div>
         </div>
         <div class="faq-contact-container-tablet">
@@ -364,7 +423,10 @@
             <h3 class="faq-question-title-tablet">
               Is any of my personal information stored in the App?
             </h3>
-            <button class="material-icons faq-chevron-tablet">
+            <button
+              class="material-icons faq-chevron-tablet"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -372,12 +434,18 @@
             <h3 class="faq-question-title-tablet">
               What formats can I download my transaction history in?
             </h3>
-            <button class="material-icons faq-chevron-tablet">
+            <button
+              class="material-icons faq-chevron-tablet"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
           <div class="faq-question-expanded-tablet">
-            <div class="faq-question-title-container-tablet">
+            <div
+              class="faq-question-title-container-tablet"
+              aria-label="Collapse FAQ"
+            >
               <h3 class="faq-question-title-tablet">
                 Can I schedule future transfers?
               </h3>
@@ -399,7 +467,10 @@
             <h3 class="faq-question-title-tablet">
               When can I use Banking App services?
             </h3>
-            <button class="material-icons faq-chevron-tablet">
+            <button
+              class="material-icons faq-chevron-tablet"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -407,7 +478,10 @@
             <h3 class="faq-question-title-tablet">
               Can I create my own password that is easy for me to remember?
             </h3>
-            <button class="material-icons faq-chevron-tablet">
+            <button
+              class="material-icons faq-chevron-tablet"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -415,15 +489,23 @@
             <h3 class="faq-question-title-tablet">
               What happens if I forget or lose my password?
             </h3>
-            <button class="material-icons faq-chevron-tablet">
+            <button
+              class="material-icons faq-chevron-tablet"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
           <div class="contact-image-box-tablet">
-            <img src="/images/icon-box-tablet.svg" class="icon-box-tablet" />
+            <img
+              src="/images/icon-box-tablet.svg"
+              class="icon-box-tablet"
+              alt="Contact Icon"
+            />
             <img
               src="/images/icon-box-2-tablet.svg"
               class="icon-box-2-tablet"
+              alt="Contact Icon"
             />
           </div>
         </div>
@@ -441,7 +523,10 @@
               <h3 class="faq-question-title-mobile">
                 Is any of my personal information stored in the App?
               </h3>
-              <button class="material-icons faq-chevron-mobile">
+              <button
+                class="material-icons faq-chevron-mobile"
+                aria-label="Collapse FAQ"
+              >
                 chevron_right
               </button>
             </div>
@@ -467,7 +552,10 @@
             <h3 class="faq-question-title-mobile">
               What formats can I donwload my transaction history in?
             </h3>
-            <button class="material-icons faq-chevron-mobile">
+            <button
+              class="material-icons faq-chevron-mobile"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -476,7 +564,10 @@
             <h3 class="faq-question-title-mobile">
               Can I schedule future transfers?
             </h3>
-            <button class="material-icons faq-chevron-mobile">
+            <button
+              class="material-icons faq-chevron-mobile"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -485,7 +576,10 @@
             <h3 class="faq-question-title-mobile">
               When can I use Banking App services?
             </h3>
-            <button class="material-icons faq-chevron-mobile">
+            <button
+              class="material-icons faq-chevron-mobile"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -494,7 +588,10 @@
             <h3 class="faq-question-title-mobile">
               Can I create my own password that is easy for me to remember?
             </h3>
-            <button class="material-icons faq-chevron-mobile">
+            <button
+              class="material-icons faq-chevron-mobile"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -503,7 +600,10 @@
             <h3 class="faq-question-title-mobile">
               What happens if I forget or lose my password?
             </h3>
-            <button class="material-icons faq-chevron-mobile">
+            <button
+              class="material-icons faq-chevron-mobile"
+              aria-label="Expand FAQ"
+            >
               chevron_right
             </button>
           </div>
@@ -530,8 +630,12 @@
 
         <div class="subscribe-form">
           <div class="input-group">
-            <span class="material-icons-outlined">mail_outline</span>
-            <div class="email-placeholder">Your Email</div>
+            <span class="material-icons-outlined" aria-hidden="true"
+              >mail_outline</span
+            >
+            <div class="email-placeholder" aria-label="Your Email">
+              Your Email
+            </div>
           </div>
           <div class="subscribe-btn">Subscribe</div>
         </div>
