@@ -23,6 +23,8 @@ nav,
 }
 
 nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,6 +137,8 @@ nav .slider.round:before {
 header .content-wrapper {
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 header .content-wrapper .mobile-buttons-wrapper {
   display: none;
@@ -226,6 +230,10 @@ header .content-wrapper .discover-more-text {
 main {
   margin-top: 2rem;
 }
+main #brands {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 main #brands img {
   max-width: 100%;
   height: auto;
@@ -249,7 +257,7 @@ main #app-features {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   gap: 9.375rem;
 }
 main #app-features img {
@@ -307,7 +315,7 @@ main #how-it-works {
   background-color: #F3F6FF;
   text-align: center;
   width: 100%;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 main #how-it-works .how-it-works-container {
   display: flex;
@@ -354,7 +362,7 @@ main #how-it-works .how-it-works-container .how-it-works-text-mobile {
   display: none;
 }
 main #app-features-2 {
-  padding: 7rem 0;
+  padding: 7rem 1rem;
 }
 main .app-features-2-container {
   display: flex;
@@ -447,7 +455,7 @@ main #testimonials {
   display: flex;
   justify-content: space-between;
   background-color: #F3F6FF;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 main #testimonials .testimonials-container {
   display: flex;
@@ -471,7 +479,7 @@ main #testimonials .testimonials-container .testimonial-images img {
 main #faq-section {
   display: flex;
   justify-content: space-between;
-  padding: 7rem 0;
+  padding: 7rem 1rem;
 }
 main #faq-section .faq-title {
   margin-bottom: 1rem;
@@ -736,9 +744,7 @@ main #subscribe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   background-color: #F3F6FF;
-  width: 80%;
   margin: 0 auto;
   padding: 4.5rem 6.875rem;
   gap: 4.875rem;
@@ -1208,7 +1214,7 @@ footer .footer-container {
   }
   main #subscribe {
     width: 95% !important;
-    padding: 3.125rem 1.125rem 3.125rem 1.25rem;
+    padding: 3.125rem 1.125rem;
     gap: 1.875rem;
   }
   main #subscribe .subscribe-content {

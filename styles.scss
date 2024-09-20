@@ -27,6 +27,8 @@ nav,
 }
 
 nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,6 +161,8 @@ header {
   .content-wrapper {
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     .mobile-buttons-wrapper {
       display: none;
@@ -256,6 +260,9 @@ main {
   margin-top: 2rem;
 
   #brands {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     img {
       max-width: 100%;
       height: auto;
@@ -282,7 +289,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     gap: 9.375rem;
 
     img {
@@ -351,7 +358,7 @@ main {
     background-color: $background-light;
     text-align: center;
     width: 100%;
-    padding: 5rem 0;
+    padding: 5rem 1rem;
 
     .how-it-works-container {
       display: flex;
@@ -409,7 +416,7 @@ main {
   }
 
   #app-features-2 {
-    padding: 7rem 0;
+    padding: 7rem 1rem;
   }
   .app-features-2-container {
     display: flex;
@@ -489,7 +496,7 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: $background-light;
-    padding: 5rem 0;
+    padding: 5rem 1rem;
 
     .testimonials-container {
       display: flex;
@@ -519,7 +526,7 @@ main {
   #faq-section {
     display: flex;
     justify-content: space-between;
-    padding: 7rem 0;
+    padding: 7rem 1rem;
 
     .faq-title {
       margin-bottom: 1rem;
@@ -652,9 +659,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
     background-color: $background-light;
-    width: 80%;
     margin: 0 auto;
     padding: 4.5rem 6.875rem;
     gap: 4.875rem;
@@ -1032,7 +1037,7 @@ footer {
     }
     #subscribe {
       width: 95% !important;
-      padding: 3.125rem 1.125rem 3.125rem 1.25rem;
+      padding: 3.125rem 1.125rem;
       gap: 1.875rem;
 
       .subscribe-content {
