@@ -129,74 +129,73 @@ nav .slider.round:before {
   border-radius: 50%;
 }
 
-.full-width-header {
+.hero {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(240, 200, 212, 0.05) 42%, rgba(160, 108, 156, 0.07) 83%);
   width: 100%;
 }
-
-header .content-wrapper {
+.hero .content-wrapper {
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-header .content-wrapper .mobile-buttons-wrapper {
+.hero .content-wrapper .mobile-buttons-wrapper {
   display: none;
 }
-header .content-wrapper .header-content {
+.hero .content-wrapper .hero-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
   margin: 0 auto;
 }
-header .content-wrapper .header-container {
+.hero .content-wrapper .hero-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 48px;
   width: 100%;
 }
-header .content-wrapper .header-container .header-title {
+.hero .content-wrapper .hero-container .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
 }
-header .content-wrapper .header-container .header-subtitle {
+.hero .content-wrapper .hero-container .hero-subtitle {
   font-size: 1.125rem;
   font-weight: 400;
   color: #565973;
 }
-header .content-wrapper .header-container .market-buttons-container {
+.hero .content-wrapper .hero-container .market-buttons-container {
   display: flex;
   gap: 24px;
   height: 3.625rem;
 }
-header .content-wrapper .header-container .market-buttons-container .button-app-store {
+.hero .content-wrapper .hero-container .market-buttons-container .button-app-store {
   background-image: url("/buttons/appstore.svg");
   background-size: cover;
   width: 11.25rem;
   height: 3.25rem;
   border: none;
 }
-header .content-wrapper .header-container .market-buttons-container .button-google-play {
+.hero .content-wrapper .hero-container .market-buttons-container .button-google-play {
   background-image: url("/buttons/googleplay.svg");
   background-size: cover;
   width: 11.25rem;
   height: 3.25rem;
   border: none;
 }
-header .content-wrapper .header-phones {
+.hero .content-wrapper .hero-phones {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding-top: 7rem;
   margin-bottom: -8.375rem;
 }
-header .content-wrapper .header-phones img {
+.hero .content-wrapper .hero-phones img {
   max-width: 100%;
   height: auto;
 }
-header .content-wrapper .discover-more-container {
+.hero .content-wrapper .discover-more-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -204,10 +203,10 @@ header .content-wrapper .discover-more-container {
   margin-top: 2rem;
   margin-bottom: 3.75rem;
 }
-header .content-wrapper .discover-more-container .material-icons {
+.hero .content-wrapper .discover-more-container .material-icons {
   transform: rotate(90deg);
 }
-header .content-wrapper .discover-more-button {
+.hero .content-wrapper .discover-more-button {
   font-family: "Material Icons";
   background-color: #2196f3;
   width: 42px;
@@ -221,7 +220,7 @@ header .content-wrapper .discover-more-button {
   justify-content: center;
   background-color: white;
 }
-header .content-wrapper .discover-more-text {
+.hero .content-wrapper .discover-more-text {
   font-size: 0.875rem;
   font-weight: 400;
   color: #565973;
@@ -837,27 +836,26 @@ footer .footer-container {
   nav .sign-in-button {
     display: none;
   }
-  header {
+  .hero {
     padding: 0 1.1875rem;
   }
-  header .content-wrapper .mobile-buttons-wrapper {
+  .hero .content-wrapper .mobile-buttons-wrapper {
     display: none;
   }
-  header .content-wrapper .header-container .header-title {
+  .hero .content-wrapper .hero-container .hero-title {
     transform: translateX(55%);
-    width: 18.75rem;
     font-size: 2.125rem;
   }
-  header .content-wrapper .header-container .header-subtitle {
+  .hero .content-wrapper .hero-container .hero-subtitle {
     padding-top: 50px;
     font-size: 1rem;
     font-weight: 400;
   }
-  header .content-wrapper .discover-more-container {
+  .hero .content-wrapper .discover-more-container {
     justify-content: flex-start;
     padding-right: 0;
   }
-  .header-phones {
+  .hero-phones {
     justify-content: flex-end;
   }
   main {
@@ -1268,13 +1266,13 @@ footer .footer-container {
     padding-right: 1rem;
     background-repeat: no-repeat;
   }
-  header {
+  .hero {
     padding: 0%;
   }
-  header .content-wrapper .header-phones {
+  .hero .content-wrapper .hero-phones {
     display: none;
   }
-  header .content-wrapper .mobile-buttons-wrapper {
+  .hero .content-wrapper .mobile-buttons-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -1282,27 +1280,27 @@ footer .footer-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  header .content-wrapper .header-container {
+  .hero .content-wrapper .hero-container {
     justify-content: center;
     align-items: center;
   }
-  header .content-wrapper .header-container .header-title {
+  .hero .content-wrapper .hero-container .hero-title {
     transform: none;
     padding-top: 1.5625rem;
   }
-  header .content-wrapper .header-container .header-subtitle {
+  .hero .content-wrapper .hero-container .hero-subtitle {
     text-align: center;
     padding-top: 0;
     font-size: 1.125rem;
   }
-  header .content-wrapper .header-container .market-buttons-container {
+  .hero .content-wrapper .hero-container .market-buttons-container {
     display: none;
     width: 100% !important;
   }
-  header .content-wrapper .discover-more-container {
+  .hero .content-wrapper .discover-more-container {
     justify-content: center;
   }
-  header .content-wrapper .mobile-button-app-store {
+  .hero .content-wrapper .mobile-button-app-store {
     background-image: url("/buttons/appstore.svg");
     width: 100%;
     background-repeat: no-repeat;
@@ -1339,7 +1337,7 @@ footer .footer-container {
     border-radius: 8px;
     height: 3.125rem;
   }
-  header .content-wrapper .mobile-button-google-play {
+  .hero .content-wrapper .mobile-button-google-play {
     background-image: url("/buttons/googleplay.svg");
     width: 100%;
     background-repeat: no-repeat;

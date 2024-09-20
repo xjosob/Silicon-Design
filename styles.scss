@@ -1,4 +1,4 @@
-@import "elements";
+@import "colors";
 @import "buttons";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "typography";
@@ -147,7 +147,7 @@ nav {
   }
 }
 
-.full-width-header {
+.hero {
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 0%,
@@ -155,9 +155,7 @@ nav {
     rgba(160, 108, 156, 0.07) 83%
   );
   width: 100%;
-}
 
-header {
   .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -168,26 +166,26 @@ header {
       display: none;
     }
 
-    .header-content {
+    .hero-content {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       width: 100%;
       margin: 0 auto;
     }
-    .header-container {
+    .hero-container {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 48px;
       width: 100%;
 
-      .header-title {
+      .hero-title {
         font-size: map-get($display-4, font-size);
         font-weight: map-get($display-4, font-weight);
       }
 
-      .header-subtitle {
+      .hero-subtitle {
         font-size: map-get($l-text, font-size);
         font-weight: map-get($l-text, font-weight);
         color: map-get($l-text, color);
@@ -212,7 +210,7 @@ header {
       }
     }
 
-    .header-phones {
+    .hero-phones {
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
@@ -768,21 +766,20 @@ footer {
     }
   }
 
-  header {
+  .hero {
     padding: 0 1.1875rem;
 
     .content-wrapper {
       .mobile-buttons-wrapper {
         display: none;
       }
-      .header-container {
-        .header-title {
+      .hero-container {
+        .hero-title {
           transform: translateX(55%);
-          width: 18.75rem;
           font-size: 2.125rem;
         }
 
-        .header-subtitle {
+        .hero-subtitle {
           padding-top: 50px;
           font-size: map-get($m-text, font-size);
           font-weight: map-get($m-text, font-weight);
@@ -796,7 +793,7 @@ footer {
     }
   }
 
-  .header-phones {
+  .hero-phones {
     justify-content: flex-end;
   }
 
@@ -1099,11 +1096,11 @@ footer {
       }
     }
 
-    header {
+    .hero {
       padding: 0%;
 
       .content-wrapper {
-        .header-phones {
+        .hero-phones {
           display: none;
         }
 
@@ -1116,16 +1113,16 @@ footer {
           padding-right: 1rem;
         }
 
-        .header-container {
+        .hero-container {
           justify-content: center;
           align-items: center;
 
-          .header-title {
+          .hero-title {
             transform: none;
             padding-top: 1.5625rem;
           }
 
-          .header-subtitle {
+          .hero-subtitle {
             text-align: center;
             padding-top: 0;
             font-size: 1.125rem;
