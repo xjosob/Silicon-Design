@@ -445,28 +445,26 @@ main {
         margin-top: 1.25rem;
       }
 
-      .receive-money-text-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1rem;
-        width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 40%;
 
-        .receive-money-title {
-          @each $property, $value in $heading-h2 {
-            #{$property}: $value;
-          }
+      .receive-money-title {
+        @each $property, $value in $heading-h2 {
+          #{$property}: $value;
         }
+      }
 
-        .receive-money-icons {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          img {
-            gap: 50px;
-            padding-bottom: 1.5625rem;
-          }
+      .receive-money-icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          gap: 50px;
+          padding-bottom: 1.5625rem;
         }
       }
     }

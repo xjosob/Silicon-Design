@@ -375,6 +375,15 @@ main .app-features-2-container .receive-money-container {
   align-items: center;
   justify-content: space-between;
 }
+main .app-features-2-container .money-transfer-text-container,
+main .app-features-2-container .receive-money-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 40%;
+}
 main .app-features-2-container .money-transfer-text-container .learn-more-button-right,
 main .app-features-2-container .receive-money-text-container .learn-more-button-right {
   background-color: #6366F1;
@@ -408,29 +417,20 @@ main .app-features-2-container .receive-money-text-container .receive-money-butt
   gap: 0.5rem;
   margin-top: 1.25rem;
 }
-main .app-features-2-container .money-transfer-text-container .receive-money-text-container,
-main .app-features-2-container .receive-money-text-container .receive-money-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1rem;
-  width: 40%;
-}
-main .app-features-2-container .money-transfer-text-container .receive-money-text-container .receive-money-title,
-main .app-features-2-container .receive-money-text-container .receive-money-text-container .receive-money-title {
+main .app-features-2-container .money-transfer-text-container .receive-money-title,
+main .app-features-2-container .receive-money-text-container .receive-money-title {
   color: #0B0F19;
   font-size: 2rem;
   font-weight: 800;
 }
-main .app-features-2-container .money-transfer-text-container .receive-money-text-container .receive-money-icons,
-main .app-features-2-container .receive-money-text-container .receive-money-text-container .receive-money-icons {
+main .app-features-2-container .money-transfer-text-container .receive-money-icons,
+main .app-features-2-container .receive-money-text-container .receive-money-icons {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main .app-features-2-container .money-transfer-text-container .receive-money-text-container .receive-money-icons img,
-main .app-features-2-container .receive-money-text-container .receive-money-text-container .receive-money-icons img {
+main .app-features-2-container .money-transfer-text-container .receive-money-icons img,
+main .app-features-2-container .receive-money-text-container .receive-money-icons img {
   gap: 50px;
   padding-bottom: 1.5625rem;
 }
