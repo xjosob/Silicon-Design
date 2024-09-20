@@ -288,7 +288,6 @@ main #app-features .features-grid .feature {
 }
 main #app-features .features-grid .feature .feature-icon img {
   width: 15.625rem;
-  flex-shrink: 0;
 }
 main #app-features .features-grid .feature .feature-text {
   font-size: 1rem;
@@ -835,6 +834,9 @@ footer .footer-container {
   header {
     padding: 0 1.1875rem;
   }
+  header .content-wrapper .mobile-buttons-wrapper {
+    display: none;
+  }
   header .content-wrapper .header-container .header-title {
     transform: translateX(55%);
     width: 18.75rem;
@@ -844,9 +846,6 @@ footer .footer-container {
     padding-top: 50px;
     font-size: 1rem;
     font-weight: 400;
-  }
-  header .content-wrapper .header-container .mobile-buttons-wrapper {
-    display: none;
   }
   header .content-wrapper .discover-more-container {
     justify-content: flex-start;
@@ -1265,111 +1264,106 @@ footer .footer-container {
   }
   header {
     padding: 0%;
+  }
+  header .content-wrapper .header-phones {
+    display: none;
+  }
+  header .content-wrapper .mobile-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  header .header-phones {
-    display: none !important;
+  header .content-wrapper .header-container {
+    justify-content: center;
+    align-items: center;
   }
-  header .header-title {
-    transform: none !important;
+  header .content-wrapper .header-container .header-title {
+    transform: none;
     padding-top: 1.5625rem;
   }
-  header .header-subtitle {
+  header .content-wrapper .header-container .header-subtitle {
     text-align: center;
-    width: 100%;
     padding-top: 0;
-    font-size: 1.125rem !important;
+    font-size: 1.125rem;
   }
-  header .header-container {
-    padding-left: 0;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  header .discover-more-container {
-    justify-content: center !important;
+  header .content-wrapper .header-container .market-buttons-container {
+    display: none;
     width: 100% !important;
   }
-  header .market-buttons-container {
-    display: none !important;
-    width: 100% !important;
+  header .content-wrapper .discover-more-container {
+    justify-content: center;
   }
-  header .mobile-buttons-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1rem !important;
-    width: 100% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  header .mobile-button-app-store {
+  header .content-wrapper .mobile-button-app-store {
     background-image: url("/buttons/appstore.svg");
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     background-size: contain;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     width: 7.6875rem;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     height: 2rem;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     border: none;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
   }
-  header .mobile-button-google-play {
+  header .content-wrapper .mobile-button-google-play {
     background-image: url("/buttons/googleplay.svg");
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     background-size: contain;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     width: 7.6875rem;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     height: 2rem;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
     border: none;
-    width: 100% !important;
+    width: 100%;
     background-repeat: no-repeat;
     background-color: black;
     background-position: center;
@@ -1382,61 +1376,46 @@ footer .footer-container {
   main #brands {
     display: none;
   }
-  main #app-features {
-    display: flex;
-    width: 100% !important;
-    text-align: center;
-    align-items: center;
-    max-width: -moz-fit-content !important;
-    max-width: fit-content !important;
-    justify-content: center !important;
-    flex-direction: column;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
   main #app-features .features-grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  main #app-features .features-title {
-    font-size: 1.75rem !important;
+  main #app-features .feature-icon {
+    display: flex;
   }
-  main #app-features .feature-title,
-  main #app-features .feature-text {
-    text-align: left !important;
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-1,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-2,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-3,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-1,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-2,
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-tablet-3 {
+    display: none;
   }
-  main #how-it-works .how-it-works-images .iphone-1,
-  main #how-it-works .how-it-works-images .iphone-2,
-  main #how-it-works .how-it-works-images .iphone-3,
-  main #how-it-works .how-it-works-images .iphone-tablet-1,
-  main #how-it-works .how-it-works-images .iphone-tablet-2,
-  main #how-it-works .how-it-works-images .iphone-tablet-3 {
-    display: none !important;
+  main #how-it-works .how-it-works-container .how-it-works-images .iphone-mobile {
+    display: flex;
   }
-  main #how-it-works .how-it-works-images .iphone-mobile {
-    display: flex !important;
+  main #how-it-works .how-it-works-container .how-it-works-images img {
+    max-width: 100%;
+    height: auto;
   }
-  main #how-it-works .how-it-works-images img {
-    max-width: 100% !important;
-    height: auto !important;
+  main #how-it-works .how-it-works-container .how-it-works-subtitle {
+    display: none;
   }
-  main #how-it-works .how-it-works-subtitle {
-    display: none !important;
+  main #how-it-works .how-it-works-container .how-it-works-text {
+    display: none;
   }
-  main #how-it-works .how-it-works-text {
-    display: none !important;
+  main #how-it-works .how-it-works-container .how-it-works-subtitle-mobile {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
-  main #how-it-works .how-it-works-subtitle-mobile {
-    display: flex !important;
-    font-size: 1.5rem !important;
-    font-weight: 800 !important;
+  main #how-it-works .how-it-works-container .how-it-works-subtitle-tablet {
+    display: none;
   }
-  main #how-it-works .how-it-works-subtitle-tablet {
-    display: none !important;
-  }
-  main #how-it-works .how-it-works-text-mobile {
-    display: flex !important;
-    color: #565973 !important;
+  main #how-it-works .how-it-works-container .how-it-works-text-mobile {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #565973;
   }
   main #app-features-2 {
     display: none;
@@ -1445,7 +1424,6 @@ footer .footer-container {
     display: none;
   }
   main #faq-section {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
   }
@@ -1513,7 +1491,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     background-color: #2196f3;
     display: flex;
     align-items: center;
@@ -1524,7 +1502,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     width: 42px;
     display: flex;
     align-items: center;
@@ -1535,7 +1513,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     height: 42px;
     display: flex;
     align-items: center;
@@ -1546,7 +1524,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1557,7 +1535,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     border: none;
     display: flex;
     align-items: center;
@@ -1568,7 +1546,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     font-size: 2em;
     display: flex;
     align-items: center;
@@ -1579,7 +1557,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -1590,7 +1568,7 @@ footer .footer-container {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    font-size: 1.5em;
+    font-size: 24px;
   }
   main #faq-section .faq-question-expanded-mobile {
     display: flex;
@@ -1713,7 +1691,6 @@ footer .footer-container {
     margin-top: 3.75rem;
     margin-bottom: 2.5rem;
     width: 10.125rem;
-    height: auto;
     background-color: #6366F1;
     font-size: 14px;
     font-weight: 400;
@@ -1750,57 +1727,47 @@ footer .footer-container {
     padding: 10.8px 28.438px 16.3px 28.8px;
     border-radius: 6px;
   }
-  footer .footer-container {
-    align-items: center;
+  main #subscribe {
+    padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem;
+    gap: 3.125rem;
     flex-direction: column;
   }
-  #subscribe {
-    padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem !important;
-    gap: 3.125rem !important;
-    flex-direction: column;
-  }
-  #subscribe .subscribe-content {
+  main #subscribe .subscribe-content {
     display: flex;
     align-items: center;
-    justify-content: center !important;
-    width: 100% !important;
+    justify-content: center;
+    width: 100%;
   }
-  #subscribe .alert-icon {
+  main #subscribe .alert-icon {
     margin-right: 2rem;
-    width: 75px !important;
-    height: 75px !important;
+    width: 75px;
+    height: 75px;
   }
-  #subscribe .subscribe-text h4 {
+  main #subscribe .subscribe-text h4 {
     display: none;
   }
-  #subscribe .subscribe-text-tablet h4 {
+  main #subscribe .subscribe-text-tablet h4 {
     display: flex;
-    color: #0B0F19 !important;
-    font-size: 1.5rem !important;
-    font-weight: 800 !important;
+    color: #0B0F19;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
-  #subscribe .subscribe-form {
+  main #subscribe .subscribe-form {
     display: flex;
     align-items: center;
-    flex-grow: 1;
     white-space: nowrap;
     justify-content: flex-end;
     width: 100%;
   }
-  #subscribe .subscribe-btn {
-    padding: 0.9375rem 1.1557rem 1.125rem 1.25rem !important;
+  main #subscribe .subscribe-btn {
+    padding: 0.9375rem 1.1557rem 1.125rem 1.25rem;
   }
-  #subscribe .input-group {
-    display: flex;
-    align-items: center;
-    border-radius: 8px 0px 0px 8px;
-    padding: 7px 10px 5px 20px !important;
-    border: 1px solid #ddd;
-    flex-grow: 1;
+  main #subscribe .input-group {
+    padding: 7px 10px 5px 20px;
     max-width: 20.625rem;
-    background-color: white;
   }
-  #subscribe .input-group .material-icons-outlined {
-    color: #B4B7C9;
+  footer .footer-container {
+    align-items: center;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -326,7 +326,6 @@ main {
 
         .feature-icon img {
           width: 15.625rem;
-          flex-shrink: 0;
         }
 
         .feature-text {
@@ -770,6 +769,9 @@ footer {
     padding: 0 1.1875rem;
 
     .content-wrapper {
+      .mobile-buttons-wrapper {
+        display: none;
+      }
       .header-container {
         .header-title {
           transform: translateX(55%);
@@ -781,10 +783,6 @@ footer {
           padding-top: 50px;
           font-size: map-get($m-text, font-size);
           font-weight: map-get($m-text, font-weight);
-        }
-
-        .mobile-buttons-wrapper {
-          display: none;
         }
       }
 
@@ -1100,149 +1098,135 @@ footer {
 
     header {
       padding: 0%;
-      width: 100%;
 
-      .header-phones {
-        display: none !important;
-      }
-
-      .header-title {
-        transform: none !important;
-        padding-top: 1.5625rem;
-      }
-
-      .header-subtitle {
-        text-align: center;
-        width: 100%;
-        padding-top: 0;
-        font-size: 1.125rem !important;
-      }
-
-      .header-container {
-        padding-left: 0;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-
-      .discover-more-container {
-        justify-content: center !important;
-        width: 100% !important;
-      }
-
-      .market-buttons-container {
-        display: none !important;
-        width: 100% !important;
-      }
-
-      .mobile-buttons-wrapper {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 1rem !important;
-        width: 100% !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-      }
-
-      .mobile-button-app-store {
-        @each $property, $value in $mobile-button-app-store {
-          #{$property}: $value;
-          width: 100% !important;
-          background-repeat: no-repeat;
-          background-color: black;
-          background-position: center;
-          border-radius: 8px;
-          height: 3.125rem;
+      .content-wrapper {
+        .header-phones {
+          display: none;
         }
-      }
 
-      .mobile-button-google-play {
-        @each $property, $value in $mobile-button-google-play {
-          #{$property}: $value;
-          width: 100% !important;
-          background-repeat: no-repeat;
-          background-color: black;
-          background-position: center;
-          border-radius: 8px;
-          height: 3.125rem;
+        .mobile-buttons-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .header-container {
+          justify-content: center;
+          align-items: center;
+
+          .header-title {
+            transform: none;
+            padding-top: 1.5625rem;
+          }
+
+          .header-subtitle {
+            text-align: center;
+            padding-top: 0;
+            font-size: 1.125rem;
+          }
+
+          .market-buttons-container {
+            display: none;
+            width: 100% !important;
+          }
+        }
+
+        .discover-more-container {
+          justify-content: center;
+        }
+
+        .mobile-button-app-store {
+          @each $property, $value in $mobile-button-app-store {
+            #{$property}: $value;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            border-radius: 8px;
+            height: 3.125rem;
+          }
+        }
+
+        .mobile-button-google-play {
+          @each $property, $value in $mobile-button-google-play {
+            #{$property}: $value;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            border-radius: 8px;
+            height: 3.125rem;
+          }
         }
       }
     }
 
     main {
       margin-top: 0;
+
       #brands {
         display: none;
       }
 
       #app-features {
-        display: flex;
-        width: 100% !important;
-        text-align: center;
-        align-items: center;
-        max-width: fit-content !important;
-        justify-content: center !important;
-        flex-direction: column;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-
         .features-grid {
-          grid-template-columns: 1fr !important;
-          gap: 2rem !important;
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
 
-        .features-title {
-          font-size: map-get($heading-h3, font-size) !important;
-        }
-
-        .feature-title,
-        .feature-text {
-          text-align: left !important;
+        .feature-icon {
+          display: flex;
         }
       }
 
       #how-it-works {
-        .how-it-works-images {
-          .iphone-1,
-          .iphone-2,
-          .iphone-3,
-          .iphone-tablet-1,
-          .iphone-tablet-2,
-          .iphone-tablet-3 {
-            display: none !important;
+        .how-it-works-container {
+          .how-it-works-images {
+            .iphone-1,
+            .iphone-2,
+            .iphone-3,
+            .iphone-tablet-1,
+            .iphone-tablet-2,
+            .iphone-tablet-3 {
+              display: none;
+            }
+
+            .iphone-mobile {
+              display: flex;
+            }
+
+            img {
+              max-width: 100%;
+              height: auto;
+            }
           }
 
-          .iphone-mobile {
-            display: flex !important;
+          .how-it-works-subtitle {
+            display: none;
           }
 
-          img {
-            max-width: 100% !important;
-            height: auto !important;
+          .how-it-works-text {
+            display: none;
           }
-        }
 
-        .how-it-works-subtitle {
-          display: none !important;
-        }
+          .how-it-works-subtitle-mobile {
+            display: block;
+            font-size: map-get($heading-h4, font-size);
+            font-weight: map-get($heading-h4, font-weight);
+          }
 
-        .how-it-works-text {
-          display: none !important;
-        }
+          .how-it-works-subtitle-tablet {
+            display: none;
+          }
 
-        .how-it-works-subtitle-mobile {
-          display: flex !important;
-          font-size: map-get($heading-h4, font-size) !important;
-          font-weight: map-get($heading-h4, font-weight) !important;
-        }
-
-        .how-it-works-subtitle-tablet {
-          display: none !important;
-        }
-
-        .how-it-works-text-mobile {
-          display: flex !important;
-          color: map-get($m-text, color) !important;
+          .how-it-works-text-mobile {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            color: map-get($m-text, color);
+          }
         }
       }
 
@@ -1255,7 +1239,6 @@ footer {
       }
 
       #faq-section {
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
 
@@ -1330,7 +1313,7 @@ footer {
             flex-shrink: 0;
             width: 36px;
             height: 36px;
-            font-size: 1.5em;
+            font-size: 24px;
           }
         }
         .faq-question-expanded-mobile {
@@ -1379,7 +1362,6 @@ footer {
           margin-top: 3.75rem;
           margin-bottom: 2.5rem;
           width: 10.125rem;
-          height: auto;
           @each $property, $value in $button-l {
             #{$property}: $value;
             font-size: 14px;
@@ -1389,68 +1371,58 @@ footer {
           }
         }
       }
+
+      #subscribe {
+        padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem;
+        gap: 3.125rem;
+        flex-direction: column;
+
+        .subscribe-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .alert-icon {
+          margin-right: 2rem;
+          width: 75px;
+          height: 75px;
+        }
+
+        .subscribe-text h4 {
+          display: none;
+        }
+
+        .subscribe-text-tablet h4 {
+          display: flex;
+          @each $property, $value in $heading-h4 {
+            #{$property}: $value;
+          }
+        }
+
+        .subscribe-form {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          justify-content: flex-end;
+          width: 100%;
+        }
+
+        .subscribe-btn {
+          padding: 0.9375rem 1.1557rem 1.125rem 1.25rem;
+        }
+
+        .input-group {
+          padding: 7px 10px 5px 20px;
+          max-width: 20.625rem;
+        }
+      }
     }
     footer {
       .footer-container {
         align-items: center;
         flex-direction: column;
-      }
-    }
-    #subscribe {
-      padding: 3.75rem 0.9375rem 2.0625rem 1.5625rem !important;
-      gap: 3.125rem !important;
-      flex-direction: column;
-
-      .subscribe-content {
-        display: flex;
-        align-items: center;
-        justify-content: center !important;
-        width: 100% !important;
-      }
-
-      .alert-icon {
-        margin-right: 2rem;
-        width: 75px !important;
-        height: 75px !important;
-      }
-
-      .subscribe-text h4 {
-        display: none;
-      }
-
-      .subscribe-text-tablet h4 {
-        display: flex;
-        @each $property, $value in $heading-h4 {
-          #{$property}: $value !important;
-        }
-      }
-
-      .subscribe-form {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        white-space: nowrap;
-        justify-content: flex-end;
-        width: 100%;
-      }
-
-      .subscribe-btn {
-        padding: 0.9375rem 1.1557rem 1.125rem 1.25rem !important;
-      }
-
-      .input-group {
-        display: flex;
-        align-items: center;
-        border-radius: 8px 0px 0px 8px;
-        padding: 7px 10px 5px 20px !important;
-        border: 1px solid #ddd;
-        flex-grow: 1;
-        max-width: 20.625rem;
-
-        background-color: white;
-        .material-icons-outlined {
-          color: $input-placeholder;
-        }
       }
     }
   }
