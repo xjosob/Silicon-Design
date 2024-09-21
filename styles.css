@@ -901,6 +901,32 @@ body.dark-theme main #app-features-2 .check-icon {
 body.dark-theme main #app-features-2 .receive-money-icons p {
   color: rgba(255, 255, 255, 0.7);
 }
+body.dark-theme main #testimonials {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+body.dark-theme main #testimonials .testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+body.dark-theme main #testimonials .testimonials-container .clients-loving {
+  color: white;
+}
+body.dark-theme main #testimonials .testimonials-container .testimonial-images {
+  display: flex;
+  gap: 1.5rem;
+}
+body.dark-theme main #testimonials .testimonials-container .testimonial-images img {
+  max-width: 60%;
+  height: auto;
+  min-width: 20%;
+}
+body.dark-theme main #testimonials .testimonials-container .testimonial-images .testimonial-image {
+  content: url(images/testimonial-dark.svg);
+}
+body.dark-theme main #testimonials .testimonials-container .testimonial-images .testimonial-image-2 {
+  content: url(images/testimonial-2-dark.svg);
+}
 
 footer {
   display: flex;

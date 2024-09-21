@@ -869,6 +869,39 @@ body.dark-theme main {
       }
     }
   }
+
+  #testimonials {
+    background-color: rgba(255, 255, 255, 0.04);
+
+    .testimonials-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      .clients-loving {
+        color: white;
+      }
+
+      .testimonial-images {
+        display: flex;
+        gap: 1.5rem;
+
+        img {
+          max-width: 60%;
+          height: auto;
+          min-width: 20%;
+        }
+
+        .testimonial-image {
+          content: url(images/testimonial-dark.svg);
+        }
+
+        .testimonial-image-2 {
+          content: url(images/testimonial-2-dark.svg);
+        }
+      }
+    }
+  }
 }
 
 footer {
