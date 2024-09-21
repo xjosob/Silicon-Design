@@ -9,32 +9,34 @@
   </head>
   <body class="light-theme">
     <nav>
-      <img src="logos/navbar-logo.svg" alt="Logo" class="logo" />
-      <div class="features-container">
+      <div class="content-wrapper-nav">
+        <img src="logos/navbar-logo.svg" alt="Logo" class="logo" />
+        <div class="features-container">
+          <ul>
+            <li class="features">Features</li>
+          </ul>
+        </div>
         <ul>
-          <li class="features">Features</li>
+          <li class="theme-text">Dark Mode</li>
+          <li class="toggle-container">
+            <label class="switch" for="theme-toggle">
+              <input type="checkbox" id="theme-toggle" />
+              <span class="slider round"></span>
+            </label>
+          </li>
+          <li class="sign-in-button">
+            <button class="sign-in">
+              <span class="icon material-icons">person_outlined</span>
+              Sign in/up
+            </button>
+          </li>
+          <div class="hamburger"></div>
         </ul>
       </div>
-      <ul>
-        <li class="theme-text">Dark Mode</li>
-        <li class="toggle-container">
-          <label class="switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
-            <span class="slider round"></span>
-          </label>
-        </li>
-        <li class="sign-in-button">
-          <button class="sign-in">
-            <span class="icon material-icons">person_outlined</span>
-            Sign in/up
-          </button>
-        </li>
-        <div class="hamburger"></div>
-      </ul>
     </nav>
 
     <section class="hero">
-      <div class="content-wrapper">
+      <div class="content-wrapper-hero">
         <div class="hero-content">
           <div class="hero-container">
             <h1 class="hero-title">Manage All Your<br />Money in One App</h1>

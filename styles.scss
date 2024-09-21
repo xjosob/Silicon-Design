@@ -17,8 +17,8 @@ body.dark-theme {
   color: white;
 }
 
-nav,
-.content-wrapper,
+.content-wrapper-nav,
+.content-wrapper-hero,
 #brands,
 #app-features,
 .how-it-works-container,
@@ -31,7 +31,7 @@ nav,
   margin: 0 auto;
 }
 
-nav {
+.content-wrapper-nav {
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
@@ -50,6 +50,7 @@ nav {
     font-size: map-get($navigation-text, font-size);
     font-weight: map-get($navigation-text, font-weight);
     margin-right: 1rem;
+    line-height: 160%;
   }
 
   .features-container {
@@ -64,6 +65,7 @@ nav {
     font-size: map-get($navigation-text, font-size);
     font-weight: map-get($navigation-text, font-weight);
     margin-left: 3rem;
+    line-height: 160%;
   }
 
   .sign-in-button {
@@ -152,6 +154,7 @@ nav {
   }
 }
 
+// Dark mode
 body.dark-theme nav {
   background-color: rgba(241, 244, 253, 0.07);
 
@@ -176,7 +179,7 @@ body.dark-theme nav {
   );
   width: 100%;
 
-  .content-wrapper {
+  .content-wrapper-hero {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
@@ -203,12 +206,14 @@ body.dark-theme nav {
       .hero-title {
         font-size: map-get($display-4, font-size);
         font-weight: map-get($display-4, font-weight);
+        line-height: 130%;
       }
 
       .hero-subtitle {
         font-size: map-get($l-text, font-size);
         font-weight: map-get($l-text, font-weight);
         color: map-get($l-text, color);
+        line-height: 160%;
       }
 
       .market-buttons-container {
@@ -282,7 +287,7 @@ body.dark-theme .hero {
     rgba(241, 244, 253, 0.07) 82.52%
   );
 
-  .content-wrapper {
+  .content-wrapper-hero {
     .hero-container {
       .hero-title {
         color: white;
@@ -803,7 +808,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav {
+  .content-wrapper-nav {
     padding: 0 1.1875rem;
 
     .features {
@@ -832,14 +837,15 @@ footer {
     }
   }
 
+  // Dark theme
   body.dark-theme nav {
-    background-color: rgba(19, 16, 34, 0);
+    background-color: rgba(19, 16, 34, 0.3);
   }
 
   .hero {
     padding: 0 1.1875rem;
 
-    .content-wrapper {
+    .content-wrapper-hero {
       .mobile-buttons-wrapper {
         display: none;
       }
@@ -860,7 +866,6 @@ footer {
           padding-top: 50px;
           font-size: map-get($l-text, font-size);
           font-weight: map-get($l-text, font-weight);
-          line-height: 28.8px;
         }
       }
 
@@ -878,7 +883,7 @@ footer {
       rgba(218, 70, 239, 0.05) 50%,
       rgba(19, 16, 34, 0) 100%
     );
-    .content-wrapper {
+    .content-wrapper-hero {
       .hero-container {
         .hero-subtitle {
           color: $body-text;
@@ -1172,7 +1177,7 @@ footer {
   }
 
   @media (max-width: 480px) {
-    nav {
+    .content-wrapper-nav {
       padding: 1.875rem 1rem;
       height: 3.25rem;
 
@@ -1194,7 +1199,7 @@ footer {
     .hero {
       padding: 0%;
 
-      .content-wrapper {
+      .content-wrapper-hero {
         .hero-phones {
           display: none;
         }
@@ -1255,7 +1260,7 @@ footer {
     }
 
     body.dark-theme .hero {
-      .content-wrapper {
+      .content-wrapper-hero {
         .hero-container {
           .mobile-buttons-wrapper {
             .mobile-button-app-store {
@@ -1269,6 +1274,9 @@ footer {
               background-color: #eff2fc;
               background-size: 32%;
             }
+          }
+          .hero-subtitle {
+            color: white;
           }
         }
 
