@@ -593,6 +593,7 @@ main {
           #{$property}: $value;
         }
 
+        line-height: 130%;
         width: 25%;
       }
 
@@ -611,12 +612,12 @@ main {
 
   #faq-section {
     display: flex;
-    justify-content: space-between;
     padding: 7rem 1rem;
 
     .faq-title {
       margin-bottom: 1rem;
       width: 60%;
+      line-height: 130%;
       @each $property, $value in $heading-h2 {
         #{$property}: $value;
       }
@@ -625,6 +626,7 @@ main {
     .faq-subtitle {
       margin-bottom: 2rem;
       width: 75%;
+      line-height: 160%;
       @each $property, $value in $l-text {
         #{$property}: $value;
       }
@@ -649,6 +651,7 @@ main {
     }
 
     .faq-questions-container {
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -666,6 +669,7 @@ main {
 
         .faq-question-title {
           color: $navigation;
+          line-height: 160%;
         }
 
         .faq-chevron {
@@ -698,12 +702,15 @@ main {
       .faq-question-title-container {
         display: flex;
         justify-content: space-between;
+
         .faq-question-title {
           color: $navigation;
+          line-height: 160%;
         }
       }
 
       .faq-answer {
+        line-height: 160%;
         @each $property, $value in $s-text {
           #{$property}: $value;
         }
@@ -899,6 +906,66 @@ body.dark-theme main {
         .testimonial-image-2 {
           content: url(images/testimonial-2-dark.svg);
         }
+      }
+    }
+  }
+
+  #faq-section {
+    .faq-title {
+      color: white;
+    }
+
+    .faq-subtitle {
+      color: white;
+      opacity: 0.7;
+    }
+
+    .faq-contact-container {
+      .contact-image-box {
+        .icon-box {
+          content: url(images/icon-box-dark.svg);
+        }
+      }
+
+      .icon-box-2 {
+        content: url(images/icon-box-2-dark.svg);
+      }
+    }
+
+    .faq-questions-container {
+      .faq-question {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        .faq-question-title {
+          color: white;
+        }
+
+        .faq-chevron {
+          color: white;
+          background-color: rgba(255, 255, 255, 0.04);
+        }
+      }
+    }
+    .faq-question-expanded {
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+      .faq-question-title-container {
+        display: flex;
+        justify-content: space-between;
+        .faq-question-title {
+          color: white;
+        }
+      }
+
+      .faq-answer {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .faq-chevron {
+        color: white;
+        filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
       }
     }
   }
@@ -1139,14 +1206,16 @@ footer {
 
       .faq-title-tablet {
         text-align: center;
+        margin-bottom: 1rem;
+        line-height: 130%;
         @each $property, $value in $heading-h2 {
           #{$property}: $value;
         }
-        margin-bottom: 1rem;
       }
 
       .faq-subtitle-tablet {
         text-align: center;
+        line-height: 160%;
         @each $property, $value in $l-text {
           #{$property}: $value;
         }
@@ -1183,7 +1252,9 @@ footer {
           border-radius: 8px;
           box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
             0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+
           .faq-question-title-tablet {
+            line-height: 160%;
             @each $property, $value in $navigation-text {
               #{$property}: $value;
             }
@@ -1213,10 +1284,13 @@ footer {
           border-radius: 8px;
           box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
             0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+
           .faq-question-title-container-tablet {
             display: flex;
             justify-content: space-between;
+
             .faq-question-title-tablet {
+              line-height: 160%;
               @each $property, $value in $navigation-text {
                 #{$property}: $value;
               }
@@ -1224,6 +1298,7 @@ footer {
           }
 
           .faq-answer-tablet {
+            line-height: 160%;
             @each $property, $value in $s-text {
               #{$property}: $value;
             }
@@ -1305,6 +1380,53 @@ footer {
               opacity: 1;
             }
           }
+        }
+      }
+    }
+
+    #faq-section {
+      .faq-title-tablet {
+        color: white;
+      }
+
+      .faq-subtitle-tablet {
+        color: white;
+        opacity: 0.7;
+      }
+
+      .faq-questions-container-tablet {
+        .faq-question-tablet {
+          background-color: rgba(255, 255, 255, 0.04);
+
+          .faq-question-title-tablet {
+            color: white;
+          }
+
+          .faq-chevron-tablet {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.04);
+          }
+        }
+      }
+      .faq-question-expanded-tablet {
+        background-color: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        .faq-question-title-container-tablet {
+          display: flex;
+          justify-content: space-between;
+          .faq-question-title-tablet {
+            color: white;
+          }
+        }
+
+        .faq-answer-tablet {
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .faq-chevron-tablet {
+          color: white;
+          filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
         }
       }
     }
@@ -1519,6 +1641,7 @@ footer {
         }
 
         .faq-title-mobile {
+          line-height: 130%;
           text-align: center;
           @each $property, $value in $heading-h2 {
             #{$property}: $value;
@@ -1527,6 +1650,7 @@ footer {
         }
 
         .faq-subtitle-mobile {
+          line-height: 160%;
           text-align: center;
           @each $property, $value in $l-text {
             #{$property}: $value;
@@ -1555,7 +1679,9 @@ footer {
           padding: 1.5rem;
           border-radius: 8px;
           box-shadow: none;
+
           .faq-question-title-mobile {
+            line-height: 130%;
             @each $property, $value in $navigation-text {
               #{$property}: $value;
             }
@@ -1584,10 +1710,13 @@ footer {
           padding: 1.5rem;
           border-radius: 8px;
           box-shadow: none;
+
           .faq-question-title-container-mobile {
             display: flex;
             justify-content: space-between;
+
             .faq-question-title-mobile {
+              line-height: 130%;
               @each $property, $value in $navigation-text {
                 #{$property}: $value;
               }
@@ -1610,6 +1739,7 @@ footer {
           }
         }
         .faq-answer-mobile {
+          line-height: 160%;
           @each $property, $value in $s-text {
             #{$property}: $value;
           }
@@ -1683,6 +1813,55 @@ footer {
     body.dark-theme main {
       #how-it-works {
         background-color: rgba(255, 255, 255, 0.07);
+      }
+
+      #faq-section {
+        .faq-title-mobile {
+          color: white;
+        }
+
+        .faq-questions-container-mobile {
+          border: 1px solid rgba(255, 255, 255, 0.15);
+
+          .faq-question-mobile {
+            background-color: #131022;
+
+            .faq-question-title-mobile {
+              color: white;
+            }
+
+            .faq-chevron-mobile {
+              color: white;
+              background-color: rgba(255, 255, 255, 0.04);
+            }
+          }
+
+          hr {
+            background-color: rgba(255, 255, 255, 0.15);
+          }
+        }
+        .faq-question-expanded-mobile {
+          background-color: #131022;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 8px 8px 0px 0px;
+
+          .faq-question-title-container-mobile {
+            display: flex;
+            justify-content: space-between;
+            .faq-question-title-mobile {
+              color: white;
+            }
+          }
+
+          .faq-answer-mobile {
+            color: rgba(255, 255, 255, 0.7);
+          }
+
+          .faq-chevron-mobile {
+            color: white;
+            filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
+          }
+        }
       }
     }
 
