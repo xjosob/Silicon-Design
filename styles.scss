@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+body.dark-theme {
+  background-color: $heading-dark;
+  color: white;
+}
+
 nav,
 .content-wrapper,
 #brands,

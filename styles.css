@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+body.dark-theme {
+  background-color: #0b0f19;
+  color: white;
+}
+
 nav,
 .content-wrapper,
 #brands,
@@ -48,13 +53,13 @@ nav .features-container {
   list-style: none;
 }
 nav .features {
-  color: #33354D;
+  color: #33354d;
   font-size: 16px;
   font-weight: 600;
   margin-left: 3rem;
 }
 nav .sign-in-button .sign-in {
-  background-color: #6366F1;
+  background-color: #6366f1;
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
@@ -100,7 +105,7 @@ nav .slider {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #9397AD;
+  background-color: #9397ad;
   transition: 0.4s;
 }
 nav .slider:before {
@@ -114,10 +119,10 @@ nav .slider:before {
   transition: 0.4s;
 }
 nav input:checked + .slider {
-  background-color: #6366F1;
+  background-color: #6366f1;
 }
 nav input:focus + .slider {
-  box-shadow: 0 0 1px #6366F1;
+  box-shadow: 0 0 1px #6366f1;
 }
 nav input:checked + .slider:before {
   transform: translateX(20px);
@@ -244,7 +249,7 @@ main #brands .brands-container {
   align-items: center;
 }
 main #brands .brand-box {
-  border: 1px solid #E2E5F1;
+  border: 1px solid #e2e5f1;
   border-radius: 8px;
   height: 6.25rem;
   width: 12.5rem;
@@ -275,13 +280,13 @@ main #app-features .features-content {
 main #app-features .features-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #0B0F19;
+  color: #0b0f19;
 }
 main #app-features .features-subtitle {
   margin: 1.4375rem 0 2.5rem 0;
   font-size: 1.125rem;
   font-weight: 400;
-  color: #9397AD;
+  color: #9397ad;
 }
 main #app-features .features-grid {
   display: grid;
@@ -304,14 +309,14 @@ main #app-features .features-grid .feature .feature-text {
 main #app-features .features-grid .feature .feature-text .feature-title {
   font-size: 1rem;
   font-weight: 800;
-  color: #0B0F19;
+  color: #0b0f19;
   line-height: 1.5;
 }
 main #how-it-works {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   text-align: center;
   width: 100%;
   padding: 5rem 1rem;
@@ -385,7 +390,7 @@ main .app-features-2-container .receive-money-text-container {
 }
 main .app-features-2-container .money-transfer-text-container .learn-more-button-right,
 main .app-features-2-container .receive-money-text-container .learn-more-button-right {
-  background-color: #6366F1;
+  background-color: #6366f1;
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
@@ -401,7 +406,7 @@ main .app-features-2-container .receive-money-text-container .learn-more-button-
 }
 main .app-features-2-container .money-transfer-text-container .receive-money-button-right,
 main .app-features-2-container .receive-money-text-container .receive-money-button-right {
-  background-color: #6366F1;
+  background-color: #6366f1;
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
@@ -418,7 +423,7 @@ main .app-features-2-container .receive-money-text-container .receive-money-butt
 }
 main .app-features-2-container .money-transfer-text-container .receive-money-title,
 main .app-features-2-container .receive-money-text-container .receive-money-title {
-  color: #0B0F19;
+  color: #0b0f19;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -447,13 +452,13 @@ main .app-features-2-container .money-transfer-text-container p {
 main .app-features-2-container .money-transfer-text-container .check-icon {
   font-size: 1.25rem;
   color: white;
-  background-color: #6366F1;
+  background-color: #6366f1;
   border-radius: 50%;
 }
 main #testimonials {
   display: flex;
   justify-content: space-between;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   padding: 5rem 1rem;
 }
 main #testimonials .testimonials-container {
@@ -461,7 +466,7 @@ main #testimonials .testimonials-container {
   justify-content: space-between;
 }
 main #testimonials .testimonials-container .clients-loving {
-  color: #0B0F19;
+  color: #0b0f19;
   font-size: 2.5rem;
   font-weight: 800;
   width: 25%;
@@ -483,7 +488,7 @@ main #faq-section {
 main #faq-section .faq-title {
   margin-bottom: 1rem;
   width: 60%;
-  color: #0B0F19;
+  color: #0b0f19;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -525,7 +530,7 @@ main #faq-section .faq-questions-container .faq-question {
   box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
 }
 main #faq-section .faq-questions-container .faq-question .faq-question-title {
-  color: #33354D;
+  color: #33354d;
 }
 main #faq-section .faq-questions-container .faq-question .faq-chevron {
   font-family: "Material Icons";
@@ -534,7 +539,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -545,7 +550,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -556,7 +561,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -567,7 +572,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -578,7 +583,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -589,7 +594,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -600,7 +605,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -611,7 +616,7 @@ main #faq-section .faq-questions-container .faq-question .faq-chevron {
   transform: rotate(90deg);
   justify-content: center;
   box-shadow: none;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   flex-shrink: 0;
   width: 36px;
   height: 36px;
@@ -631,7 +636,7 @@ main #faq-section .faq-question-expanded .faq-question-title-container {
   justify-content: space-between;
 }
 main #faq-section .faq-question-expanded .faq-question-title-container .faq-question-title {
-  color: #33354D;
+  color: #33354d;
 }
 main #faq-section .faq-question-expanded .faq-answer {
   color: #565973;
@@ -643,7 +648,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -654,7 +659,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -665,7 +670,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -676,7 +681,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -687,7 +692,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -698,7 +703,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -709,7 +714,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -720,7 +725,7 @@ main #faq-section .faq-question-expanded .faq-chevron {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6366F1;
+  background-color: #6366f1;
   transform: rotate(270deg);
   flex-shrink: 0;
   width: 36px;
@@ -743,7 +748,7 @@ main #subscribe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F3F6FF;
+  background-color: #f3f6ff;
   margin: 0 auto;
   padding: 4.5rem 6.875rem;
   gap: 4.875rem;
@@ -758,7 +763,7 @@ main #subscribe .alert-icon {
   margin-right: 2rem;
 }
 main #subscribe .subscribe-text h4 {
-  color: #0B0F19;
+  color: #0b0f19;
   font-size: 1.5rem;
   font-weight: 800;
 }
@@ -784,13 +789,13 @@ main #subscribe .input-group {
 }
 main #subscribe .input-group .email-placeholder {
   padding: 0.625rem;
-  color: #B4B7C9;
+  color: #b4b7c9;
 }
 main #subscribe .input-group .material-icons-outlined {
-  color: #B4B7C9;
+  color: #b4b7c9;
 }
 main #subscribe .subscribe-btn {
-  background-color: #6366F1;
+  background-color: #6366f1;
   color: white;
   border: none;
   padding: 0.625rem 1.25rem;
@@ -805,7 +810,7 @@ footer {
   padding: 3.375rem 0;
 }
 footer p {
-  color: #9397AD;
+  color: #9397ad;
   color: #565973;
   font-size: 0.875rem;
   font-weight: 400;
@@ -847,7 +852,7 @@ footer .footer-container {
     justify-content: flex-end;
     transform: translateX(15%);
     width: 100%;
-    color: #0B0F19;
+    color: #0b0f19;
     font-size: 2.5rem;
     font-weight: 800;
   }
@@ -883,7 +888,7 @@ footer .footer-container {
     height: auto;
   }
   main #brands .brand-box {
-    border: 1px solid #E2E5F1;
+    border: 1px solid #e2e5f1;
     border-radius: 8px;
     height: 5.625rem;
     width: 9.375rem !important;
@@ -966,7 +971,7 @@ footer .footer-container {
   }
   main #faq-section .faq-title-tablet {
     text-align: center;
-    color: #0B0F19;
+    color: #0b0f19;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 1rem;
@@ -1009,7 +1014,7 @@ footer .footer-container {
     box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
   }
   main #faq-section .faq-questions-container-tablet .faq-question-tablet .faq-question-title-tablet {
-    color: #33354D;
+    color: #33354d;
     font-size: 16px;
     font-weight: 600;
   }
@@ -1020,7 +1025,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1031,7 +1036,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1042,7 +1047,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1053,7 +1058,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1064,7 +1069,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1075,7 +1080,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1086,7 +1091,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1097,7 +1102,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1117,7 +1122,7 @@ footer .footer-container {
     justify-content: space-between;
   }
   main #faq-section .faq-questions-container-tablet .faq-question-expanded-tablet .faq-question-title-container-tablet .faq-question-title-tablet {
-    color: #33354D;
+    color: #33354d;
     font-size: 16px;
     font-weight: 600;
   }
@@ -1131,7 +1136,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1142,7 +1147,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1153,7 +1158,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1164,7 +1169,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1175,7 +1180,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1186,7 +1191,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1197,7 +1202,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1208,7 +1213,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1240,7 +1245,7 @@ footer .footer-container {
     min-width: 30%;
   }
   main #subscribe .subscribe-btn {
-    background-color: #6366F1;
+    background-color: #6366f1;
     color: white;
     border: none;
     padding: 0.625rem 0.625rem;
@@ -1249,7 +1254,7 @@ footer .footer-container {
   }
   main #subscribe .subscribe-text-tablet h4 {
     display: flex;
-    color: #0B0F19 !important;
+    color: #0b0f19 !important;
     font-size: 1.5rem !important;
     font-weight: 800 !important;
   }
@@ -1433,7 +1438,7 @@ footer .footer-container {
     flex-direction: column;
   }
   main #faq-section hr {
-    background-color: #E2E5F1;
+    background-color: #e2e5f1;
     height: 1px;
     border: 0;
   }
@@ -1448,7 +1453,7 @@ footer .footer-container {
   }
   main #faq-section .faq-title-mobile {
     text-align: center;
-    color: #0B0F19;
+    color: #0b0f19;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 1rem;
@@ -1469,7 +1474,7 @@ footer .footer-container {
   main #faq-section .faq-questions-container-mobile {
     display: flex;
     flex-direction: column;
-    border: 1px solid #E2E5F1;
+    border: 1px solid #e2e5f1;
     border-radius: 8px;
   }
   main #faq-section .faq-question-mobile {
@@ -1481,7 +1486,7 @@ footer .footer-container {
     box-shadow: none;
   }
   main #faq-section .faq-question-mobile .faq-question-title-mobile {
-    color: #33354D;
+    color: #33354d;
     font-size: 16px;
     font-weight: 600;
   }
@@ -1492,7 +1497,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1503,7 +1508,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1514,7 +1519,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1525,7 +1530,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1536,7 +1541,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1547,7 +1552,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1558,7 +1563,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1569,7 +1574,7 @@ footer .footer-container {
     transform: rotate(90deg);
     justify-content: center;
     box-shadow: none;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
     flex-shrink: 0;
     width: 36px;
     height: 36px;
@@ -1589,7 +1594,7 @@ footer .footer-container {
     justify-content: space-between;
   }
   main #faq-section .faq-question-expanded-mobile .faq-question-title-container-mobile .faq-question-title-mobile {
-    color: #33354D;
+    color: #33354d;
     font-size: 16px;
     font-weight: 600;
   }
@@ -1598,7 +1603,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1609,7 +1614,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1620,7 +1625,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1631,7 +1636,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1642,7 +1647,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1653,7 +1658,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1664,7 +1669,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1675,7 +1680,7 @@ footer .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6366F1;
+    background-color: #6366f1;
     transform: rotate(270deg);
     flex-shrink: 0;
     width: 36px;
@@ -1696,7 +1701,7 @@ footer .footer-container {
     margin-top: 3.75rem;
     margin-bottom: 2.5rem;
     width: 10.125rem;
-    background-color: #6366F1;
+    background-color: #6366f1;
     font-size: 14px;
     font-weight: 400;
     padding: 10.8px 28.438px 16.3px 28.8px;
@@ -1753,7 +1758,7 @@ footer .footer-container {
   }
   main #subscribe .subscribe-text-tablet h4 {
     display: flex;
-    color: #0B0F19;
+    color: #0b0f19;
     font-size: 1.5rem;
     font-weight: 800;
   }
