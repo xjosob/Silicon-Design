@@ -321,6 +321,11 @@ main #app-features .phone-visa {
   width: 50%;
   min-width: auto;
 }
+main #app-features .feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 main #app-features .features-content {
   display: flex;
   flex-direction: column;
@@ -329,12 +334,14 @@ main #app-features .features-title {
   font-size: 2.5rem;
   font-weight: 800;
   color: #0b0f19;
+  line-height: 130%;
 }
 main #app-features .features-subtitle {
   margin: 1.4375rem 0 2.5rem 0;
   font-size: 1.125rem;
   font-weight: 400;
   color: #9397ad;
+  line-height: 160%;
 }
 main #app-features .features-grid {
   display: grid;
@@ -358,7 +365,10 @@ main #app-features .features-grid .feature .feature-text .feature-title {
   font-size: 1rem;
   font-weight: 800;
   color: #0b0f19;
-  line-height: 1.5;
+  line-height: 140%;
+}
+main #app-features .features-grid .feature .feature-text .feature-description {
+  line-height: 160%;
 }
 main #how-it-works {
   display: flex;
@@ -857,6 +867,27 @@ body.dark-theme main #brands .brand-box {
 body.dark-theme main #brands .brand-box img {
   border: none;
 }
+body.dark-theme main #app-features .features-title {
+  color: white;
+}
+body.dark-theme main #app-features .features-subtitle {
+  color: white;
+  opacity: 0.5;
+}
+body.dark-theme main #app-features .features-grid .feature .feature-text .feature-title {
+  color: white;
+}
+body.dark-theme main #app-features .features-grid .feature .feature-text .feature-description {
+  color: white;
+  opacity: 0.7;
+}
+body.dark-theme main #how-it-works {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+body.dark-theme main #how-it-works .how-it-works-text {
+  color: white;
+  opacity: 0.7;
+}
 
 footer {
   display: flex;
@@ -895,11 +926,11 @@ footer .footer-container {
   .content-wrapper-nav .sign-in-button {
     display: none;
   }
-  .content-wrapper-nav .hamburger {
-    background-image: url("/buttons/Hamburger-dark.svg");
-  }
   body.dark-theme nav {
     background-color: rgba(19, 16, 34, 0.3);
+  }
+  body.dark-theme nav .hamburger {
+    background-image: url("/buttons/Hamburger-dark.svg");
   }
   .hero {
     padding: 0 1.1875rem;
@@ -1326,6 +1357,14 @@ footer .footer-container {
     font-size: 1.5rem !important;
     font-weight: 800 !important;
   }
+  body.dark-theme main #app-features .features-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+  }
+  body.dark-theme main #app-features .features-grid .feature .feature-text .feature-description {
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+  }
 }
 @media (max-width: 768px) and (max-width: 480px) {
   .content-wrapper-nav {
@@ -1509,8 +1548,6 @@ footer .footer-container {
     display: none;
   }
   main #how-it-works .how-it-works-container .how-it-works-text-mobile {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     color: #565973;
   }
   main #app-features-2 {
@@ -1861,6 +1898,9 @@ footer .footer-container {
   main #subscribe .input-group {
     padding: 7px 10px 5px 20px;
     max-width: 20.625rem;
+  }
+  body.dark-theme main #how-it-works {
+    background-color: rgba(255, 255, 255, 0.07);
   }
   footer .footer-container {
     align-items: center;
