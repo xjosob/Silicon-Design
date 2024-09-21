@@ -135,13 +135,16 @@ nav .slider.round:before {
 }
 
 body.dark-theme nav {
-  background-color: transparent;
+  background-color: rgba(241, 244, 253, 0.07);
 }
 body.dark-theme nav .logo {
   content: url("logos/navbar-logo-dark.svg");
 }
 body.dark-theme nav .features {
   color: white;
+}
+body.dark-theme nav .theme-text {
+  color: #565973;
 }
 
 .hero {
@@ -239,6 +242,33 @@ body.dark-theme nav .features {
   font-size: 0.875rem;
   font-weight: 400;
   color: #565973;
+}
+
+body.dark-theme .hero {
+  background: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
+}
+body.dark-theme .hero .content-wrapper .hero-container .hero-title {
+  color: white;
+}
+body.dark-theme .hero .content-wrapper .hero-container .hero-subtitle {
+  color: white;
+  opacity: 0.7;
+}
+body.dark-theme .hero .content-wrapper .hero-container .market-buttons-container .button-app-store {
+  background-image: url(buttons/appstore-dark.svg);
+  background-color: transparent;
+}
+body.dark-theme .hero .content-wrapper .hero-container .market-buttons-container .button-google-play {
+  background-image: url(buttons/googleplay-dark.svg);
+  background-color: transparent;
+}
+body.dark-theme .hero .content-wrapper .discover-more-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+body.dark-theme .hero .content-wrapper .discover-more-text {
+  color: white;
+  opacity: 0.7;
 }
 
 main {
@@ -832,7 +862,6 @@ footer .footer-container {
 
 @media (max-width: 768px) {
   nav {
-    margin-bottom: 3.125rem;
     padding: 0 1.1875rem;
   }
   nav .features {
@@ -851,6 +880,12 @@ footer .footer-container {
   nav .sign-in-button {
     display: none;
   }
+  nav .hamburger {
+    background-image: url("/buttons/Hamburger-dark.svg");
+  }
+  body.dark-theme nav {
+    background-color: rgba(19, 16, 34, 0);
+  }
   .hero {
     padding: 0 1.1875rem;
   }
@@ -862,18 +897,27 @@ footer .footer-container {
     justify-content: flex-end;
     transform: translateX(15%);
     width: 100%;
+    margin-top: 3.125rem;
     color: #0b0f19;
     font-size: 2.5rem;
     font-weight: 800;
   }
   .hero .content-wrapper .hero-container .hero-subtitle {
     padding-top: 50px;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 400;
+    line-height: 28.8px;
   }
   .hero .content-wrapper .discover-more-container {
     justify-content: flex-start;
     padding-right: 0;
+  }
+  body.dark-theme .hero {
+    background: radial-gradient(118% 116.18% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0) 100%);
+  }
+  body.dark-theme .hero .content-wrapper .hero-container .hero-subtitle {
+    color: #565973;
+    opacity: 0.7;
   }
   .hero-phones {
     justify-content: flex-end;
@@ -1271,10 +1315,8 @@ footer .footer-container {
 }
 @media (max-width: 768px) and (max-width: 480px) {
   nav {
-    margin: 0.4375rem 0.225rem 0rem 0rem;
+    padding: 1.875rem 1rem;
     height: 3.25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
   nav .theme-text {
     display: none;
@@ -1301,7 +1343,6 @@ footer .footer-container {
   }
   .hero .content-wrapper .hero-container .hero-title {
     transform: none;
-    padding-top: 1.5625rem;
     justify-content: center;
     text-align: center;
   }
@@ -1389,6 +1430,24 @@ footer .footer-container {
     background-position: center;
     border-radius: 8px;
     height: 3.125rem;
+  }
+  body.dark-theme .hero .content-wrapper .hero-container .mobile-buttons-wrapper .mobile-button-app-store {
+    background-image: url(buttons/appstore-dark-mobile.svg);
+    background-color: #eff2fc;
+    background-size: 33%;
+  }
+  body.dark-theme .hero .content-wrapper .hero-container .mobile-buttons-wrapper .mobile-button-google-play {
+    background-image: url(buttons/googleplay-dark-mobile.svg);
+    background-color: #eff2fc;
+    background-size: 32%;
+  }
+  body.dark-theme .hero .content-wrapper .discover-more-button {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+  body.dark-theme .hero .content-wrapper .discover-more-text {
+    color: white;
+    opacity: 0.7;
   }
   main {
     margin-top: 0;

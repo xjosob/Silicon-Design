@@ -153,12 +153,17 @@ nav {
 }
 
 body.dark-theme nav {
-  background-color: transparent;
+  background-color: rgba(241, 244, 253, 0.07);
+
   .logo {
     content: url("logos/navbar-logo-dark.svg");
   }
   .features {
     color: white;
+  }
+
+  .theme-text {
+    color: $body-text;
   }
 }
 
@@ -265,6 +270,49 @@ body.dark-theme nav {
       font-size: map-get($s-text, font-size);
       font-weight: map-get($s-text, font-weight);
       color: map-get($s-text, color);
+    }
+  }
+}
+
+body.dark-theme .hero {
+  background: radial-gradient(
+    120.91% 118.4% at 50% 100%,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 41.83%,
+    rgba(241, 244, 253, 0.07) 82.52%
+  );
+
+  .content-wrapper {
+    .hero-container {
+      .hero-title {
+        color: white;
+      }
+
+      .hero-subtitle {
+        color: white;
+        opacity: 0.7;
+      }
+
+      .market-buttons-container {
+        .button-app-store {
+          background-image: url(buttons/appstore-dark.svg);
+          background-color: transparent;
+        }
+        .button-google-play {
+          background-image: url(buttons/googleplay-dark.svg);
+          background-color: transparent;
+        }
+      }
+    }
+
+    .discover-more-button {
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+    }
+
+    .discover-more-text {
+      color: white;
+      opacity: 0.7;
     }
   }
 }
@@ -756,7 +804,6 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    margin-bottom: 3.125rem;
     padding: 0 1.1875rem;
 
     .features {
@@ -779,6 +826,14 @@ footer {
     .sign-in-button {
       display: none;
     }
+
+    .hamburger {
+      background-image: url("/buttons/Hamburger-dark.svg");
+    }
+  }
+
+  body.dark-theme nav {
+    background-color: rgba(19, 16, 34, 0);
   }
 
   .hero {
@@ -794,6 +849,7 @@ footer {
           justify-content: flex-end;
           transform: translateX(15%);
           width: 100%;
+          margin-top: 3.125rem;
 
           @each $property, $value in $heading-h1 {
             #{$property}: $value;
@@ -802,14 +858,32 @@ footer {
 
         .hero-subtitle {
           padding-top: 50px;
-          font-size: map-get($m-text, font-size);
-          font-weight: map-get($m-text, font-weight);
+          font-size: map-get($l-text, font-size);
+          font-weight: map-get($l-text, font-weight);
+          line-height: 28.8px;
         }
       }
 
       .discover-more-container {
         justify-content: flex-start;
         padding-right: 0;
+      }
+    }
+  }
+
+  body.dark-theme .hero {
+    background: radial-gradient(
+      118% 116.18% at 50% 100%,
+      rgba(99, 102, 241, 0.1) 0%,
+      rgba(218, 70, 239, 0.05) 50%,
+      rgba(19, 16, 34, 0) 100%
+    );
+    .content-wrapper {
+      .hero-container {
+        .hero-subtitle {
+          color: $body-text;
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -1099,10 +1173,9 @@ footer {
 
   @media (max-width: 480px) {
     nav {
-      margin: 0.4375rem 0.225rem 0rem 0rem;
+      padding: 1.875rem 1rem;
       height: 3.25rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
+
       .theme-text {
         display: none;
       }
@@ -1136,7 +1209,6 @@ footer {
         .hero-container {
           .hero-title {
             transform: none;
-            padding-top: 1.5625rem;
             justify-content: center;
             text-align: center;
           }
@@ -1178,6 +1250,36 @@ footer {
             border-radius: 8px;
             height: 3.125rem;
           }
+        }
+      }
+    }
+
+    body.dark-theme .hero {
+      .content-wrapper {
+        .hero-container {
+          .mobile-buttons-wrapper {
+            .mobile-button-app-store {
+              background-image: url(buttons/appstore-dark-mobile.svg);
+              background-color: #eff2fc;
+              background-size: 33%;
+            }
+
+            .mobile-button-google-play {
+              background-image: url(buttons/googleplay-dark-mobile.svg);
+              background-color: #eff2fc;
+              background-size: 32%;
+            }
+          }
+        }
+
+        .discover-more-button {
+          background: rgba(255, 255, 255, 0.05);
+          color: white;
+        }
+
+        .discover-more-text {
+          color: white;
+          opacity: 0.7;
         }
       }
     }
