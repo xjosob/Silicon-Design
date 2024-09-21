@@ -152,6 +152,16 @@ nav {
   }
 }
 
+body.dark-theme nav {
+  background-color: transparent;
+  .logo {
+    content: url("logos/navbar-logo-dark.svg");
+  }
+  .features {
+    color: white;
+  }
+}
+
 .hero {
   background: linear-gradient(
     to bottom,

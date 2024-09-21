@@ -134,6 +134,16 @@ nav .slider.round:before {
   border-radius: 50%;
 }
 
+body.dark-theme nav {
+  background-color: transparent;
+}
+body.dark-theme nav .logo {
+  content: url("logos/navbar-logo-dark.svg");
+}
+body.dark-theme nav .features {
+  color: white;
+}
+
 .hero {
   background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(240, 200, 212, 0.05) 42%, rgba(160, 108, 156, 0.07) 83%);
   width: 100%;
