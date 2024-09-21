@@ -300,6 +300,10 @@ main #brands .brand-box {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 0.3125rem;
+}
+main #brands .brand-box img {
+  border: none;
 }
 main #app-features {
   display: flex;
@@ -845,6 +849,13 @@ main #subscribe .subscribe-btn {
   padding: 0.625rem 1.25rem;
   border-radius: 0px 8px 8px 0px;
   font-size: 16px;
+}
+
+body.dark-theme main #brands .brand-box {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+body.dark-theme main #brands .brand-box img {
+  border: none;
 }
 
 footer {
