@@ -831,6 +831,7 @@ main #subscribe .alert-icon {
   margin-right: 2rem;
 }
 main #subscribe .subscribe-text h4 {
+  line-height: 140%;
   color: #0b0f19;
   font-size: 1.5rem;
   font-weight: 800;
@@ -975,6 +976,27 @@ body.dark-theme main #faq-section .faq-question-expanded .faq-chevron {
   color: white;
   filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
 }
+body.dark-theme main #subscribe {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+body.dark-theme main #subscribe .subscribe-text h4 {
+  color: #0b0f19;
+  color: white;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+  color: white;
+}
+body.dark-theme main #subscribe .input-group {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+body.dark-theme main #subscribe .input-group .email-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+body.dark-theme main #subscribe .input-group .material-icons-outlined {
+  color: rgba(255, 255, 255, 0.4);
+}
 
 footer {
   display: flex;
@@ -984,6 +1006,7 @@ footer {
 }
 footer p {
   color: #9397ad;
+  line-height: 160%;
   color: #565973;
   font-size: 0.875rem;
   font-weight: 400;
@@ -991,6 +1014,11 @@ footer p {
 footer .footer-container {
   display: flex;
   gap: 0.1875rem;
+}
+
+body.dark-theme footer p {
+  color: white;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
@@ -1077,9 +1105,9 @@ footer .footer-container {
     border: 1px solid #e2e5f1;
     border-radius: 8px;
     height: 5.625rem;
-    width: 9.375rem !important;
+    width: 9.375rem;
     display: flex;
-    justify-content: center !important;
+    justify-content: center;
     align-items: center;
   }
   main .phone-visa {
@@ -1096,7 +1124,7 @@ footer .footer-container {
     padding-right: 1.1875rem;
   }
   main #app-features .features-title {
-    font-size: 1.75rem !important;
+    font-size: 1.75rem;
   }
   main .features-grid .feature-title,
   main .features-grid .feature-text {
@@ -1139,6 +1167,7 @@ footer .footer-container {
     display: none;
   }
   main #faq-section {
+    padding-bottom: 1rem;
     padding-left: 1.1875rem;
     padding-right: 1.1875rem;
     display: flex;
@@ -1413,7 +1442,7 @@ footer .footer-container {
     color: white;
   }
   main #subscribe {
-    width: 95% !important;
+    width: 95%;
     padding: 3.125rem 1.125rem;
     gap: 1.875rem;
   }
@@ -1444,10 +1473,14 @@ footer .footer-container {
     font-size: 16px;
   }
   main #subscribe .subscribe-text-tablet h4 {
+    line-height: 140%;
     display: flex;
-    color: #0b0f19 !important;
-    font-size: 1.5rem !important;
-    font-weight: 800 !important;
+    color: #0b0f19;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  body.dark-theme main #brands .brand-box {
+    background: #131022;
   }
   body.dark-theme main #app-features .features-subtitle {
     color: rgba(255, 255, 255, 0.7);
@@ -1492,6 +1525,33 @@ footer .footer-container {
     color: white;
     filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
   }
+  body.dark-theme main #subscribe {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+  body.dark-theme main #subscribe .subscribe-text-tablet h4 {
+    color: #0b0f19;
+    color: white;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    color: white;
+  }
+  body.dark-theme main #subscribe .input-group {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: white;
+  }
+  body.dark-theme main #subscribe .input-group .email-placeholder {
+    color: #b4b7c9;
+  }
+  body.dark-theme main #subscribe .input-group .material-icons-outlined {
+    color: #b4b7c9;
+  }
+  footer {
+    padding: 1.25rem 0;
+  }
+  body.dark-theme footer p {
+    color: #9397ad;
+  }
 }
 @media (max-width: 768px) and (max-width: 480px) {
   .content-wrapper-nav {
@@ -1503,6 +1563,9 @@ footer .footer-container {
   }
   .content-wrapper-nav .toggle-container {
     margin-right: 0;
+  }
+  .content-wrapper-nav .switch .slider.round {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }
   .content-wrapper-nav .hamburger {
     margin-left: 1.5rem;
@@ -2012,6 +2075,7 @@ footer .footer-container {
     display: none;
   }
   main #subscribe .subscribe-text-tablet h4 {
+    line-height: 140%;
     display: flex;
     color: #0b0f19;
     font-size: 1.5rem;
@@ -2030,6 +2094,9 @@ footer .footer-container {
   main #subscribe .input-group {
     padding: 7px 10px 5px 20px;
     max-width: 20.625rem;
+  }
+  body.dark-theme .content-wrapper-nav .slider.round {
+    box-shadow: 0 6px 8px rgba(255, 255, 255, 0.13);
   }
   body.dark-theme main #how-it-works {
     background-color: rgba(255, 255, 255, 0.07);
@@ -2072,8 +2139,14 @@ footer .footer-container {
     color: white;
     filter: drop-shadow(-1px 1px 3px rgba(99, 102, 241, 0.9));
   }
+  footer {
+    padding: 1.625rem 0;
+  }
   footer .footer-container {
     align-items: center;
     flex-direction: column;
+  }
+  footer .footer-container p {
+    line-height: 160%;
   }
 }/*# sourceMappingURL=styles.css.map */

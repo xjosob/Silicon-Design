@@ -769,6 +769,8 @@ main {
     }
 
     .subscribe-text h4 {
+      line-height: 140%;
+
       @each $property, $value in $heading-h4 {
         #{$property}: $value;
       }
@@ -969,6 +971,30 @@ body.dark-theme main {
       }
     }
   }
+
+  #subscribe {
+    background-color: rgba(255, 255, 255, 0.04);
+
+    .subscribe-text h4 {
+      @each $property, $value in $heading-h4 {
+        #{$property}: $value;
+        color: white;
+      }
+    }
+
+    .input-group {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background-color: rgba(255, 255, 255, 0.02);
+
+      .email-placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .material-icons-outlined {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
 }
 
 footer {
@@ -979,6 +1005,7 @@ footer {
 
   p {
     color: $muted-text;
+    line-height: 160%;
     @each $property, $value in $s-text {
       #{$property}: $value;
     }
@@ -987,6 +1014,13 @@ footer {
   .footer-container {
     display: flex;
     gap: 0.1875rem;
+  }
+}
+
+body.dark-theme footer {
+  p {
+    color: white;
+    opacity: 0.5;
   }
 }
 
@@ -1104,9 +1138,9 @@ footer {
         border: 1px solid $divider-border;
         border-radius: 8px;
         height: 5.625rem;
-        width: 9.375rem !important;
+        width: 9.375rem;
         display: flex;
-        justify-content: center !important;
+        justify-content: center;
         align-items: center;
       }
     }
@@ -1126,7 +1160,7 @@ footer {
       padding-right: 1.1875rem;
 
       .features-title {
-        font-size: map-get($heading-h3, font-size) !important;
+        font-size: map-get($heading-h3, font-size);
       }
     }
 
@@ -1186,6 +1220,7 @@ footer {
     }
 
     #faq-section {
+      padding-bottom: 1rem;
       padding-left: 1.1875rem;
       padding-right: 1.1875rem;
       display: flex;
@@ -1322,7 +1357,7 @@ footer {
       }
     }
     #subscribe {
-      width: 95% !important;
+      width: 95%;
       padding: 3.125rem 1.125rem;
       gap: 1.875rem;
 
@@ -1358,14 +1393,20 @@ footer {
       }
 
       .subscribe-text-tablet h4 {
+        line-height: 140%;
         display: flex;
         @each $property, $value in $heading-h4 {
-          #{$property}: $value !important;
+          #{$property}: $value;
         }
       }
     }
   }
   body.dark-theme main {
+    #brands {
+      .brand-box {
+        background: #131022;
+      }
+    }
     #app-features {
       .features-subtitle {
         color: rgba(255, 255, 255, 0.7);
@@ -1430,6 +1471,39 @@ footer {
         }
       }
     }
+
+    #subscribe {
+      background-color: rgba(255, 255, 255, 0.04);
+
+      .subscribe-text-tablet h4 {
+        @each $property, $value in $heading-h4 {
+          #{$property}: $value;
+          color: white;
+        }
+      }
+
+      .input-group {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background-color: white;
+
+        .email-placeholder {
+          color: $input-placeholder;
+        }
+
+        .material-icons-outlined {
+          color: $input-placeholder;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 1.25rem 0;
+  }
+  body.dark-theme footer {
+    p {
+      color: $muted-text;
+    }
   }
 
   @media (max-width: 480px) {
@@ -1443,6 +1517,12 @@ footer {
 
       .toggle-container {
         margin-right: 0;
+      }
+
+      .switch {
+        .slider.round {
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
       }
 
       .hamburger {
@@ -1785,6 +1865,7 @@ footer {
         }
 
         .subscribe-text-tablet h4 {
+          line-height: 140%;
           display: flex;
           @each $property, $value in $heading-h4 {
             #{$property}: $value;
@@ -1809,7 +1890,11 @@ footer {
         }
       }
     }
-
+    body.dark-theme .content-wrapper-nav {
+      .slider.round {
+        box-shadow: 0 6px 8px rgba(255, 255, 255, 0.13);
+      }
+    }
     body.dark-theme main {
       #how-it-works {
         background-color: rgba(255, 255, 255, 0.07);
@@ -1866,9 +1951,14 @@ footer {
     }
 
     footer {
+      padding: 1.625rem 0;
       .footer-container {
         align-items: center;
         flex-direction: column;
+
+        p {
+          line-height: 160%;
+        }
       }
     }
   }
